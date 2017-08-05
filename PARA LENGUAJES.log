@@ -1,0 +1,406 @@
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6300 64-bit) (preloaded format=pdflatex 2017.8.4)  4 AUG 2017 20:50
+entering extended mode
+**"./PARA LENGUAJES.tex"
+("PARA LENGUAJES.tex"
+LaTeX2e <2017-04-15>
+Babel <3.9t> and hyphenation patterns for 76 language(s) loaded.
+("C:\Program Files\MiKTeX 2.9\tex\latex\ieeetran\IEEEtran.cls"
+Document Class: IEEEtran 2015/08/26 V1.8b by Michael Shell
+-- See the "IEEEtran_HOWTO" manual for usage information.
+-- http://www.michaelshell.org/tex/ieeetran/
+\@IEEEtrantmpdimenA=\dimen102
+\@IEEEtrantmpdimenB=\dimen103
+\@IEEEtrantmpdimenC=\dimen104
+\@IEEEtrantmpcountA=\count79
+\@IEEEtrantmpcountB=\count80
+\@IEEEtrantmpcountC=\count81
+\@IEEEtrantmptoksA=\toks14
+LaTeX Font Info:    Try loading font information for OT1+ppl on input line 503.
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\psnfss\ot1ppl.fd"
+File: ot1ppl.fd 2001/06/04 font definitions for OT1/ppl.
+)
+-- Using IEEE Computer Society mode.
+-- Using 8.5in x 11in (letter) paper.
+-- Using PDF output.
+\@IEEEnormalsizeunitybaselineskip=\dimen105
+-- This is a 10 point document.
+\CLASSINFOnormalsizebaselineskip=\dimen106
+\CLASSINFOnormalsizeunitybaselineskip=\dimen107
+\IEEEnormaljot=\dimen108
+LaTeX Font Info:    Font shape `OT1/ppl/bx/n' in size <5.01874> not available
+(Font)              Font shape `OT1/ppl/b/n' tried instead on input line 1090.
+LaTeX Font Info:    Font shape `OT1/ppl/bx/it' in size <5.01874> not available
+(Font)              Font shape `OT1/ppl/b/it' tried instead on input line 1090.
+
+LaTeX Font Info:    Font shape `OT1/ppl/bx/n' in size <7.02625> not available
+(Font)              Font shape `OT1/ppl/b/n' tried instead on input line 1090.
+LaTeX Font Info:    Font shape `OT1/ppl/bx/it' in size <7.02625> not available
+(Font)              Font shape `OT1/ppl/b/it' tried instead on input line 1090.
+
+LaTeX Font Info:    Font shape `OT1/ppl/bx/n' in size <8.03> not available
+(Font)              Font shape `OT1/ppl/b/n' tried instead on input line 1090.
+LaTeX Font Info:    Font shape `OT1/ppl/bx/it' in size <8.03> not available
+(Font)              Font shape `OT1/ppl/b/it' tried instead on input line 1090.
+
+LaTeX Font Info:    Font shape `OT1/ppl/bx/n' in size <9.03374> not available
+(Font)              Font shape `OT1/ppl/b/n' tried instead on input line 1090.
+LaTeX Font Info:    Font shape `OT1/ppl/bx/it' in size <9.03374> not available
+(Font)              Font shape `OT1/ppl/b/it' tried instead on input line 1090.
+
+LaTeX Font Info:    Font shape `OT1/ppl/bx/n' in size <9.53561> not available
+(Font)              Font shape `OT1/ppl/b/n' tried instead on input line 1090.
+LaTeX Font Info:    Font shape `OT1/ppl/bx/it' in size <9.53561> not available
+(Font)              Font shape `OT1/ppl/b/it' tried instead on input line 1090.
+
+LaTeX Font Info:    Font shape `OT1/ppl/bx/n' in size <11.04124> not available
+(Font)              Font shape `OT1/ppl/b/n' tried instead on input line 1090.
+LaTeX Font Info:    Font shape `OT1/ppl/bx/it' in size <11.04124> not available
+
+(Font)              Font shape `OT1/ppl/b/it' tried instead on input line 1090.
+
+LaTeX Font Info:    Font shape `OT1/ppl/bx/n' in size <12.045> not available
+(Font)              Font shape `OT1/ppl/b/n' tried instead on input line 1090.
+LaTeX Font Info:    Font shape `OT1/ppl/bx/it' in size <12.045> not available
+(Font)              Font shape `OT1/ppl/b/it' tried instead on input line 1090.
+
+LaTeX Font Info:    Font shape `OT1/ppl/bx/n' in size <17.06374> not available
+(Font)              Font shape `OT1/ppl/b/n' tried instead on input line 1090.
+LaTeX Font Info:    Font shape `OT1/ppl/bx/it' in size <17.06374> not available
+
+(Font)              Font shape `OT1/ppl/b/it' tried instead on input line 1090.
+
+LaTeX Font Info:    Font shape `OT1/ppl/bx/n' in size <20.075> not available
+(Font)              Font shape `OT1/ppl/b/n' tried instead on input line 1090.
+LaTeX Font Info:    Font shape `OT1/ppl/bx/it' in size <20.075> not available
+(Font)              Font shape `OT1/ppl/b/it' tried instead on input line 1090.
+
+LaTeX Font Info:    Font shape `OT1/ppl/bx/n' in size <24.09> not available
+(Font)              Font shape `OT1/ppl/b/n' tried instead on input line 1090.
+LaTeX Font Info:    Font shape `OT1/ppl/bx/it' in size <24.09> not available
+(Font)              Font shape `OT1/ppl/b/it' tried instead on input line 1090.
+
+\IEEEquantizedlength=\dimen109
+\IEEEquantizedlengthdiff=\dimen110
+\IEEEquantizedtextheightdiff=\dimen111
+\IEEEilabelindentA=\dimen112
+\IEEEilabelindentB=\dimen113
+\IEEEilabelindent=\dimen114
+\IEEEelabelindent=\dimen115
+\IEEEdlabelindent=\dimen116
+\IEEElabelindent=\dimen117
+\IEEEiednormlabelsep=\dimen118
+\IEEEiedmathlabelsep=\dimen119
+\IEEEiedtopsep=\skip41
+\c@section=\count82
+\c@subsection=\count83
+\c@subsubsection=\count84
+\c@paragraph=\count85
+\c@IEEEsubequation=\count86
+\abovecaptionskip=\skip42
+\belowcaptionskip=\skip43
+\c@figure=\count87
+\c@table=\count88
+\@IEEEeqnnumcols=\count89
+\@IEEEeqncolcnt=\count90
+\@IEEEsubeqnnumrollback=\count91
+\@IEEEquantizeheightA=\dimen120
+\@IEEEquantizeheightB=\dimen121
+\@IEEEquantizeheightC=\dimen122
+\@IEEEquantizeprevdepth=\dimen123
+\@IEEEquantizemultiple=\count92
+\@IEEEquantizeboxA=\box26
+\@IEEEtmpitemindent=\dimen124
+\IEEEPARstartletwidth=\dimen125
+\c@IEEEbiography=\count93
+\@IEEEtranrubishbin=\box27
+) ("C:\Program Files\MiKTeX 2.9\tex\generic\babel\babel.sty"
+Package: babel 2017/04/28 3.9t The Babel package
+
+*************************************
+* Local config file bblopts.cfg used
+*
+("C:\Program Files\MiKTeX 2.9\tex\latex\arabi\bblopts.cfg"
+File: bblopts.cfg 2005/09/08 v0.1 add Arabic and Farsi to "declared" options of
+ babel
+)
+("C:\Program Files\MiKTeX 2.9\tex\latex\babel-spanish\spanish.ldf"
+Language: spanish.ldf 2016/03/03 v5.0p Spanish support from the babel system
+
+("C:\Program Files\MiKTeX 2.9\tex\generic\babel\babel.def"
+File: babel.def 2017/04/28 3.9t Babel common definitions
+\babel@savecnt=\count94
+\U@D=\dimen126
+)
+\es@quottoks=\toks15
+\es@quotdepth=\count95
+Package babel Info: Making " an active character on input line 561.
+Package babel Info: Making . an active character on input line 662.
+Package babel Info: Making < an active character on input line 707.
+Package babel Info: Making > an active character on input line 707.
+))
+("C:\Program Files\MiKTeX 2.9\tex\latex\cite\cite.sty"
+LaTeX Info: Redefining \cite on input line 302.
+LaTeX Info: Redefining \nocite on input line 332.
+Package: cite 2015/02/27  v 5.5
+) ("PARA LENGUAJES.aux"
+LaTeX Info: Redefining \. on input line 6.
+LaTeX Info: Redefining \% on input line 6.
+)
+\openout1 = `"PARA LENGUAJES.aux"'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 23.
+LaTeX Font Info:    ... okay on input line 23.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 23.
+LaTeX Font Info:    ... okay on input line 23.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 23.
+LaTeX Font Info:    ... okay on input line 23.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 23.
+LaTeX Font Info:    ... okay on input line 23.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 23.
+LaTeX Font Info:    ... okay on input line 23.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 23.
+LaTeX Font Info:    ... okay on input line 23.
+
+-- Lines per column: 61 (exact).
+LaTeX Info: Redefining \. on input line 23.
+LaTeX Info: Redefining \% on input line 23.
+LaTeX Font Info:    Try loading font information for OT1+phv on input line 39.
+("C:\Program Files\MiKTeX 2.9\tex\latex\psnfss\ot1phv.fd"
+File: ot1phv.fd 2001/06/04 scalable font definitions for OT1/phv.
+)
+LaTeX Font Info:    Calculating math sizes for size <24.09> on input line 39.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <24.09> on input line 39.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <16.86292> on input line 39.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <12.045> on input line 39.
+LaTeX Font Info:    Font shape `OT1/phv/m/it' in size <11.04124> not available
+(Font)              Font shape `OT1/phv/m/sl' tried instead on input line 39.
+LaTeX Font Info:    Font shape `OT1/phv/bx/n' in size <8.03> not available
+(Font)              Font shape `OT1/phv/b/n' tried instead on input line 39.
+LaTeX Font Info:    Calculating math sizes for size <11.04124> on input line 39
+.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <11.04124> on input line 39.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <7.72884> on input line 39.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <5.52061> on input line 39.
+LaTeX Font Info:    Try loading font information for U+pzd on input line 39.
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\psnfss\upzd.fd"
+File: upzd.fd 2001/06/04 font definitions for U/pzd.
+)
+LaTeX Font Info:    Font shape `OT1/phv/bx/n' in size <11.04124> not available
+(Font)              Font shape `OT1/phv/b/n' tried instead on input line 45.
+LaTeX Font Info:    Font shape `OT1/phv/bx/sc' in size <11.04124> not available
+
+(Font)              Font shape `OT1/phv/b/sc' tried instead on input line 45.
+Missing character: There is no Ã in font pplr7t!
+Missing character: There is no ± in font pplr7t!
+LaTeX Font Info:    Calculating math sizes for size <9.53561> on input line 48.
+
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <9.53561> on input line 48.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <6.6749> on input line 48.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <4.7678> on input line 48.
+LaTeX Font Info:    Try loading font information for OMS+ppl on input line 54.
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\psnfss\omsppl.fd"
+File: omsppl.fd 
+)
+LaTeX Font Info:    Font shape `OMS/ppl/m/n' in size <9.53561> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 54.
+
+Underfull \hbox (badness 4660) in paragraph at lines 63--64
+[]\OT1/ppl/m/n/9.53561 Formato al-ta-men-te uti-li-za-do pa-ra
+ []
+
+Missing character: There is no Ã in font pplr7t!
+Missing character: There is no ± in font pplr7t!
+LaTeX Font Info:    Calculating math sizes for size <8.03> on input line 83.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <8.03> on input line 83.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <5.62097> on input line 83.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <4.015> on input line 83.
+LaTeX Font Info:    Try loading font information for OT1+pcr on input line 87.
+("C:\Program Files\MiKTeX 2.9\tex\latex\psnfss\ot1pcr.fd"
+File: ot1pcr.fd 2001/06/04 font definitions for OT1/pcr.
+)
+LaTeX Font Info:    Try loading font information for OML+ppl on input line 107.
+
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\psnfss\omlppl.fd"
+File: omlppl.fd 
+)
+LaTeX Font Info:    Font shape `OML/ppl/m/n' in size <8.03> not available
+(Font)              Font shape `OML/cmm/m/it' tried instead on input line 107.
+Missing character: There is no Ã in font pplr7t!
+Missing character: There is no ¡ in font pplr7t!
+Missing character: There is no Ã in font pplr7t!
+Missing character: There is no ¡ in font pplr7t!
+Missing character: There is no Ã in font pplr7t!
+Missing character: There is no ¡ in font pplr7t!
+Missing character: There is no Ã in font pplr7t!
+Missing character: There is no ¡ in font pplr7t!
+
+Underfull \hbox (badness 3746) in paragraph at lines 119--121
+\OT1/ppl/m/it/9.53561 Sys-tem User's Gui-de and Re-fe-ren-ce Ma-nual\OT1/ppl/m/
+n/9.53561 [2] pg. 41
+ []
+
+
+Underfull \hbox (badness 4366) in paragraph at lines 119--121
+\OT1/ppl/m/n/9.53561 Pa-ra uti-li-zar otros ca-rac-te-res es-pe-cia-les de idio
+-mas
+ []
+
+
+Underfull \hbox (badness 7326) in paragraph at lines 119--121
+\OT1/ppl/m/n/9.53561 di-fe-ren-tes co-mo chino o ru-so exis-te un pa-que-te
+ []
+
+
+Underfull \hbox (badness 1902) in paragraph at lines 119--121
+\OT1/ppl/m/n/9.53561 lla-ma-do Ba-bel crea-do por Johan-nes Braams y Ja-vier
+ []
+
+
+Underfull \hbox (badness 7777) in paragraph at lines 119--121
+\OT1/ppl/m/n/9.53561 Be-zos, pa-ra uti-li-zar ba-bel se uti-li-za el si-guien-t
+e
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 119--121
+\OT1/ppl/m/n/9.53561 co-man-do: [][]\OT1/pcr/m/n/9.53561 \usepackage[language]{
+babel} []\OT1/ppl/m/n/9.53561 es
+ []
+
+
+Underfull \hbox (badness 6910) in paragraph at lines 119--121
+\OT1/ppl/m/n/9.53561 re-co-men-da-do uti-li-zar es-te co-man-do in-me-dia-ta-me
+n-te
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 119--121
+\OT1/ppl/m/n/9.53561 des-pues de uti-li-zar [][]\OT1/pcr/m/n/9.53561 \documentc
+lass []\OT1/ppl/m/n/9.53561 asi otros
+ []
+
+
+Underfull \hbox (badness 1742) in paragraph at lines 119--121
+\OT1/ppl/m/n/9.53561 per-mi-te ser []nvo-ca-do[]uti-li-zan-do va-rios len-gua-
+jes co-mo
+ []
+
+
+Underfull \hbox (badness 3849) in paragraph at lines 119--121
+\OT1/ppl/m/n/9.53561 pa-ra-me-tros, de es-ta for-ma si te-ne-mos el co-man-do
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 119--121
+[][]\OT1/pcr/m/n/9.53561 \usepackage[languageA,languageB]{babel} []\OT1/ppl/m/n
+/9.53561 se
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 119--121
+\OT1/ppl/m/n/9.53561 cam-biar ut-ti-li-zan-do [][]\OT1/pcr/m/n/9.53561 \selectl
+anguage{languageA}[]\OT1/ppl/m/n/9.53561 ,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 119--121
+\OT1/ppl/m/n/9.53561 adems, ba-bel per-mi-te uti-li-zar cier-tos co-man-dos
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 119--121
+\OT1/ppl/m/n/9.53561 co-mo [][]\OT1/pcr/m/n/9.53561 \foreignlanguage{language}{
+Texto} []\OT1/ppl/m/n/9.53561 y
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 119--121
+[][]\OT1/pcr/m/n/9.53561 \begin{otherlanguage}...\end{otherlanguage}
+ []
+
+LaTeX Info: Redefining \. on input line 121.
+LaTeX Info: Redefining \% on input line 121.
+[1{C:/ProgramData/MiKTeX/2.9/pdftex/config/pdftex.map}
+
+
+]
+Underfull \hbox (badness 4686) in paragraph at lines 132--133
+[]\OT1/ppl/m/n/8.03 J. Braams y J. Be-zos \OT1/ppl/m/it/8.03 Ba-bel\OT1/ppl/m/n
+/8.03 , Ju-nio 2017. Re-cu-pe-ra-do de
+ []
+
+
+Overfull \hbox (41.07558pt too wide) in paragraph at lines 132--133
+\OT1/ppl/m/n/8.03 http://ftp.ntou.edu.tw/ctan/macros/latex2e/required/babel/bas
+e/babel.pdf 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 135--137
+[]\OT1/ppl/m/n/8.03 L. Lam-port \OT1/ppl/m/it/8.03 La-tex A Do-cu-ment Pre-pa-r
+a-tion Sys-tem
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 135--137
+\OT1/ppl/m/it/8.03 User's Gui-de and Re-fe-ren-ce Ma-nual \OT1/ppl/m/n/8.03 Re-
+cu-pe-ra-do de:
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 135--137
+\OT1/ppl/m/n/8.03 http://users.softlab.ntua.gr/ sivann/books/LaTeX$ $%20-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 135--137
+\OT1/ppl/m/n/8.03 %20User's$ $%20Guide$ $%20and$ $%20Reference$ $%20Manual-
+ []
+
+LaTeX Info: Redefining \. on input line 142.
+LaTeX Info: Redefining \% on input line 142.
+[2
+
+] ("PARA LENGUAJES.aux"
+LaTeX Info: Redefining \. on input line 6.
+LaTeX Info: Redefining \% on input line 6.
+) ) 
+Here is how much of TeX's memory you used:
+ 2213 strings out of 493320
+ 34921 string characters out of 3138955
+ 105756 words of memory out of 3000000
+ 5758 multiletter control sequences out of 15000+200000
+ 53410 words of font info for 113 fonts, out of 3000000 for 9000
+ 1144 hyphenation exceptions out of 8191
+ 29i,13n,30p,913b,384s stack positions out of 5000i,500n,10000p,200000b,50000s
+{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/base/8r.enc}<C:/Program Files/M
+iKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Program Files/MiKTeX 2.9
+/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files/MiKTeX 2.9/fonts/t
+ype1/urw/courier/ucrr8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/helvet
+ic/uhvb8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/helvetic/uhvr8a.pfb>
+<C:/Program Files/MiKTeX 2.9/fonts/type1/urw/helvetic/uhvro8a.pfb><C:/Program F
+iles/MiKTeX 2.9/fonts/type1/urw/palatino/uplr8a.pfb><C:/Program Files/MiKTeX 2.
+9/fonts/type1/urw/palatino/uplri8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1
+/urw/zapfding/uzdr.pfb>
+Output written on "PARA LENGUAJES.pdf" (2 pages, 101114 bytes).
+PDF statistics:
+ 46 PDF objects out of 1000 (max. 8388607)
+ 0 named destinations out of 1000 (max. 500000)
+ 1 words of extra memory for PDF output out of 10000 (max. 10000000)
+
