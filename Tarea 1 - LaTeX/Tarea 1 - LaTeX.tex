@@ -1,5 +1,21 @@
 \documentclass[10pt,journal,compsoc]{IEEEtran}
 \usepackage[spanish]{babel}
+\usepackage{enumitem}
+\usepackage{enumerate}
+\usepackage{lipsum}
+\usepackage{graphicx}
+\usepackage{background}
+\usepackage{xcolor}
+\usepackage{listings}
+\lstset
+{
+	language=[LaTeX]TeX,
+	breaklines=true,
+	basicstyle=\tt\scriptsize,
+	keywordstyle=\color{blue},
+	identifierstyle=\color{magenta},
+}
+
 \ifCLASSOPTIONcompsoc
   \usepackage[nocompress]{cite}
 \else
@@ -19,6 +35,8 @@ pdfauthor={Daniel, Wilbert, Anthony, Bryan},
 
 \hyphenation{op-tical net-works semi-conduc-tor}
 
+
+\backgroundsetup{contents={\includegraphics[scale=0.015]{ITCR_LOGO.png}}}
 
 \begin{document}
 \title{\LaTeX}
@@ -41,6 +59,8 @@ En este documento, se encuentra recopilada alguna informaci\'on \'util con respe
 \IEEEdisplaynontitleabstractindextext
 
 \IEEEpeerreviewmaketitle
+
+\section{Datos his\'oricos sobre LaTeX}
 
 \section{Importancia y usos acad\'emicos}
 \IEEEPARstart{L}{aTeX} permite concentrarse en lo que es verdaderamente importante: el contenido. Como escritor (cient\'ifico, investigador,  estudiante o no) esta herramienta permite minimizar el tiempo dedicado al diseño del documento y enfocarse en las palabras. Una ventaja considerable, sobre otros sistemas tradicionales, es la alta calidad tipogr\'afica de los documentos que se podr\'an producir.
@@ -77,6 +97,33 @@ Con \LaTeX\ es posible escribir art\'iculos para revistas, reportes t\'ecnicos, 
 		\item Incluso se incluye la opci\'on de utilizar temas y colores.
 	\end{itemize}
 \end{itemize}
+
+\renewcommand{\thesubsection}{\thesection.\alph{subsection}}
+
+\section{C\'omo crear}
+	\subsection{P\'arrafos}	
+	\subsection{Efectores de letras, colores}
+	\subsection{Tildes, caracteres especiales de distintos idiomas}
+	\subsection{T\'itulos, subt\'itulos}
+	\subsection{Referencias}
+	\subsection{Marcas de agua}
+	\begin{itemize}
+		\item Im\'agenes
+		\begin{itemize}
+			\item Para utilizar im\'agenes como marcas de agua en el documento deben utilizarse los paquetes \textbf{\textit{graphicx}} y \textbf{\textit{background}}.	
+		\end{itemize}
+	\begin{lstlisting}
+\usepackage{graphicx}
+\usepackage{background}
+\backgroundsetup{contents={\includegraphics[scale=X]{<archivo>}}}
+	\end{lstlisting}
+
+	\end{itemize}
+	
+
+
+	\subsection{Headers y footers}
+	\subsection{Saltos de p\'agina, columnas, citas al pie de p\'agina}
 
 \begin{table}
 		\centering
