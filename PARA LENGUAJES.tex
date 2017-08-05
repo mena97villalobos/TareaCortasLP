@@ -1,0 +1,108 @@
+\documentclass[10pt,journal,compsoc]{IEEEtran}
+\usepackage[spanish]{babel}
+\ifCLASSOPTIONcompsoc
+  \usepackage[nocompress]{cite}
+\else
+  \usepackage{cite}
+\fi
+
+\ifCLASSINFOpdf
+\else
+\fi
+\newcommand\MYhyperrefoptions{bookmarks=true,bookmarksnumbered=true,
+pdfpagemode={UseOutlines},plainpages=false,pdfpagelabels=true,
+colorlinks=true,linkcolor={black},citecolor={black},urlcolor={black},
+pdftitle={\LaTeX},
+pdfsubject={Tarea Corta 1, Latex},
+pdfauthor={Daniel, Wilbert, Anthony, Bryan},
+}
+
+\hyphenation{op-tical net-works semi-conduc-tor}
+
+
+\begin{document}
+\title{\LaTeX}
+
+\author{Daniel~Delgado,~\IEEEmembership{Estudiante,~ITCR,}
+        Wilbert~Gonzales,~\IEEEmembership{Estudiante,~ITCR,}
+        Anthony~Leandro,~\IEEEmembership{Estudiante,~ITCR,}
+        and~Bryan~Mena,~\IEEEmembership{Estudiante,~ITCR}
+}
+\markboth{Lenguajes de Programaci\'on, Tarea Corta 1, Agosto 2017}
+{Shell \MakeLowercase{\textit{et al.}}: \LaTex}
+\IEEEtitleabstractindextext{
+\begin{abstract}
+En este documento, se encuentra recopilada alguna informaci\'on \'util con respecto al uso de LaTeX
+\end{abstract}
+}
+
+\maketitle
+
+\IEEEdisplaynontitleabstractindextext
+
+\IEEEpeerreviewmaketitle
+
+\begin{table}
+		\centering
+		\caption{Simbolos utiles en \LaTeX}
+		\begin{tabular}{ l r r }
+			Codigo \LaTeX & Resultado \\
+			\hline\\
+			 \verb|\'e| & \'e \\
+			 \verb|\=e| & \=e \\
+			 \verb|\u e|& \u e\\
+			 \verb|\d e|& \d e \\
+			 \verb|oe| & \oe \\
+			 \verb|aa| & \aa \\
+			 \verb|i| & \i \\
+			 \verb|l| & \l \\
+			 \verb|\`e| & \`e \\
+			 \verb|\.e| & \.e \\
+			 \verb|v e| & \v e \\
+			 \verb|b e| & \b e \\
+			 \verb|OE| & \OE \\
+			 \verb|AA| & \AA \\
+			 \verb|j| & \j \\
+			 \verb|L| & \L \\
+			 \verb|l| & \l \\
+			 \verb|\^e| & \^e \\
+			 \verb|\"e| & \"e \\
+			 \verb|c e| & \c e \\
+			 \verb|t ee|& \t ee \\
+			 \verb|\ae| & \ae \\
+			 \verb|o| & \o \\
+			 \verb|ss| & \ss \\
+			 \verb|~e| & \~e \\
+			 \verb|H e| & \H e \\
+			 \verb|r e| & \r e \\
+			 \verb|AE| & \AE \\
+			 \verb|O|& \O \\
+		\end{tabular}
+	\hfill
+\end{table}
+Para una lista m\'as detallada (Simbolos matematicos, griegos, entre otros) revisar \emph{Latex A Document Preparation System User's Guide and Reference Manual}[2] pág. 41
+Para utilizar otros caracteres especiales de idiomas diferentes como chino o ruso existe un paquete llamado Babel creado por Johannes Braams y Javier Bezos, para utilizar babel se utiliza el siguiente comando: \verb|\usepackage[language]{babel}| es recomendado utilizar este comando inmediatamente despues de utilizar \verb|\documentclass| asi otros paquetes sabran que lenguaje se esta utilizando. Babel permite ser "invocado"utilizando varios lenguajes como parametros, de esta forma si tenemos el comando \verb|\usepackage[languageA,languageB]{babel}| se tomará el "languageB" como el lenguaje activo y se podrá cambiar uttilizando \verb|\selectlanguage{languageA}|, además, babel permite utilizar ciertos comandos como \verb|\foreignlanguage{language}{Texto}| y \verb|\begin{otherlanguage}...\end{otherlanguage}| para encapsular texto escrito en otros idiomas.
+
+\appendices
+\section{}
+Appendix one text goes here.
+
+\section{}
+Appendix two text goes here.
+
+\begin{thebibliography}{2}
+	
+	\bibitem{Babel}
+	J.~Braams y J.~Bezos \emph{Babel}, Junio 2017. Recuperado de http://ftp.ntou.edu.tw/ctan/macros/latex2e/required/babel/base/babel.pdf  
+	
+	\bibitem{Latex}
+	L.~Lamport \emph{Latex A Document Preparation System User's Guide and Reference Manual} Recuperado de:
+	http://users.softlab.ntua.gr/~sivann/books/LaTeX\%20-\%20User's\%20Guide\%20and\%20Reference\%20Manual-lamport94.pdf
+	
+	
+	
+\end{thebibliography}
+
+\end{document}
+
+
