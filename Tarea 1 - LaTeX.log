@@ -1,7 +1,7 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6300 64-bit) (preloaded format=pdflatex 2017.8.4)  4 AUG 2017 20:50
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6300 64-bit) (preloaded format=pdflatex 2017.8.4)  4 AUG 2017 20:57
 entering extended mode
-**"./PARA LENGUAJES.tex"
-("PARA LENGUAJES.tex"
+**"./Tarea 1 - LaTeX.tex"
+("Tarea 1 - LaTeX.tex"
 LaTeX2e <2017-04-15>
 Babel <3.9t> and hyphenation patterns for 76 language(s) loaded.
 ("C:\Program Files\MiKTeX 2.9\tex\latex\ieeetran\IEEEtran.cls"
@@ -143,11 +143,11 @@ Package babel Info: Making > an active character on input line 707.
 LaTeX Info: Redefining \cite on input line 302.
 LaTeX Info: Redefining \nocite on input line 332.
 Package: cite 2015/02/27  v 5.5
-) ("PARA LENGUAJES.aux"
+) ("Tarea 1 - LaTeX.aux"
 LaTeX Info: Redefining \. on input line 6.
 LaTeX Info: Redefining \% on input line 6.
 )
-\openout1 = `"PARA LENGUAJES.aux"'.
+\openout1 = `"Tarea 1 - LaTeX.aux"'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 23.
 LaTeX Font Info:    ... okay on input line 23.
@@ -161,7 +161,6 @@ LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 23.
 LaTeX Font Info:    ... okay on input line 23.
 LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 23.
 LaTeX Font Info:    ... okay on input line 23.
-
 -- Lines per column: 61 (exact).
 LaTeX Info: Redefining \. on input line 23.
 LaTeX Info: Redefining \% on input line 23.
@@ -377,18 +376,18 @@ LaTeX Info: Redefining \. on input line 142.
 LaTeX Info: Redefining \% on input line 142.
 [2
 
-] ("PARA LENGUAJES.aux"
+] ("Tarea 1 - LaTeX.aux"
 LaTeX Info: Redefining \. on input line 6.
 LaTeX Info: Redefining \% on input line 6.
 ) ) 
 Here is how much of TeX's memory you used:
  2213 strings out of 493320
- 34921 string characters out of 3138955
+ 34931 string characters out of 3138955
  105756 words of memory out of 3000000
  5758 multiletter control sequences out of 15000+200000
  53410 words of font info for 113 fonts, out of 3000000 for 9000
  1144 hyphenation exceptions out of 8191
- 29i,13n,30p,913b,384s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 29i,13n,30p,914b,384s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/base/8r.enc}<C:/Program Files/M
 iKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Program Files/MiKTeX 2.9
 /fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files/MiKTeX 2.9/fonts/t
@@ -398,7 +397,7 @@ ic/uhvb8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/helvetic/uhvr8a.pfb>
 iles/MiKTeX 2.9/fonts/type1/urw/palatino/uplr8a.pfb><C:/Program Files/MiKTeX 2.
 9/fonts/type1/urw/palatino/uplri8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1
 /urw/zapfding/uzdr.pfb>
-Output written on "PARA LENGUAJES.pdf" (2 pages, 101114 bytes).
+Output written on "Tarea 1 - LaTeX.pdf" (2 pages, 101114 bytes).
 PDF statistics:
  46 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
