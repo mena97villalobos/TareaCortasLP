@@ -1,5 +1,8 @@
 \documentclass[10pt,journal,compsoc]{IEEEtran}
 \usepackage[spanish]{babel}
+\usepackage{listings}
+\usepackage{graphicx}
+\usepackage[usenames, dvipsnames]{color}
 \ifCLASSOPTIONcompsoc
   \usepackage[nocompress]{cite}
 \else
@@ -78,47 +81,139 @@ Con \LaTeX\ es posible escribir art\'iculos para revistas, reportes t\'ecnicos, 
 	\end{itemize}
 \end{itemize}
 
-\begin{table}
-		\centering
-		\caption{Simbolos utiles en \LaTeX}
-		\begin{tabular}{ l r r }
-			Codigo \LaTeX & Resultado \\
-			\hline\\
-			 \verb|\'e| & \'e \\
-			 \verb|\=e| & \=e \\
-			 \verb|\u e|& \u e\\
-			 \verb|\d e|& \d e \\
-			 \verb|oe| & \oe \\
-			 \verb|aa| & \aa \\
-			 \verb|i| & \i \\
-			 \verb|l| & \l \\
-			 \verb|\`e| & \`e \\
-			 \verb|\.e| & \.e \\
-			 \verb|v e| & \v e \\
-			 \verb|b e| & \b e \\
-			 \verb|OE| & \OE \\
-			 \verb|AA| & \AA \\
-			 \verb|j| & \j \\
-			 \verb|L| & \L \\
-			 \verb|l| & \l \\
-			 \verb|\^e| & \^e \\
-			 \verb|\"e| & \"e \\
-			 \verb|c e| & \c e \\
-			 \verb|t ee|& \t ee \\
-			 \verb|\ae| & \ae \\
-			 \verb|o| & \o \\
-			 \verb|ss| & \ss \\
-			 \verb|~e| & \~e \\
-			 \verb|H e| & \H e \\
-			 \verb|r e| & \r e \\
-			 \verb|AE| & \AE \\
-			 \verb|O|& \O \\
-		\end{tabular}
-	\hfill
-\end{table}
-Para una lista m\'as detallada (Simbolos matematicos, griegos, entre otros) revisar \emph{Latex A Document Preparation System User's Guide and Reference Manual}[2] pág. 41
-Para utilizar otros caracteres especiales de idiomas diferentes como chino o ruso existe un paquete llamado Babel creado por Johannes Braams y Javier Bezos, para utilizar babel se utiliza el siguiente comando: \verb|\usepackage[language]{babel}| es recomendado utilizar este comando inmediatamente despues de utilizar \verb|\documentclass| asi otros paquetes sabran que lenguaje se esta utilizando. Babel permite ser "invocado"utilizando varios lenguajes como parametros, de esta forma si tenemos el comando \verb|\usepackage[languageA,languageB]{babel}| se tomará el "languageB" como el lenguaje activo y se podrá cambiar uttilizando \verb|\selectlanguage{languageA}|, además, babel permite utilizar ciertos comandos como \verb|\foreignlanguage{language}{Texto}| y \verb|\begin{otherlanguage}...\end{otherlanguage}| para encapsular texto escrito en otros idiomas.
+\section{Minipage}%%%%%%%FIME minipage es seccion #7
+Minipage es utilizado para colocar objetos uno al lado de otros, los cuales, sin minipage, ser\'ia muy dificil.
+Comando para utilizar minipage:
+\begin{lstlisting}
+\begin{minipage}[adjusting]{width of the minipage}
+    Texto ... \ \
+    Imagenes ... \ \
+    Tablas ... \ \
+\end{minipage}
+\end{lstlisting}
+	Donde adjusting puede tomar valores de c (centrado), t(top), b(bottom)
+\subsection{Ejemplos}
+\begin{minipage}{0.2\textwidth}
+	\begin{tabular}{|c|c|c|}
+		\hline
+		A & B & C \\
+		\hline
+		1 & 2 & 3  \\
+		\hline 
+		4 & 5 & 6 \\
+		\hline
+	\end{tabular}
+\end{minipage}
+\begin{minipage}{0.2\textwidth}
+	\begin{tabular}{c|c|c}
+		A & B & C \\
+		\hline
+		1 & 2 & 3  \\
+		\hline 
+		4 & 5 & 6 \\
+	\end{tabular}
+\end{minipage}\\
+\newline
+Dos tablas juntas\\
+\begin{minipage}{0.2\textwidth}
+	\begin{tabular}{c|c|c}
+		A & B & C \\
+		\hline
+		1 & 2 & 3  \\
+		\hline 
+		4 & 5 & 6 \\
+	\end{tabular}
+\end{minipage}
+\begin{minipage}{0.2\textwidth}
+	\includegraphics[width=\textwidth]{pic1.jpg}
+\end{minipage}\\
+\newline
+Tabla junto a imagen\\
 
+
+\section{Como Crear...}
+\subsection{Efectos de letras y colores}
+Para cambiar texto de color se utiliza el paquete color \verb|\usepackage[usenames, dvipsnames]{color}| se utiliza l comando \verb|\color{Color}| para cambiar el color del texto desde el punto en que se utiliza, adem\'as se puede utlizar el comando \verb|\pagecolor{Color}| para cambiar el color de la p\'agina.\\
+Para cambiar colores de fondo y texto tambien se utilizan los comandos \verb|\textcolor{Color}{Texto}| para cambiar el color del texto, \verb|\colorbox{color}{texto}| para ponerle fondo de color al texto, \verb|\fcolorbox{ColorBorde}{ColorFondo}{texto}| para encerrar un texto en una caja con color de borde y de fondo:\\
+\textcolor{red}{Texto}\\\newline
+\colorbox{blue}{Texto}\\\newline
+\fcolorbox{blue}{green}{Texto}\\\newline
+
+Para cambiar el estilo del texto se utilizan los comandos \verb|\textbf{Texto}| para texto en negrita, \verb|\textit{Texto}| para texto en it\'alica, \verb|\textsl{Texto}| para texto inclinado y \verb|\texttt{Texto}| para texto en estilo. Ejemplos:\\
+Negrita: \textbf{Texto}\\
+Italica: \textit{Texto}\\
+Inclinado: \textsl{Texto}\\
+Estilo: \texttt{Texto}\\
+Para tama\~no de letra se utilizan los comandos
+\begin{lstlisting}
+	\tiny
+	\scriptsize
+	\small
+	\normalsize
+	\large
+	\Large
+	\LARGE
+	\huge
+	\Huge
+\end{lstlisting}
+Ejemplos:\\
+\verb|\tiny|: \tiny texto\\\normalsize
+\verb|\scriptsize|: \scriptsize texto\\\normalsize
+\verb|\small|: \small texto\\\normalsize
+\verb|\normalsize|: \normalsize texto\\\normalsize
+\verb|\large|: \large texto\\\normalsize
+\verb|\Large|: \Large texto\\\normalsize
+\verb|\LARGE|: \LARGE texto\\\normalsize
+\verb|\huge|: \huge texto\\\normalsize
+\verb|\Huge|: \Huge texto\\\normalsize
+\normalsize
+
+\subsection{Tildes y caracteres especiales}
+	Para utilizar otros caracteres especiales de idiomas diferentes como chino o ruso existe un paquete llamado Babel creado por Johannes Braams y Javier Bezos, para utilizar babel se utiliza el siguiente comando: \verb|\usepackage[language]{babel}| es recomendado utilizar este comando inmediatamente despues de utilizar \verb|\documentclass| asi otros paquetes sabran que lenguaje se esta utilizando. Babel permite ser "invocado"utilizando varios lenguajes como parametros, de esta forma si tenemos el comando \verb|\usepackage[languageA,languageB]{babel}| se tomará el "languageB" como el lenguaje activo y se podrá cambiar uttilizando \verb|\selectlanguage{languageA}|, además, babel permite utilizar ciertos comandos como \verb|\foreignlanguage{language}{Texto}| y \verb|\begin{otherlanguage}...\end{otherlanguage}| para encapsular texto escrito en otros idiomas.\newline\newline
+	\begin{minipage}{0.2\textwidth}
+		\begin{tabular}{ l r r }
+			\LaTeX & Resultado \\
+			\hline\\
+			\verb|\'e| & \'e \\
+			\verb|\=e| & \=e \\
+			\verb|\u e|& \u e\\
+			\verb|\d e|& \d e \\
+			\verb|\oe| & \oe \\
+			\verb|\aa| & \aa \\
+			\verb|\i| & \i \\
+			\verb|\l| & \l \\
+			\verb|\`e| & \`e \\
+			\verb|\.e| & \.e \\
+			\verb|\v e| & \v e \\
+			\verb|\b e| & \b e \\
+			\verb|\OE| & \OE \\
+			\verb|\AA| & \AA \\
+		\end{tabular}
+		\hfill
+	\end{minipage}
+	\begin{minipage}{0.1\textwidth}
+		\begin{tabular}{ l r r }
+			\LaTeX & Resultado \\
+			\hline\\
+			\verb|\j| & \j \\
+			\verb|\L| & \L \\
+			\verb|\l| & \l \\
+			\verb|\^e| & \^e \\
+			\verb|\"e| & \"e \\
+			\verb|\c e| & \c e \\
+			\verb|\t ee|& \t ee \\
+			\verb|\ae| & \ae \\
+			\verb|\o| & \o \\
+			\verb|\ss| & \ss \\
+			\verb|\~e| & \~e \\
+			\verb|\H e| & \H e \\
+			\verb|\r e| & \r e \\
+			\verb|\AE| & \AE \\
+			\verb|\O|& \O \\
+		\end{tabular}
+		\hfill
+	\end{minipage}\\
+	Para una lista m\'as detallada (Simbolos matematicos, griegos, entre otros) revisar \emph{Latex A Document Preparation System User's Guide and Reference Manual}\textsuperscript{[2]} p\'ag. 41
 \appendices
 \section{}
 Appendix one text goes here.
