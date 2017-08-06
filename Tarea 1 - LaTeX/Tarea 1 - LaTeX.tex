@@ -2,6 +2,7 @@
 \usepackage[spanish]{babel}
 \usepackage{listings}
 \usepackage{graphicx}
+\usepackage{wrapfig}
 \usepackage[usenames, dvipsnames]{color}
 \ifCLASSOPTIONcompsoc
   \usepackage[nocompress]{cite}
@@ -81,56 +82,6 @@ Con \LaTeX\ es posible escribir art\'iculos para revistas, reportes t\'ecnicos, 
 	\end{itemize}
 \end{itemize}
 
-\section{Minipage}%%%%%%%FIME minipage es seccion #7
-Minipage es utilizado para colocar objetos uno al lado de otros, los cuales, sin minipage, ser\'ia muy dificil.
-Comando para utilizar minipage:
-\begin{lstlisting}
-\begin{minipage}[adjusting]{width of the minipage}
-    Texto ... \ \
-    Imagenes ... \ \
-    Tablas ... \ \
-\end{minipage}
-\end{lstlisting}
-	Donde adjusting puede tomar valores de c (centrado), t(top), b(bottom)
-\subsection{Ejemplos}
-\begin{minipage}{0.2\textwidth}
-	\begin{tabular}{|c|c|c|}
-		\hline
-		A & B & C \\
-		\hline
-		1 & 2 & 3  \\
-		\hline 
-		4 & 5 & 6 \\
-		\hline
-	\end{tabular}
-\end{minipage}
-\begin{minipage}{0.2\textwidth}
-	\begin{tabular}{c|c|c}
-		A & B & C \\
-		\hline
-		1 & 2 & 3  \\
-		\hline 
-		4 & 5 & 6 \\
-	\end{tabular}
-\end{minipage}\\
-\newline
-Dos tablas juntas\\
-\begin{minipage}{0.2\textwidth}
-	\begin{tabular}{c|c|c}
-		A & B & C \\
-		\hline
-		1 & 2 & 3  \\
-		\hline 
-		4 & 5 & 6 \\
-	\end{tabular}
-\end{minipage}
-\begin{minipage}{0.2\textwidth}
-	\includegraphics[width=\textwidth]{pic1.jpg}
-\end{minipage}\\
-\newline
-Tabla junto a imagen\\
-
-
 \section{Como Crear...}
 \subsection{Efectos de letras y colores}
 Para cambiar texto de color se utiliza el paquete color \verb|\usepackage[usenames, dvipsnames]{color}| se utiliza l comando \verb|\color{Color}| para cambiar el color del texto desde el punto en que se utiliza, adem\'as se puede utlizar el comando \verb|\pagecolor{Color}| para cambiar el color de la p\'agina.\\
@@ -169,7 +120,7 @@ Ejemplos:\\
 \normalsize
 
 \subsection{Tildes y caracteres especiales}
-	Para utilizar otros caracteres especiales de idiomas diferentes como chino o ruso existe un paquete llamado Babel creado por Johannes Braams y Javier Bezos, para utilizar babel se utiliza el siguiente comando: \verb|\usepackage[language]{babel}| es recomendado utilizar este comando inmediatamente despues de utilizar \verb|\documentclass| asi otros paquetes sabran que lenguaje se esta utilizando. Babel permite ser "invocado"utilizando varios lenguajes como parametros, de esta forma si tenemos el comando \verb|\usepackage[languageA,languageB]{babel}| se tomará el "languageB" como el lenguaje activo y se podrá cambiar uttilizando \verb|\selectlanguage{languageA}|, además, babel permite utilizar ciertos comandos como \verb|\foreignlanguage{language}{Texto}| y \verb|\begin{otherlanguage}...\end{otherlanguage}| para encapsular texto escrito en otros idiomas.\newline\newline
+Para utilizar otros caracteres especiales de idiomas diferentes como chino o ruso existe un paquete llamado Babel creado por Johannes Braams y Javier Bezos, para utilizar babel se utiliza el siguiente comando: \verb|\usepackage[language]{babel}| es recomendado utilizar este comando inmediatamente despues de utilizar \verb|\documentclass| asi otros paquetes sabran que lenguaje se esta utilizando. Babel permite ser "invocado"utilizando varios lenguajes como parametros, de esta forma si tenemos el comando \verb|\usepackage[languageA,languageB]{babel}| se tomará el "languageB" como el lenguaje activo y se podrá cambiar uttilizando \verb|\selectlanguage{languageA}|, además, babel permite utilizar ciertos comandos como \verb|\foreignlanguage{language}{Texto}| y \verb|\begin{otherlanguage}...\end{otherlanguage}| para encapsular texto escrito en otros idiomas.\newline\newline
 	\begin{minipage}{0.2\textwidth}
 		\begin{tabular}{ l r r }
 			\LaTeX & Resultado \\
@@ -213,7 +164,87 @@ Ejemplos:\\
 		\end{tabular}
 		\hfill
 	\end{minipage}\\
-	Para una lista m\'as detallada (Simbolos matematicos, griegos, entre otros) revisar \emph{Latex A Document Preparation System User's Guide and Reference Manual}\textsuperscript{[2]} p\'ag. 41
+	Para una lista m\'as detallada (Simbolos matem\'aticos, griegos, entre otros) revisar \emph{Latex A Document Preparation System User's Guide and Reference Manual}\textsuperscript{[2]} p\'ag. 41
+
+\section{Minipage}%%%%%%%FIME minipage es seccion #7
+Minipage es utilizado para colocar objetos uno al lado de otros, los cuales, sin minipage, ser\'ia muy dificil.
+Comando para utilizar minipage:
+\begin{lstlisting}
+\begin{minipage}[adjusting]{width of the minipage}
+Texto ... \ \
+Imagenes ... \ \
+Tablas ... \ \
+\end{minipage}
+\end{lstlisting}
+Donde adjusting puede tomar valores de c (centrado), t(top), b(bottom)
+\subsection{Ejemplos}
+\begin{minipage}{0.2\textwidth}
+	\begin{tabular}{|c|c|c|}
+		\hline
+		A & B & C \\
+		\hline
+		1 & 2 & 3  \\
+		\hline 
+		4 & 5 & 6 \\
+		\hline
+	\end{tabular}
+\end{minipage}
+\begin{minipage}{0.2\textwidth}
+	\begin{tabular}{c|c|c}
+		A & B & C \\
+		\hline
+		1 & 2 & 3  \\
+		\hline 
+		4 & 5 & 6 \\
+	\end{tabular}
+\end{minipage}\\
+\newline
+Dos tablas juntas\\
+\begin{minipage}{0.2\textwidth}
+	\begin{tabular}{c|c|c}
+		A & B & C \\
+		\hline
+		1 & 2 & 3  \\
+		\hline 
+		4 & 5 & 6 \\
+	\end{tabular}
+\end{minipage}
+\begin{minipage}{0.2\textwidth}
+	\includegraphics[width=\textwidth]{pic1.jpg}
+\end{minipage}\\
+\newline
+Tabla junto a imagen\\
+
+\section{Como crear figuras y gr\'aficas}
+Para insertar gr\'aficos y figuras se utiliza el paquete \verb|\usepackage{graphicx}|. Para insertar figuras se utiliza el siguiente comando
+\begin{lstlisting}
+\begin{figure}
+\centering
+\includegraphics{grafico}
+\caption{Caption}
+\label{Label}
+\end{figure}
+\end{lstlisting}
+donde gr\'afico es el path de la figura que se quiere insertar y caption y label son textos que se le puede insertar a la figura. Ejemplo:\\
+\begin{figure}
+	\centering
+	\includegraphics[width=0.3\textwidth]{pic1.jpg}
+	\caption{Caption}
+\end{figure}
+Ejemplo:\\
+\begin{wrapfigure}{r}{0.1\textwidth}
+	\begin{center}
+		\includegraphics[width=0.1\textwidth]{pic1.jpg}
+	\end{center}
+	\caption{A gull}
+\end{wrapfigure}
+Para mayor comodidad y para mejorar la apariencia existe la posibilidad de hacer que el texto envuelva la imagen con el uso de \verb|\usepackage{wrapfig}| y el comando de inicio:
+\begin{lstlisting}
+\begin{wrapfigure}{i}{0.5\textwidth}
+contenido
+\end{wrapfigure}
+\end{lstlisting}
+
 \appendices
 \section{}
 Appendix one text goes here.

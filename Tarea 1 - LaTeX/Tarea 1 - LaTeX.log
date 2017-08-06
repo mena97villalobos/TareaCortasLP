@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6300 64-bit) (preloaded format=pdflatex 2017.6.21)  6 AUG 2017 10:44
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6300 64-bit) (preloaded format=pdflatex 2017.6.21)  6 AUG 2017 16:46
 entering extended mode
 **"./Tarea 1 - LaTeX.tex"
 ("Tarea 1 - LaTeX.tex"
@@ -196,6 +196,14 @@ Package: ltxcmds 2016/05/16 v1.23 LaTeX kernel commands for general use (HO)
 \Gin@req@height=\dimen131
 \Gin@req@width=\dimen132
 )
+(C:\Users\mena9\AppData\Roaming\MiKTeX\2.9\tex\latex\wrapfig\wrapfig.sty
+\wrapoverhang=\dimen133
+\WF@size=\dimen134
+\c@WF@wrappedlines=\count105
+\WF@box=\box30
+\WF@everypar=\toks18
+Package: wrapfig 2003/01/31  v 3.6
+)
 ("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\color.sty"
 Package: color 2016/07/10 v1.1e Standard LaTeX Color (DPC)
 
@@ -218,36 +226,36 @@ LaTeX Info: Redefining \% on input line 6.
 )
 \openout1 = `"Tarea 1 - LaTeX.aux"'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 26.
-LaTeX Font Info:    ... okay on input line 26.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 26.
-LaTeX Font Info:    ... okay on input line 26.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 26.
-LaTeX Font Info:    ... okay on input line 26.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 26.
-LaTeX Font Info:    ... okay on input line 26.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 26.
-LaTeX Font Info:    ... okay on input line 26.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 26.
-LaTeX Font Info:    ... okay on input line 26.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 27.
+LaTeX Font Info:    ... okay on input line 27.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 27.
+LaTeX Font Info:    ... okay on input line 27.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 27.
+LaTeX Font Info:    ... okay on input line 27.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 27.
+LaTeX Font Info:    ... okay on input line 27.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 27.
+LaTeX Font Info:    ... okay on input line 27.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 27.
+LaTeX Font Info:    ... okay on input line 27.
 
 -- Lines per column: 61 (exact).
-LaTeX Info: Redefining \. on input line 26.
-LaTeX Info: Redefining \% on input line 26.
-\c@lstlisting=\count105
+LaTeX Info: Redefining \. on input line 27.
+LaTeX Info: Redefining \% on input line 27.
+\c@lstlisting=\count106
 (C:\Users\mena9\AppData\Roaming\MiKTeX\2.9\tex\context\base\supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count106
-\scratchdimen=\dimen133
-\scratchbox=\box30
-\nofMPsegments=\count107
-\nofMParguments=\count108
-\everyMPshowfont=\toks18
-\MPscratchCnt=\count109
-\MPscratchDim=\dimen134
-\MPnumerator=\count110
-\makeMPintoPDFobject=\count111
-\everyMPtoPDFconversion=\toks19
+\scratchcounter=\count107
+\scratchdimen=\dimen135
+\scratchbox=\box31
+\nofMPsegments=\count108
+\nofMParguments=\count109
+\everyMPshowfont=\toks19
+\MPscratchCnt=\count110
+\MPscratchDim=\dimen136
+\MPnumerator=\count111
+\makeMPintoPDFobject=\count112
+\everyMPtoPDFconversion=\toks20
 ) ("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\pdftexcmds.sty"
 Package: pdftexcmds 2017/03/19 v0.25 Utility functions of pdfTeX for LuaTeX (HO
 )
@@ -293,144 +301,118 @@ Package grfext Info: Graphics extension search list:
 G,.JBIG2,.JB2,.eps]
 (grfext)             \AppendGraphicsExtensions on input line 456.
 )
-LaTeX Font Info:    Try loading font information for OT1+phv on input line 42.
+LaTeX Font Info:    Try loading font information for OT1+phv on input line 43.
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\psnfss\ot1phv.fd"
 File: ot1phv.fd 2001/06/04 scalable font definitions for OT1/phv.
 )
-LaTeX Font Info:    Calculating math sizes for size <24.09> on input line 42.
+LaTeX Font Info:    Calculating math sizes for size <24.09> on input line 43.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <24.09> on input line 42.
+(Font)              <24.09> on input line 43.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <16.86292> on input line 42.
+(Font)              <16.86292> on input line 43.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <12.045> on input line 42.
+(Font)              <12.045> on input line 43.
 LaTeX Font Info:    Font shape `OT1/phv/m/it' in size <11.04124> not available
-(Font)              Font shape `OT1/phv/m/sl' tried instead on input line 42.
+(Font)              Font shape `OT1/phv/m/sl' tried instead on input line 43.
 LaTeX Font Info:    Font shape `OT1/phv/bx/n' in size <8.03> not available
-(Font)              Font shape `OT1/phv/b/n' tried instead on input line 42.
-LaTeX Font Info:    Calculating math sizes for size <11.04124> on input line 42
+(Font)              Font shape `OT1/phv/b/n' tried instead on input line 43.
+LaTeX Font Info:    Calculating math sizes for size <11.04124> on input line 43
 .
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <11.04124> on input line 42.
+(Font)              <11.04124> on input line 43.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7.72884> on input line 42.
+(Font)              <7.72884> on input line 43.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5.52061> on input line 42.
-LaTeX Font Info:    Try loading font information for U+pzd on input line 42.
+(Font)              <5.52061> on input line 43.
+LaTeX Font Info:    Try loading font information for U+pzd on input line 43.
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\psnfss\upzd.fd"
 File: upzd.fd 2001/06/04 font definitions for U/pzd.
 )
 LaTeX Font Info:    Font shape `OT1/phv/bx/n' in size <11.04124> not available
-(Font)              Font shape `OT1/phv/b/n' tried instead on input line 48.
+(Font)              Font shape `OT1/phv/b/n' tried instead on input line 49.
 LaTeX Font Info:    Font shape `OT1/phv/bx/sc' in size <11.04124> not available
 
-(Font)              Font shape `OT1/phv/b/sc' tried instead on input line 48.
+(Font)              Font shape `OT1/phv/b/sc' tried instead on input line 49.
 Missing character: There is no Ã in font pplr7t!
 Missing character: There is no ± in font pplr7t!
-LaTeX Font Info:    Calculating math sizes for size <9.53561> on input line 51.
+LaTeX Font Info:    Calculating math sizes for size <9.53561> on input line 52.
 
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <9.53561> on input line 51.
+(Font)              <9.53561> on input line 52.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6.6749> on input line 51.
+(Font)              <6.6749> on input line 52.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <4.7678> on input line 51.
-LaTeX Font Info:    Try loading font information for OMS+ppl on input line 57.
+(Font)              <4.7678> on input line 52.
+LaTeX Font Info:    Try loading font information for OMS+ppl on input line 58.
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\psnfss\omsppl.fd"
 File: omsppl.fd 
 )
 LaTeX Font Info:    Font shape `OMS/ppl/m/n' in size <9.53561> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 57.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 58.
 
-Underfull \hbox (badness 4660) in paragraph at lines 66--67
+Underfull \hbox (badness 4660) in paragraph at lines 67--68
 []\OT1/ppl/m/n/9.53561 Formato al-ta-men-te uti-li-za-do pa-ra
  []
 
 Missing character: There is no Ã in font pplr7t!
 Missing character: There is no ± in font pplr7t!
-
-Overfull \hbox (33.12602pt too wide) in paragraph at lines 88--89
-[][][][][][][][][][][][][][][][][] 
- []
-
 LaTeX Font Info:    Font shape `OT1/phv/bx/n' in size <9.53561> not available
-(Font)              Font shape `OT1/phv/b/n' tried instead on input line 95.
-<pic1.jpg, id=1, 186.6975pt x 140.525pt>
-File: pic1.jpg Graphic file (type jpg)
- <use pic1.jpg>
-Package pdftex.def Info: pic1.jpg used on input line 128.
-(pdftex.def)             Requested size: 103.58542pt x 77.96655pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 96--132
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 96--132
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 96--132
-
- []
-
-LaTeX Font Info:    Try loading font information for OT1+pcr on input line 136.
-
+(Font)              Font shape `OT1/phv/b/n' tried instead on input line 86.
+LaTeX Font Info:    Try loading font information for OT1+pcr on input line 87.
 ("C:\Program Files\MiKTeX 2.9\tex\latex\psnfss\ot1pcr.fd"
 File: ot1pcr.fd 2001/06/04 font definitions for OT1/pcr.
 )
-Underfull \hbox (badness 10000) in paragraph at lines 136--141
+Underfull \hbox (badness 10000) in paragraph at lines 87--92
 [][]\OT1/pcr/m/n/9.53561 \usepackage[usenames, dvipsnames]{color} []\OT1/ppl/m/
 n/9.53561 se
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 136--141
+Underfull \hbox (badness 10000) in paragraph at lines 87--92
 \OT1/ppl/m/n/9.53561 los co-man-dos [][]\OT1/pcr/m/n/9.53561 \textcolor{Color}{
 Texto} []\OT1/ppl/m/n/9.53561 pa-ra
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 136--141
+Underfull \hbox (badness 10000) in paragraph at lines 87--92
 []\OT1/ppl/m/n/9.53561 pa-ra po-ner-le fon-do de co-lor al tex-to,
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 136--141
+Underfull \hbox (badness 10000) in paragraph at lines 87--92
 [][]\OT1/pcr/m/n/9.53561 \fcolorbox{ColorBorde}{ColorFondo}{texto}
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 136--141
+Underfull \hbox (badness 10000) in paragraph at lines 87--92
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 136--141
+Underfull \hbox (badness 10000) in paragraph at lines 87--92
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 136--141
+Underfull \hbox (badness 10000) in paragraph at lines 87--92
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 136--141
+Underfull \hbox (badness 10000) in paragraph at lines 87--92
 
  []
 
-LaTeX Info: Redefining \. on input line 141.
-LaTeX Info: Redefining \% on input line 141.
+LaTeX Info: Redefining \. on input line 107.
+LaTeX Info: Redefining \% on input line 107.
 [1{C:/Users/mena9/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}
 
 
- <./pic1.jpg>]
-Underfull \hbox (badness 10000) in paragraph at lines 159--170
+]
+Underfull \hbox (badness 10000) in paragraph at lines 110--121
 
  []
 
@@ -440,162 +422,237 @@ Missing character: There is no Ã in font pplr7t!
 Missing character: There is no ¡ in font pplr7t!
 Missing character: There is no Ã in font pplr7t!
 Missing character: There is no ¡ in font pplr7t!
-LaTeX Font Info:    Try loading font information for OML+ppl on input line 204.
+LaTeX Font Info:    Try loading font information for OML+ppl on input line 155.
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\psnfss\omlppl.fd"
 File: omlppl.fd 
 )
 LaTeX Font Info:    Font shape `OML/ppl/m/n' in size <9.53561> not available
-(Font)              Font shape `OML/cmm/m/it' tried instead on input line 204.
+(Font)              Font shape `OML/cmm/m/it' tried instead on input line 155.
 
-Overfull \hbox (43.22401pt too wide) in paragraph at lines 195--215
+Overfull \hbox (43.22401pt too wide) in paragraph at lines 146--166
 [][]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 195--215
+Underfull \hbox (badness 10000) in paragraph at lines 146--166
 
  []
 
 
-Underfull \hbox (badness 7326) in paragraph at lines 172--217
+Underfull \hbox (badness 7326) in paragraph at lines 123--168
 \OT1/ppl/m/n/9.53561 di-fe-ren-tes co-mo chino o ru-so exis-te un pa-que-te
  []
 
 
-Underfull \hbox (badness 1902) in paragraph at lines 172--217
+Underfull \hbox (badness 1902) in paragraph at lines 123--168
 \OT1/ppl/m/n/9.53561 lla-ma-do Ba-bel crea-do por Johan-nes Braams y Ja-vier
  []
 
 
-Underfull \hbox (badness 7777) in paragraph at lines 172--217
+Underfull \hbox (badness 7777) in paragraph at lines 123--168
 \OT1/ppl/m/n/9.53561 Be-zos, pa-ra uti-li-zar ba-bel se uti-li-za el si-guien-t
 e
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 172--217
+Underfull \hbox (badness 10000) in paragraph at lines 123--168
 \OT1/ppl/m/n/9.53561 co-man-do: [][]\OT1/pcr/m/n/9.53561 \usepackage[language]{
 babel} []\OT1/ppl/m/n/9.53561 es
  []
 
 
-Underfull \hbox (badness 6910) in paragraph at lines 172--217
+Underfull \hbox (badness 6910) in paragraph at lines 123--168
 \OT1/ppl/m/n/9.53561 re-co-men-da-do uti-li-zar es-te co-man-do in-me-dia-ta-me
 n-te
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 172--217
+Underfull \hbox (badness 10000) in paragraph at lines 123--168
 \OT1/ppl/m/n/9.53561 des-pues de uti-li-zar [][]\OT1/pcr/m/n/9.53561 \documentc
 lass []\OT1/ppl/m/n/9.53561 asi otros
  []
 
 
-Underfull \hbox (badness 1742) in paragraph at lines 172--217
+Underfull \hbox (badness 1742) in paragraph at lines 123--168
 \OT1/ppl/m/n/9.53561 per-mi-te ser []nvo-ca-do[]uti-li-zan-do va-rios len-gua-
 jes co-mo
  []
 
 
-Underfull \hbox (badness 3849) in paragraph at lines 172--217
+Underfull \hbox (badness 3849) in paragraph at lines 123--168
 \OT1/ppl/m/n/9.53561 pa-ra-me-tros, de es-ta for-ma si te-ne-mos el co-man-do
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 172--217
+Underfull \hbox (badness 10000) in paragraph at lines 123--168
 [][]\OT1/pcr/m/n/9.53561 \usepackage[languageA,languageB]{babel} []\OT1/ppl/m/n
 /9.53561 se
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 172--217
+Underfull \hbox (badness 10000) in paragraph at lines 123--168
 \OT1/ppl/m/n/9.53561 cam-biar ut-ti-li-zan-do [][]\OT1/pcr/m/n/9.53561 \selectl
 anguage{languageA}[]\OT1/ppl/m/n/9.53561 ,
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 172--217
+Underfull \hbox (badness 10000) in paragraph at lines 123--168
 \OT1/ppl/m/n/9.53561 adems, ba-bel per-mi-te uti-li-zar cier-tos co-man-dos
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 172--217
+Underfull \hbox (badness 10000) in paragraph at lines 123--168
 \OT1/ppl/m/n/9.53561 co-mo [][]\OT1/pcr/m/n/9.53561 \foreignlanguage{language}{
 Texto} []\OT1/ppl/m/n/9.53561 y
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 172--217
+Underfull \hbox (badness 10000) in paragraph at lines 123--168
 [][]\OT1/pcr/m/n/9.53561 \begin{otherlanguage}...\end{otherlanguage}
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 172--217
+Underfull \hbox (badness 10000) in paragraph at lines 123--168
 
  []
 
 
-Underfull \hbox (badness 2150) in paragraph at lines 172--217
-\OT1/ppl/m/n/9.53561 Para una lis-ta m[]as de-ta-lla-da (Sim-bo-los ma-te-ma-ti
+Underfull \hbox (badness 2150) in paragraph at lines 123--168
+\OT1/ppl/m/n/9.53561 Para una lis-ta m[]as de-ta-lla-da (Sim-bo-los ma-tem[]ati
 -cos,
  []
 
 
-Underfull \hbox (badness 4686) in paragraph at lines 227--228
-[]\OT1/ppl/m/n/8.03 J. Braams y J. Be-zos \OT1/ppl/m/it/8.03 Ba-bel\OT1/ppl/m/n
-/8.03 , Ju-nio 2017. Re-cu-pe-ra-do de
+Overfull \hbox (33.12602pt too wide) in paragraph at lines 173--174
+[][][][][][][][][][][][][][][][][] 
+ []
+
+<pic1.jpg, id=15, 186.6975pt x 140.525pt>
+File: pic1.jpg Graphic file (type jpg)
+ <use pic1.jpg>
+Package pdftex.def Info: pic1.jpg used on input line 213.
+(pdftex.def)             Requested size: 103.58542pt x 77.96655pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 181--217
+
  []
 
 
-Overfull \hbox (41.07558pt too wide) in paragraph at lines 227--228
-\OT1/ppl/m/n/8.03 http://ftp.ntou.edu.tw/ctan/macros/latex2e/required/babel/bas
-e/babel.pdf 
+Underfull \hbox (badness 10000) in paragraph at lines 181--217
+
  []
 
-LaTeX Font Info:    Calculating math sizes for size <8.03> on input line 231.
+
+Underfull \hbox (badness 10000) in paragraph at lines 181--217
+
+ []
+
+File: pic1.jpg Graphic file (type jpg)
+<use pic1.jpg>
+Package pdftex.def Info: pic1.jpg used on input line 231.
+(pdftex.def)             Requested size: 155.38206pt x 116.95949pt.
+
+
+Package wrapfig Warning: wrapfigure used inside a conflicting environment on in
+put line 235.
+
+File: pic1.jpg Graphic file (type jpg)
+<use pic1.jpg>
+Package pdftex.def Info: pic1.jpg used on input line 237.
+(pdftex.def)             Requested size: 51.79665pt x 38.9865pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 239--239
+\OT1/phv/m/n/8.03 Figura 2. A
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 228--240
+
+ []
+
+
+Package wrapfig Warning: Stationary wrapfigure forced to float on input line 24
+0.
+
+LaTeX Info: Redefining \. on input line 243.
+LaTeX Info: Redefining \% on input line 243.
+[2 <./pic1.jpg>]
+Overfull \hbox (16.86778pt too wide) in paragraph at lines 243--244
+[][][][][][][][][][][][] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 258--259
+[]\OT1/ppl/m/n/8.03 J. Braams y J. Be-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 258--259
+\OT1/ppl/m/n/8.03 zos \OT1/ppl/m/it/8.03 Ba-bel\OT1/ppl/m/n/8.03 , Ju-nio 2017.
+
+ []
+
+
+Overfull \hbox (145.67902pt too wide) in paragraph at lines 258--259
+\OT1/ppl/m/n/8.03 Re-cu-pe-ra-do de http://ftp.ntou.edu.tw/ctan/macros/latex2e/
+required/babel/base/babel.pdf 
+ []
+
+LaTeX Font Info:    Calculating math sizes for size <8.03> on input line 262.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8.03> on input line 231.
+(Font)              <8.03> on input line 262.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5.62097> on input line 231.
+(Font)              <5.62097> on input line 262.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <4.015> on input line 231.
+(Font)              <4.015> on input line 262.
 
-Underfull \hbox (badness 10000) in paragraph at lines 230--232
-[]\OT1/ppl/m/n/8.03 L. Lam-port \OT1/ppl/m/it/8.03 La-tex A Do-cu-ment Pre-pa-r
-a-tion Sys-tem
+Underfull \hbox (badness 10000) in paragraph at lines 261--263
+[]\OT1/ppl/m/n/8.03 L. Lam-port \OT1/ppl/m/it/8.03 La-tex A Do-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 230--232
-\OT1/ppl/m/it/8.03 User's Gui-de and Re-fe-ren-ce Ma-nual \OT1/ppl/m/n/8.03 Re-
-cu-pe-ra-do de:
+Underfull \hbox (badness 10000) in paragraph at lines 261--263
+\OT1/ppl/m/it/8.03 cu-ment Pre-pa-ra-tion Sys-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 230--232
-\OT1/ppl/m/n/8.03 http://users.softlab.ntua.gr/ sivann/books/LaTeX$ $%20-
+Underfull \hbox (badness 10000) in paragraph at lines 261--263
+\OT1/ppl/m/it/8.03 tem User's Gui-de and
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 230--232
+Underfull \hbox (badness 10000) in paragraph at lines 261--263
+\OT1/ppl/m/it/8.03 Re-fe-ren-ce Ma-nual \OT1/ppl/m/n/8.03 Re-
+ []
+
+
+Overfull \hbox (59.5863pt too wide) in paragraph at lines 261--263
+\OT1/ppl/m/n/8.03 cu-pe-ra-do de: http://users.softlab.ntua.gr/ sivann/books/La
+TeX$ $%20-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 261--263
 \OT1/ppl/m/n/8.03 %20User's$ $%20Guide$ $%20and$ $%20Reference$ $%20Manual-
  []
 
-LaTeX Info: Redefining \. on input line 237.
-LaTeX Info: Redefining \% on input line 237.
-[2] ("Tarea 1 - LaTeX.aux"
+LaTeX Info: Redefining \. on input line 268.
+LaTeX Info: Redefining \% on input line 268.
+[3
+
+] ("Tarea 1 - LaTeX.aux"
 LaTeX Info: Redefining \. on input line 6.
 LaTeX Info: Redefining \% on input line 6.
 ) ) 
 Here is how much of TeX's memory you used:
- 4921 strings out of 493328
- 75433 string characters out of 3139124
- 157477 words of memory out of 3000000
- 8369 multiletter control sequences out of 15000+200000
+ 4986 strings out of 493328
+ 76291 string characters out of 3139124
+ 160687 words of memory out of 3000000
+ 8430 multiletter control sequences out of 15000+200000
  59264 words of font info for 121 fonts, out of 3000000 for 9000
  1144 hyphenation exceptions out of 8191
- 39i,14n,32p,931b,859s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 39i,14n,32p,930b,1611s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/base/8r.enc}<C:/Program Files/M
 iKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Program Files/MiKTeX 2.
 9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files/MiKTeX 2.9/fonts/
@@ -606,9 +663,9 @@ Files/MiKTeX 2.9/fonts/type1/urw/palatino/uplb8a.pfb><C:/Program Files/MiKTeX 2
 .9/fonts/type1/urw/palatino/uplr8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1
 /urw/palatino/uplr8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/palatino/
 uplri8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/zapfding/uzdr.pfb>
-Output written on "Tarea 1 - LaTeX.pdf" (2 pages, 135002 bytes).
+Output written on "Tarea 1 - LaTeX.pdf" (3 pages, 137514 bytes).
 PDF statistics:
- 55 PDF objects out of 1000 (max. 8388607)
+ 58 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  6 words of extra memory for PDF output out of 10000 (max. 10000000)
 
