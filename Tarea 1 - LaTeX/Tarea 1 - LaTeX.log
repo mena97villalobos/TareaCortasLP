@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6300 64-bit) (preloaded format=pdflatex 2017.8.4)  4 AUG 2017 22:33
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6300 64-bit) (preloaded format=pdflatex 2017.8.4)  19 AUG 2017 18:10
 entering extended mode
 **"./Tarea 1 - LaTeX.tex"
 ("Tarea 1 - LaTeX.tex"
@@ -683,197 +683,73 @@ Missing character: There is no Ã in font pplr7t!
 Missing character: There is no ± in font pplr7t!
 LaTeX Font Info:    Font shape `OT1/phv/bx/n' in size <9.53561> not available
 (Font)              Font shape `OT1/phv/b/n' tried instead on input line 104.
-LaTeX Font Info:    Try loading font information for OT1+pcr on input line 117.
+LaTeX Font Info:    Try loading font information for OT1+pcr on input line 116.
 
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\psnfss\ot1pcr.fd"
 File: ot1pcr.fd 2001/06/04 font definitions for OT1/pcr.
 )
-LaTeX Font Info:    Calculating math sizes for size <8.03> on input line 132.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8.03> on input line 132.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5.62097> on input line 132.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <4.015> on input line 132.
-LaTeX Font Info:    Try loading font information for OML+ppl on input line 156.
-
-
-("C:\Program Files\MiKTeX 2.9\tex\latex\psnfss\omlppl.fd"
-File: omlppl.fd 
-)
-LaTeX Font Info:    Font shape `OML/ppl/m/n' in size <8.03> not available
-(Font)              Font shape `OML/cmm/m/it' tried instead on input line 156.
-Missing character: There is no Ã in font pplr7t!
-Missing character: There is no ¡ in font pplr7t!
-Missing character: There is no Ã in font pplr7t!
-Missing character: There is no ¡ in font pplr7t!
-Missing character: There is no Ã in font pplr7t!
-Missing character: There is no ¡ in font pplr7t!
-Missing character: There is no Ã in font pplr7t!
-Missing character: There is no ¡ in font pplr7t!
-
-Underfull \hbox (badness 3746) in paragraph at lines 168--170
-\OT1/ppl/m/it/9.53561 Sys-tem User's Gui-de and Re-fe-ren-ce Ma-nual\OT1/ppl/m/
-n/9.53561 [2] pg. 41
+Underfull \hbox (badness 10000) in paragraph at lines 124--125
+[]\OT1/ppl/m/n/9.53561 Una gu[]a m[]as de-ta-lla-da y ex-ten-sa pue-de
  []
 
 
-Underfull \hbox (badness 4366) in paragraph at lines 168--170
-\OT1/ppl/m/n/9.53561 Pa-ra uti-li-zar otros ca-rac-te-res es-pe-cia-les de idio
--mas
+Underfull \hbox (badness 10000) in paragraph at lines 124--125
+\OT1/ppl/m/n/9.53561 en-con-trar-se en \OT1/ppl/m/it/9.53561 http://ctan.math.w
+ashington.edu/tex-
  []
 
 
-Underfull \hbox (badness 7326) in paragraph at lines 168--170
-\OT1/ppl/m/n/9.53561 di-fe-ren-tes co-mo chino o ru-so exis-te un pa-que-te
- []
-
-
-Underfull \hbox (badness 1902) in paragraph at lines 168--170
-\OT1/ppl/m/n/9.53561 lla-ma-do Ba-bel crea-do por Johan-nes Braams y Ja-vier
- []
-
-
-Underfull \hbox (badness 7777) in paragraph at lines 168--170
-\OT1/ppl/m/n/9.53561 Be-zos, pa-ra uti-li-zar ba-bel se uti-li-za el si-guien-t
-e
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 168--170
-\OT1/ppl/m/n/9.53561 co-man-do: [][]\OT1/pcr/m/n/9.53561 \usepackage[language]{
-babel} []\OT1/ppl/m/n/9.53561 es
- []
-
-
-Underfull \hbox (badness 6910) in paragraph at lines 168--170
-\OT1/ppl/m/n/9.53561 re-co-men-da-do uti-li-zar es-te co-man-do in-me-dia-ta-me
-n-te
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 168--170
-\OT1/ppl/m/n/9.53561 des-pues de uti-li-zar [][]\OT1/pcr/m/n/9.53561 \documentc
-lass []\OT1/ppl/m/n/9.53561 asi otros
- []
-
-
-Underfull \hbox (badness 1742) in paragraph at lines 168--170
-\OT1/ppl/m/n/9.53561 per-mi-te ser []nvo-ca-do[]uti-li-zan-do va-rios len-gua-
-jes co-mo
- []
-
-
-Underfull \hbox (badness 3849) in paragraph at lines 168--170
-\OT1/ppl/m/n/9.53561 pa-ra-me-tros, de es-ta for-ma si te-ne-mos el co-man-do
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 168--170
-[][]\OT1/pcr/m/n/9.53561 \usepackage[languageA,languageB]{babel} []\OT1/ppl/m/n
-/9.53561 se
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 168--170
-\OT1/ppl/m/n/9.53561 cam-biar ut-ti-li-zan-do [][]\OT1/pcr/m/n/9.53561 \selectl
-anguage{languageA}[]\OT1/ppl/m/n/9.53561 ,
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 168--170
-\OT1/ppl/m/n/9.53561 adems, ba-bel per-mi-te uti-li-zar cier-tos co-man-dos
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 168--170
-\OT1/ppl/m/n/9.53561 co-mo [][]\OT1/pcr/m/n/9.53561 \foreignlanguage{language}{
-Texto} []\OT1/ppl/m/n/9.53561 y
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 168--170
-[][]\OT1/pcr/m/n/9.53561 \begin{otherlanguage}...\end{otherlanguage}
+Overfull \hbox (1.27115pt too wide) in paragraph at lines 124--125
+\OT1/ppl/m/it/9.53561 archive/macros/latex/contrib/xwatermark/doc/xwatermark-
  []
 
 <ITCR_LOGO.png, id=4, 1606.0pt x 373.395pt>
 File: ITCR_LOGO.png Graphic file (type png)
  <use ITCR_LOGO.png>
-Package pdftex.def Info: ITCR_LOGO.png used on input line 175.
+Package pdftex.def Info: ITCR_LOGO.png used on input line 137.
 (pdftex.def)             Requested size: 24.08896pt x 5.60068pt.
-LaTeX Info: Redefining \. on input line 175.
-LaTeX Info: Redefining \% on input line 175.
+LaTeX Info: Redefining \. on input line 137.
+LaTeX Info: Redefining \% on input line 137.
  [1{C:/ProgramData/MiKTeX/2.9/pdftex/config/pdftex.map}
 
 
  <./ITCR_LOGO.png>]
-Underfull \hbox (badness 4686) in paragraph at lines 181--182
-[]\OT1/ppl/m/n/8.03 J. Braams y J. Be-zos \OT1/ppl/m/it/8.03 Ba-bel\OT1/ppl/m/n
-/8.03 , Ju-nio 2017. Re-cu-pe-ra-do de
- []
-
-
-Overfull \hbox (41.07558pt too wide) in paragraph at lines 181--182
-\OT1/ppl/m/n/8.03 http://ftp.ntou.edu.tw/ctan/macros/latex2e/required/babel/bas
-e/babel.pdf 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 184--186
-[]\OT1/ppl/m/n/8.03 L. Lam-port \OT1/ppl/m/it/8.03 La-tex A Do-cu-ment Pre-pa-r
-a-tion Sys-tem
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 184--186
-\OT1/ppl/m/it/8.03 User's Gui-de and Re-fe-ren-ce Ma-nual \OT1/ppl/m/n/8.03 Re-
-cu-pe-ra-do de:
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 184--186
-\OT1/ppl/m/n/8.03 http://users.softlab.ntua.gr/ sivann/books/LaTeX$ $%20-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 184--186
-\OT1/ppl/m/n/8.03 %20User's$ $%20Guide$ $%20and$ $%20Reference$ $%20Manual-
- []
-
 File: ITCR_LOGO.png Graphic file (type png)
-<use ITCR_LOGO.png>
-Package pdftex.def Info: ITCR_LOGO.png used on input line 191.
+ <use ITCR_LOGO.png>
+Package pdftex.def Info: ITCR_LOGO.png used on input line 211.
 (pdftex.def)             Requested size: 24.08896pt x 5.60068pt.
-LaTeX Info: Redefining \. on input line 191.
-LaTeX Info: Redefining \% on input line 191.
- [2
+LaTeX Info: Redefining \. on input line 211.
+LaTeX Info: Redefining \% on input line 211.
+
+[2
 
 ] ("Tarea 1 - LaTeX.aux"
 LaTeX Info: Redefining \. on input line 7.
 LaTeX Info: Redefining \% on input line 7.
 ) ) 
 Here is how much of TeX's memory you used:
- 16689 strings out of 493320
- 314023 string characters out of 3138955
- 509261 words of memory out of 3000000
- 19891 multiletter control sequences out of 15000+200000
- 56231 words of font info for 118 fonts, out of 3000000 for 9000
+ 16659 strings out of 493320
+ 313560 string characters out of 3138955
+ 601261 words of memory out of 3000000
+ 19870 multiletter control sequences out of 15000+200000
+ 51224 words of font info for 109 fonts, out of 3000000 for 9000
  1144 hyphenation exceptions out of 8191
- 62i,14n,122p,914b,2185s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 62i,11n,122p,710b,2181s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/base/8r.enc}<C:/Program Files/M
-iKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Program Files/MiKTeX 2.9
-/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files/MiKTeX 2.9/fonts/t
-ype1/urw/courier/ucrr8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/helvet
-ic/uhvb8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/helvetic/uhvr8a.pfb>
-<C:/Program Files/MiKTeX 2.9/fonts/type1/urw/helvetic/uhvro8a.pfb><C:/Program F
-iles/MiKTeX 2.9/fonts/type1/urw/palatino/uplbi8a.pfb><C:/Program Files/MiKTeX 2
-.9/fonts/type1/urw/palatino/uplr8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1
-/urw/palatino/uplri8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/zapfding
-/uzdr.pfb>
-Output written on "Tarea 1 - LaTeX.pdf" (2 pages, 138840 bytes).
+iKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Program Files/MiKTeX 2.
+9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Program Files/MiKTeX 2.9/fonts/t
+ype1/public/amsfonts/cm/cmr7.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/publi
+c/amsfonts/cm/cmsy10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/courier/u
+crr8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/helvetic/uhvb8a.pfb><C:/
+Program Files/MiKTeX 2.9/fonts/type1/urw/helvetic/uhvr8a.pfb><C:/Program Files/
+MiKTeX 2.9/fonts/type1/urw/helvetic/uhvro8a.pfb><C:/Program Files/MiKTeX 2.9/fo
+nts/type1/urw/palatino/uplbi8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw
+/palatino/uplr8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/palatino/uplr
+i8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/zapfding/uzdr.pfb>
+Output written on "Tarea 1 - LaTeX.pdf" (2 pages, 154856 bytes).
 PDF statistics:
- 56 PDF objects out of 1000 (max. 8388607)
+ 64 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  18 words of extra memory for PDF output out of 10000 (max. 10000000)
 
