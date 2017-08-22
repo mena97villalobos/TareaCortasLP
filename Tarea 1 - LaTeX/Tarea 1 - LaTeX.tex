@@ -10,6 +10,7 @@
 \usepackage{lipsum}
 \usepackage{graphicx}
 \usepackage{background}
+\usepackage{color}
 \ifCLASSOPTIONcompsoc
   \usepackage[nocompress]{cite}
 \else
@@ -123,6 +124,170 @@ Con \LaTeX\ es posible escribir art\'iculos para revistas, reportes t\'ecnicos, 
 \end{itemize}
 
 \section{Como Crear...}
+
+
+\subsection{P\'arrafos}
+Desde el punto de vista de las personas, un p\'arrafo es la uni\'on de varias palabras las cuales se ubican despu\'es de un t\'itulo o punto y aparte, hasta el siguiente punto y aparte. En \LaTeX\ se pueden hacer p\'arrafos simplemente escribiendo despu\'es de una secci\'on o subsecci\'on.\\  Adem\'as, \LaTeX\ maneja p\'arrafos bajo una estructura propia. Para comenzar a escribir un p\'arrafo, es necesario escribir la etiqueta correspondiente para p\'arrafos, la cu\'al es la siguiente: 
+\begin{lstlisting}
+\paragraph{Titulo} 
+\end{lstlisting}
+Un ejemplo de un p\'arrafo implementado bajo esta etiqueta es el siguiente:
+\paragraph{Este es el t\'itulo} 
+Los estudiantes de segundo a\~no del T\'ecnol\'ogico de Costa Rica que cursan el segundo semestre de la carrera de Ingenier\'ia en Computaci\'on deber\'ian estar cursando en este momento el curso IC-4700 el cu\'al corresponde a Lenguajes de Programaci\'on.
+
+\subsection{Efectos de letras, colores}
+El estilo de letra se puede ajustar a las necesidades de los usuarios en diferentes formas: \\
+\begin{itemize}
+	
+	\item \'Enfasis: Se usa por medio del comando \\
+	\begin{lstlisting}
+	\emph{texto}
+	\end{lstlisting}
+	Adem\'as, este comando puede combinarse consigo mismo para devolver texto a la forma normal (sin enfatizar) entre un gran texto que s\'i tiene todo un \'enfasis de inicio a fin. Por ejemplo: \\
+	\emph{Dentro de esta frase existe una \emph{palabra} que no ha sido enfatizada.}
+	
+	\item It\'alico: Se usa por medio del comando \\
+	\begin{lstlisting}
+	\textit{texto}
+	\end{lstlisting}
+	Un ejemplo del uso de letra con efecto it\'alico es el siguiente: \\
+	Una serie que tiene muchos seguidores a nivel mundial es \textit{Game of Thrones}.
+	
+	\item Negrita: Se usa por medio del comando: \\
+	\begin{lstlisting}
+	\textbf{texto}
+	\end{lstlisting}
+	Un ejemplo del uso de la negrita en un texto es el siguiente: \\
+	Las personas que se \textbf{esfuerzan} y \textbf{luchan} por sus sue\~nos consiguen una gran recompensa.
+	
+	\item Letras min\'usculas: Sirve para poner letras en may\'uscula y con un tama\~no m\'as peque\~no de lo tradicional. Se usa por medio del comando \\
+	\begin{lstlisting}
+	\textsc{texto}
+	\end{lstlisting}
+	Un ejemplo del uso de este efecto es el siguiente: \\
+	No se lee igual la palabra \textsc{tec}, que TEC. 
+	
+	\item Inclinado: Se usa por medio del comando: \\
+	\begin{lstlisting}
+	\textsl{texto}
+	\end{lstlisting}
+	Por ejemplo: \textsl{Este texto est\'a inclinado.}
+	\item Anidado: Significa combinar un estilo con otro en el mismo texto. Por ejemplo: \\
+	\begin{lstlisting}
+	\emph{\textbf{texto}}
+	\end{lstlisting}
+	Por ejemplo: el comando de arriba \emph{\textbf{quedar\'ia as\'i}}.
+	
+	\item Colores: Para utilizar colores en las letras, primero hay que importar el paquete \textit{\textbf{color}}. Esto se hace por medio del comando: \\
+	\begin{lstlisting}
+	\usepackage{color}
+	\end{lstlisting}
+	Es preferible utilizar este comando antes del inicio del documento.
+	Seguidamente, se necesita utilizar el siguiente comando: \\
+	\begin{lstlisting}
+	\textcolor{color}{texto}
+	\end{lstlisting}
+	Y as\'i, ya se puede utilizar \textcolor{red}{colores} en el texto.
+	
+\end{itemize}
+
+\subsection{Efectos de letras y colores}
+Para cambiar texto de color se utiliza el paquete color \verb|\usepackage[usenames, dvipsnames]{color}| se utiliza l comando \verb|\color{Color}| para cambiar el color del texto desde el punto en que se utiliza, adem\'as se puede utlizar el comando \verb|\pagecolor{Color}| para cambiar el color de la p\'agina.\\
+Para cambiar colores de fondo y texto tambien se utilizan los comandos \verb|\textcolor{Color}{Texto}| para cambiar el color del texto, \verb|\colorbox{color}{texto}| para ponerle fondo de color al texto, \verb|\fcolorbox{ColorBorde}{ColorFondo}{texto}| para encerrar un texto en una caja con color de borde y de fondo:\\
+\textcolor{red}{Texto}\\\newline
+\colorbox{blue}{Texto}\\\newline
+\fcolorbox{blue}{green}{Texto}\\\newline
+
+Para cambiar el estilo del texto se utilizan los comandos \verb|\textbf{Texto}| para texto en negrita, \verb|\textit{Texto}| para texto en it\'alica, \verb|\textsl{Texto}| para texto inclinado y \verb|\texttt{Texto}| para texto en estilo. Ejemplos:\\
+Negrita: \textbf{Texto}\\
+Italica: \textit{Texto}\\
+Inclinado: \textsl{Texto}\\
+Estilo: \texttt{Texto}\\
+Para tama\~no de letra se utilizan los comandos
+\begin{lstlisting}
+\tiny
+\scriptsize
+\small
+\normalsize
+\large
+\Large
+\LARGE
+\huge
+\Huge
+\end{lstlisting}
+Ejemplos:\\
+\verb|\tiny|: \tiny texto\\\normalsize
+\verb|\scriptsize|: \scriptsize texto\\\normalsize
+\verb|\small|: \small texto\\\normalsize
+\verb|\normalsize|: \normalsize texto\\\normalsize
+\verb|\large|: \large texto\\\normalsize
+\verb|\Large|: \Large texto\\\normalsize
+\verb|\LARGE|: \LARGE texto\\\normalsize
+\verb|\huge|: \huge texto\\\normalsize
+\verb|\Huge|: \Huge texto\\\normalsize
+\normalsize
+
+\subsection{Tildes y caracteres especiales}
+Para utilizar otros caracteres especiales de idiomas diferentes como chino o ruso existe un paquete llamado Babel creado por Johannes Braams y Javier Bezos, para utilizar babel se utiliza el siguiente comando: \verb|\usepackage[language]{babel}| es recomendado utilizar este comando inmediatamente despues de utilizar \verb|\documentclass| asi otros paquetes sabran que lenguaje se esta utilizando. Babel permite ser "invocado"utilizando varios lenguajes como parametros, de esta forma si tenemos el comando \verb|\usepackage[languageA,languageB]{babel}| se tomará el "languageB" como el lenguaje activo y se podrá cambiar uttilizando \verb|\selectlanguage{languageA}|, además, babel permite utilizar ciertos comandos como \verb|\foreignlanguage{language}{Texto}| y \verb|\begin{otherlanguage}...\end{otherlanguage}| para encapsular texto escrito en otros idiomas.\newline\newline
+\begin{minipage}{0.2\textwidth}
+	\begin{tabular}{ l r r }
+		\LaTeX & Resultado \\
+		\hline\\
+		\verb|\'e| & \'e \\
+		\verb|\=e| & \=e \\
+		\verb|\u e|& \u e\\
+		\verb|\d e|& \d e \\
+		\verb|\oe| & \oe \\
+		\verb|\aa| & \aa \\
+		\verb|\i| & \i \\
+		\verb|\l| & \l \\
+		\verb|\`e| & \`e \\
+		\verb|\.e| & \.e \\
+		\verb|\v e| & \v e \\
+		\verb|\b e| & \b e \\
+		\verb|\OE| & \OE \\
+		\verb|\AA| & \AA \\
+	\end{tabular}
+	\hfill
+\end{minipage}
+\begin{minipage}{0.1\textwidth}
+	\begin{tabular}{ l r r }
+		\LaTeX & Resultado \\
+		\hline\\
+		\verb|\j| & \j \\
+		\verb|\L| & \L \\
+		\verb|\l| & \l \\
+		\verb|\^e| & \^e \\
+		\verb|\"e| & \"e \\
+		\verb|\c e| & \c e \\
+		\verb|\t ee|& \t ee \\
+		\verb|\ae| & \ae \\
+		\verb|\o| & \o \\
+		\verb|\ss| & \ss \\
+		\verb|\~e| & \~e \\
+		\verb|\H e| & \H e \\
+		\verb|\r e| & \r e \\
+		\verb|\AE| & \AE \\
+		\verb|\O|& \O \\
+	\end{tabular}
+	\hfill
+\end{minipage}\\
+Para una lista m\'as detallada (Simbolos matem\'aticos, griegos, entre otros) revisar \emph{Latex A Document Preparation System User's Guide and Reference Manual}\textsuperscript{[2]} p\'ag. 41
+
+
+\subsection{T\'itulos y subt\'itulos}
+El t\'itulo se agrega al inicio del documento, justo despu\'es del comando: \\
+\begin{lstlisting}
+\begin{document}
+\end{lstlisting}
+Para agregar un t\'itulo, se debe utilizar el comando: \\
+\begin{lstlisting}
+\title{Titulo}
+\end{lstlisting}
+Y para agregar un subt\'itulo luego del t\'itulo, se utiliza: \\
+\begin{lstlisting}
+\subtitle{Subtitulo}
+\end{lstlisting}
 
 \subsection{Marcas de agua}
 Hay diferentes paquetes para insertar marcas de agua. Estas pueden ser detr\'as del texto, o delante del texto. El ejemplo del documento aplica una imagen detr\'as del texto, m\'as espec\'ificamente, asignando la marca al \emph{background}. A continuaci\'on se explica c\'omo se puede lograr esto:
@@ -273,88 +438,6 @@ Algunos de los animales en peligro de extinción son el oso blanco\endnote{en el
 \end{document}
 \end{lstlisting}
 
-\subsection{Efectos de letras y colores}
-Para cambiar texto de color se utiliza el paquete color \verb|\usepackage[usenames, dvipsnames]{color}| se utiliza l comando \verb|\color{Color}| para cambiar el color del texto desde el punto en que se utiliza, adem\'as se puede utlizar el comando \verb|\pagecolor{Color}| para cambiar el color de la p\'agina.\\
-Para cambiar colores de fondo y texto tambien se utilizan los comandos \verb|\textcolor{Color}{Texto}| para cambiar el color del texto, \verb|\colorbox{color}{texto}| para ponerle fondo de color al texto, \verb|\fcolorbox{ColorBorde}{ColorFondo}{texto}| para encerrar un texto en una caja con color de borde y de fondo:\\
-\textcolor{red}{Texto}\\\newline
-\colorbox{blue}{Texto}\\\newline
-\fcolorbox{blue}{green}{Texto}\\\newline
-
-Para cambiar el estilo del texto se utilizan los comandos \verb|\textbf{Texto}| para texto en negrita, \verb|\textit{Texto}| para texto en it\'alica, \verb|\textsl{Texto}| para texto inclinado y \verb|\texttt{Texto}| para texto en estilo. Ejemplos:\\
-Negrita: \textbf{Texto}\\
-Italica: \textit{Texto}\\
-Inclinado: \textsl{Texto}\\
-Estilo: \texttt{Texto}\\
-Para tama\~no de letra se utilizan los comandos
-\begin{lstlisting}
-	\tiny
-	\scriptsize
-	\small
-	\normalsize
-	\large
-	\Large
-	\LARGE
-	\huge
-	\Huge
-\end{lstlisting}
-Ejemplos:\\
-\verb|\tiny|: \tiny texto\\\normalsize
-\verb|\scriptsize|: \scriptsize texto\\\normalsize
-\verb|\small|: \small texto\\\normalsize
-\verb|\normalsize|: \normalsize texto\\\normalsize
-\verb|\large|: \large texto\\\normalsize
-\verb|\Large|: \Large texto\\\normalsize
-\verb|\LARGE|: \LARGE texto\\\normalsize
-\verb|\huge|: \huge texto\\\normalsize
-\verb|\Huge|: \Huge texto\\\normalsize
-\normalsize
-
-\subsection{Tildes y caracteres especiales}
-Para utilizar otros caracteres especiales de idiomas diferentes como chino o ruso existe un paquete llamado Babel creado por Johannes Braams y Javier Bezos, para utilizar babel se utiliza el siguiente comando: \verb|\usepackage[language]{babel}| es recomendado utilizar este comando inmediatamente despues de utilizar \verb|\documentclass| asi otros paquetes sabran que lenguaje se esta utilizando. Babel permite ser "invocado"utilizando varios lenguajes como parametros, de esta forma si tenemos el comando \verb|\usepackage[languageA,languageB]{babel}| se tomará el "languageB" como el lenguaje activo y se podrá cambiar uttilizando \verb|\selectlanguage{languageA}|, además, babel permite utilizar ciertos comandos como \verb|\foreignlanguage{language}{Texto}| y \verb|\begin{otherlanguage}...\end{otherlanguage}| para encapsular texto escrito en otros idiomas.\newline\newline
-	\begin{minipage}{0.2\textwidth}
-		\begin{tabular}{ l r r }
-			\LaTeX & Resultado \\
-			\hline\\
-			\verb|\'e| & \'e \\
-			\verb|\=e| & \=e \\
-			\verb|\u e|& \u e\\
-			\verb|\d e|& \d e \\
-			\verb|\oe| & \oe \\
-			\verb|\aa| & \aa \\
-			\verb|\i| & \i \\
-			\verb|\l| & \l \\
-			\verb|\`e| & \`e \\
-			\verb|\.e| & \.e \\
-			\verb|\v e| & \v e \\
-			\verb|\b e| & \b e \\
-			\verb|\OE| & \OE \\
-			\verb|\AA| & \AA \\
-		\end{tabular}
-		\hfill
-	\end{minipage}
-	\begin{minipage}{0.1\textwidth}
-		\begin{tabular}{ l r r }
-			\LaTeX & Resultado \\
-			\hline\\
-			\verb|\j| & \j \\
-			\verb|\L| & \L \\
-			\verb|\l| & \l \\
-			\verb|\^e| & \^e \\
-			\verb|\"e| & \"e \\
-			\verb|\c e| & \c e \\
-			\verb|\t ee|& \t ee \\
-			\verb|\ae| & \ae \\
-			\verb|\o| & \o \\
-			\verb|\ss| & \ss \\
-			\verb|\~e| & \~e \\
-			\verb|\H e| & \H e \\
-			\verb|\r e| & \r e \\
-			\verb|\AE| & \AE \\
-			\verb|\O|& \O \\
-		\end{tabular}
-		\hfill
-	\end{minipage}\\
-	Para una lista m\'as detallada (Simbolos matem\'aticos, griegos, entre otros) revisar \emph{Latex A Document Preparation System User's Guide and Reference Manual}\textsuperscript{[2]} p\'ag. 41
 
 \section{Cuadros o tablas}
 \IEEEPARstart{L}as tablas son elementos comunes en la mayor\'ia de documentos cient\'ificos, \LaTeX\ provee una gran cantidad de herramientas para personalizar las tablas, modificar el tama\'no o el color de las celdas, entre otros. 
@@ -525,6 +608,25 @@ El c\'odigo para hacer esto es el siguiente:
 	\end{lstlisting}
 \end{itemize}
 
+
+\section{C\'omo agregar im\'agenes}
+
+Para agregar im\'agenes se necesita importar el paquete \textit{\textbf{graphicx}} \\
+\begin{lstlisting}
+\usepackage{graphicx}
+\end{lstlisting}
+Luego se utiliza el comando: \\
+\begin{lstlisting}
+\includegraphics{archivo_imagen}
+\end{lstlisting}
+Y si se prefiere, se puede especificar el ancho y largo de la imagen como par\'ametro en el comando de arriba. \\
+\begin{lstlisting}
+\includegraphics[width=2cm,height=3cm]{...}
+\end{lstlisting}
+Ser\'ia un ejemplo de una imagen de 2x3 cm. Un ejemplo de c\'omo se ver\'ia una imagen importada ser\'ia la siguiente: \\
+\includegraphics[width=3cm, height=3cm]{aa}
+\footnote{Imagen de muestra, tomada de http://albertaalpine.ca}
+
 \begin{thebibliography}{2}
 	
 	\bibitem{Babel}
@@ -569,6 +671,10 @@ El c\'odigo para hacer esto es el siguiente:
 	\bibitem{Memoir}	
 	Wilson, P. (2016, mayo 16). The Memoir Class for Configurable Typesetting. Recuperado a partir de http://mirrors.ucr.ac.cr/CTAN/macros/latex/contrib/memoir/memman.pdf\
 	
+	\bibitem{Guide}
+	Kottwitz, S. (2011). Latex beginner's guide. Recuperado de  http://ebookcentral.proquest.com
+	
+		
 \end{thebibliography}
 
 \end{document}
