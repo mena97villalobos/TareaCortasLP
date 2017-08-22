@@ -1,14 +1,29 @@
 \documentclass[10pt,journal,compsoc]{IEEEtran}
 \usepackage[spanish]{babel}
+\usepackage[usenames, dvipsnames]{color}
 \usepackage{listings}
 \usepackage{graphicx}
 \usepackage{wrapfig}
-\usepackage[usenames, dvipsnames]{color}
+\usepackage{xcolor}
+\usepackage{enumitem}
+\usepackage{enumerate}
+\usepackage{lipsum}
+\usepackage{graphicx}
+\usepackage{background}
 \ifCLASSOPTIONcompsoc
   \usepackage[nocompress]{cite}
 \else
   \usepackage{cite}
 \fi
+
+\lstset
+{
+	language=[LaTeX]TeX,
+	breaklines=true,
+	basicstyle=\tt\scriptsize,
+	keywordstyle=\color{blue},
+	identifierstyle=\color{magenta},
+}
 
 \ifCLASSINFOpdf
 \else
@@ -23,6 +38,7 @@ pdfauthor={Daniel, Wilbert, Anthony, Bryan},
 
 \hyphenation{op-tical net-works semi-conduc-tor}
 
+\backgroundsetup{contents={\includegraphics[scale=0.015, angle=275]{ITCR_LOGO.png}}}
 
 \begin{document}
 \title{\LaTeX}
@@ -45,6 +61,30 @@ En este documento, se encuentra recopilada alguna informaci\'on \'util con respe
 \IEEEdisplaynontitleabstractindextext
 
 \IEEEpeerreviewmaketitle
+
+\section{Datos hist\'oricos sobre LaTeX}
+\IEEEPARstart{T}{ex} es un lenguaje de programaci\'on creado para ser usado en la composici\'on tipogr\'afica. En especial para la composici\'on tipogr\'afica de las matem\'aticas, su creador fue Donald Knuth, quien escribi\'o Tex en 1978.
+En 1979 se realiz\'o la conferencia “Josiah Willard Gibbs Lecture” y Tex se hizo popular despu\'es de este evento.
+En 1986 Leslie Lamport escribe LaTeX que es un sistema de preparaci\'on de documentos.
+
+A principios de los 90 se impartieron varios cursos de TeX y LaTex. Ademas se utilizaron plantillas con el fin de generar Slides con texto matem\'atico de manera similar a Beamer.
+Se imparti\'o un taller con el fin de generar ex\'amenes de juguete con TeX y Pascal.
+Editores:
+\begin{itemize}
+	\item Texshell
+	\item Winedt
+	\item TeXnicCenter
+	\item Emacs
+	\item Texmaker
+	\item TexStudio
+	\item TexLive
+\end{itemize}
+Distribuci\'on:
+\begin{itemize}
+	\item MikTeX y fpTeX para Windows
+	\item emTeX para DOS/OS2
+	\item OzTeX para Mac
+\end{itemize}
 
 \section{Importancia y usos acad\'emicos}
 \IEEEPARstart{L}{aTeX} permite concentrarse en lo que es verdaderamente importante: el contenido. Como escritor (cient\'ifico, investigador,  estudiante o no) esta herramienta permite minimizar el tiempo dedicado al diseño del documento y enfocarse en las palabras. Una ventaja considerable, sobre otros sistemas tradicionales, es la alta calidad tipogr\'afica de los documentos que se podr\'an producir.
@@ -83,6 +123,156 @@ Con \LaTeX\ es posible escribir art\'iculos para revistas, reportes t\'ecnicos, 
 \end{itemize}
 
 \section{Como Crear...}
+
+\subsection{Marcas de agua}
+Hay diferentes paquetes para insertar marcas de agua. Estas pueden ser detr\'as del texto, o delante del texto. El ejemplo del documento aplica una imagen detr\'as del texto, m\'as espec\'ificamente, asignando la marca al \emph{background}. A continuaci\'on se explica c\'omo se puede lograr esto:
+\begin{itemize}
+	\item Im\'agenes
+	\begin{itemize}
+		\item Para utilizar im\'agenes como marcas de agua en el documento deben utilizarse los paquetes \textbf{\textit{graphicx}} y \textbf{\textit{background}}.	
+	\end{itemize}
+	\begin{lstlisting}
+	\usepackage{graphicx}
+	\usepackage{background}
+	\backgroundsetup{contents={\includegraphics[scale=X]{<archivo>}}}
+	\end{lstlisting}
+	\item Texto
+	\begin{itemize}
+		\item Para utilizar texto como marca de agua son necesarios los paquetes \textbf{\textit{draftwatermark}}, para posicionarlo detr\'as del texto, o \textbf{\textit{xwatermark}} para situarlo frente al texto.
+		\item Una gu\'ia m\'as detallada y extensa puede encontrarse en \emph{http://ctan.math.washington.edu/tex-archive/macros/latex/contrib/xwatermark/doc/xwatermark-guide.pdf}
+		\item El siguiente c\'odigo de ejemplo utiliza \textbf{\textit{xwatermark}}.
+		\begin{itemize}
+			\item allpages : todas las p\'aginas tendr\'an la marca de agua.
+			\item color : selecciona el color y transparencia del texto.
+			\item angle : el \'angulo de la marca de agua.
+			\item scale : la escala con base en la imagen original.
+			\item xpos/ypos : posici\'on en el eje x/y.
+			\item Entre corchetes se ingresa el texto deseado.
+		\end{itemize}	
+		\begin{lstlisting}
+		\usepackage[printwatermark]{xwatermark}
+		\newwatermark[allpages,color=red!50,angle=45,scale=3,xpos=0,ypos=0]{TEXTO_DESEADO}
+		\end{lstlisting}
+	\end{itemize}
+\end{itemize}
+
+\subsection{Headers.}
+Los Headers  para un documento IEEEtran en {\LaTeX} se realizan por medio del siguiente c\'odigo.
+\begin{lstlisting}
+\markboth{Journal of \LaTeX\ Class Files,~Vol.~14, No.~8, August~2015}%
+{Shell \MakeLowercase{\textit{et al.}}: Bare Advanced Demo of IEEEtran.cls for IEEE Computer Society Journals}
+\end{lstlisting}
+
+\subsection{Footers.}
+Los agradecimientos se agregan al pie de p\'agina en {\LaTeX} se realizan por medio del siguiente c\'odigo.
+\begin{lstlisting}
+\IEEEcompsocitemizethanks{\IEEEcompsocthanksitem M. Shell was with the Department
+of Electrical and Computer Engineering, Georgia Institute of Technology, Atlanta,
+GA, 30332.\protect\\
+E-mail: see http://www.michaelshell.org/contact.html
+\IEEEcompsocthanksitem J. Doe and J. Doe are with Anonymous University.}
+\thanks{Manuscript received April 19, 2005; revised August 26, 2015.}}
+\end{lstlisting}
+
+\subsection{Saltos de p\'agina, columnas y citas al pie de p\'agina.}
+Los Saltos de p\'agina  en {\LaTeX} se realizan por medio del siguiente c\'odigo.
+
+\begin{lstlisting}
+\newpage
+\end{lstlisting}
+
+Las columnas  en {\LaTeX} se realizan por medio del siguiente paquete.
+\begin{lstlisting}
+\usepackage{multicol}
+\end{lstlisting}
+Para hacer que el texto se muestre en columnas, se debe de introducir dentro de los 2 c\'odigos de LaTeX. El n\'umero indica la cantidad de columnas que se necesita.
+\begin{lstlisting}
+\begin{multicols}{2}
+
+TEXTO COLUMNA
+
+\end{multicols}
+\end{lstlisting}
+Ademas podemos mostrar columnas dentro de columnas.
+\begin{lstlisting}
+\begin{multicols}{2}
+
+TEXTO COLUMNA
+
+\begin{multicols}{2}
+
+TEXTO INTRACOLUMNA
+
+\end{multicols}
+
+TEXTO COLUMNA
+
+\end{multicols}
+\end{lstlisting}
+Para dejar un espacio detr\'as y delante de las columnas
+\begin{lstlisting}
+\setlength{multicolsep}{3cm}begin{multicols}{2}
+
+TEXTO COLUMNA
+
+\end{multicols}
+
+** Es importante reestablecer el valor predeterminado.
+
+\setlength{multicolsep}{13pt}
+\end{lstlisting}
+Si se requiere una linea de separaci\'on entre columnas.
+\begin{lstlisting}
+\setlength{columnseprule}{2pt}begin{multicols}{2}
+
+TEXTO COLUMNA
+
+\end{multicols}
+
+** Es importante reestablecer el valor predeterminado.
+
+\setlength{columnseprule}{0pt}
+\end{lstlisting}
+Tambi\'en se puede hacer la separaci\'on de columnas sin la linea.
+\begin{lstlisting}
+\setlength{columnsep}{3cm}begin{multicols}{2}
+
+TEXTO COLUMNA
+
+\end{multicols}
+
+** Es importante reestablecer el valor predeterminado.
+
+\setlength{columnsep}{10pt}
+\end{lstlisting}
+
+En vez de situar cada nota al pie de la p\'agina, se prefiere agrupar todas al final del documento, para lograr esto debemos de usar el paquete
+\begin{lstlisting}
+\usepackage{endnotes}
+\end{lstlisting}
+Con este paquete vamos indicando cada nota con
+\begin{lstlisting}
+\endnote{}
+\end{lstlisting}
+Y donde se quieran mostrar, se escribe
+\begin{lstlisting}
+\theendnotes
+\end{lstlisting}
+Por ejemplo:
+\begin{lstlisting}
+\usepackage{endnotes}
+
+\begin{document}
+
+\chapter{Introducción}
+Algunos de los animales en peligro de extinción son el oso blanco\endnote{en el Ártico}, el cóndor\endnote{en los Andes}, el tigre siberiano\endnote{en Siberia}, y el lince ibérico\endnote{en la Península Ibérica}.
+
+\chapter{Final}
+\theendnotes
+
+\end{document}
+\end{lstlisting}
+
 \subsection{Efectos de letras y colores}
 Para cambiar texto de color se utiliza el paquete color \verb|\usepackage[usenames, dvipsnames]{color}| se utiliza l comando \verb|\color{Color}| para cambiar el color del texto desde el punto en que se utiliza, adem\'as se puede utlizar el comando \verb|\pagecolor{Color}| para cambiar el color de la p\'agina.\\
 Para cambiar colores de fondo y texto tambien se utilizan los comandos \verb|\textcolor{Color}{Texto}| para cambiar el color del texto, \verb|\colorbox{color}{texto}| para ponerle fondo de color al texto, \verb|\fcolorbox{ColorBorde}{ColorFondo}{texto}| para encerrar un texto en una caja con color de borde y de fondo:\\
@@ -166,6 +356,72 @@ Para utilizar otros caracteres especiales de idiomas diferentes como chino o rus
 	\end{minipage}\\
 	Para una lista m\'as detallada (Simbolos matem\'aticos, griegos, entre otros) revisar \emph{Latex A Document Preparation System User's Guide and Reference Manual}\textsuperscript{[2]} p\'ag. 41
 
+\section{Cuadros o tablas}
+\IEEEPARstart{L}as tablas son elementos comunes en la mayor\'ia de documentos cient\'ificos, \LaTeX\ provee una gran cantidad de herramientas para personalizar las tablas, modificar el tama\'no o el color de las celdas, entre otros. 
+
+\begin{center}
+	\begin{tabular}{||c c c c||} 
+		\hline
+		Col1 & Col2 & Col3 & Col4 \\ [0.5ex] 
+		\hline
+		1 & 6 & 87837 & 787 \\ 
+		\hline
+		2 & 7 & 78 & 5415 \\
+		\hline
+		3 & 545 & 778 & 7507 \\
+		\hline
+		4 & 545 & 18744 & 7560 \\
+		\hline
+		5 & 88 & 788 & 6344 \\ [1ex] 
+		\hline
+	\end{tabular}
+\end{center}
+
+Para crear una tabla como la anterior se hace de la siguiente manera:
+\begin{lstlisting}
+\begin{center}
+\begin{tabular}{||c c c c||} 
+\hline
+Col1 & Col2 & Col3 & Col4 \\ [0.5ex] 
+\hline
+1 & 6 & 87837 & 787 \\ 
+\hline
+2 & 7 & 78 & 5415 \\
+\hline
+3 & 545 & 778 & 7507 \\
+\hline
+4 & 545 & 18744 & 7560 \\
+\hline
+5 & 88 & 788 & 6344 \\ [1ex] 
+\hline
+\end{tabular}
+\end{center}
+\end{lstlisting}
+En el c\'odigo previo, \emph{hline} se refiere a cada fila de la tabla. Luego de definir la fila, cada elemento de la respectiva columna se encuentra dividida por un \emph{\&}. Es posible combinar filas y columnas, crear tablas en m\'ultiples p\'aginas, entre muchas otras opciones de personalizaci\'on.
+
+\section{Como crear figuras y gr\'aficas}
+\begin{wrapfigure}{R}{0.2\textwidth}
+	\centering
+	\includegraphics[width=0.1\textwidth]{pic1.jpg}
+	\caption{Figura envuelta en texto}
+\end{wrapfigure}
+Para insertar gr\'aficos y figuras se utiliza el paquete \verb|\usepackage{graphicx}|. Para insertar figuras se utiliza el siguiente comando
+\begin{lstlisting}
+\begin{figure}
+\centering
+\includegraphics{grafico}
+\caption{Caption}
+\label{Label}
+\end{figure}
+\end{lstlisting}
+donde gr\'afico es el path de la figura que se quiere insertar y caption y label son textos que se le puede insertar a la figura.
+Para mayor comodidad y para mejorar la apariencia existe la posibilidad de hacer que el texto envuelva la imagen con el uso de \verb|\usepackage{wrapfig}| y el comando de inicio:\footnote{Ver Figura 1.}
+\begin{lstlisting}
+\begin{wrapfigure}{i}{0.5\textwidth}
+contenido
+\end{wrapfigure}
+\end{lstlisting}
+
 \section{Minipage}%%%%%%%FIME minipage es seccion #7
 Minipage es utilizado para colocar objetos uno al lado de otros, los cuales, sin minipage, ser\'ia muy dificil.
 Comando para utilizar minipage:
@@ -215,42 +471,59 @@ Dos tablas juntas\\
 \newline
 Tabla junto a imagen\\
 
-\section{Como crear figuras y gr\'aficas}
-Para insertar gr\'aficos y figuras se utiliza el paquete \verb|\usepackage{graphicx}|. Para insertar figuras se utiliza el siguiente comando
+\section{C\'omo crear Bibliograf\'ias}
+Las bibliograf\'ias en {\LaTeX} se realizan por medio del siguiente c\'odigo.
+
 \begin{lstlisting}
-\begin{figure}
-\centering
-\includegraphics{grafico}
-\caption{Caption}
-\label{Label}
-\end{figure}
-\end{lstlisting}
-donde gr\'afico es el path de la figura que se quiere insertar y caption y label son textos que se le puede insertar a la figura. Ejemplo:\\
-\begin{figure}
-	\centering
-	\includegraphics[width=0.3\textwidth]{pic1.jpg}
-	\caption{Caption}
-\end{figure}
-Ejemplo:\\
-\begin{wrapfigure}{r}{0.1\textwidth}
-	\begin{center}
-		\includegraphics[width=0.1\textwidth]{pic1.jpg}
-	\end{center}
-	\caption{A gull}
-\end{wrapfigure}
-Para mayor comodidad y para mejorar la apariencia existe la posibilidad de hacer que el texto envuelva la imagen con el uso de \verb|\usepackage{wrapfig}| y el comando de inicio:
-\begin{lstlisting}
-\begin{wrapfigure}{i}{0.5\textwidth}
-contenido
-\end{wrapfigure}
+\begin{thebibliography}{1}
+\bibitem{IEEEhowto:kopka}
+H.~Kopka and P.~W. Daly, \emph{A Guide to {\LaTeX}}, 3rd~ed.\hskip 1em plus
+0.5em minus 0.4em\relax Harlow, England: Addison-Wesley, 1999.
+\end{thebibliography}
 \end{lstlisting}
 
-\appendices
-\section{}
-Appendix one text goes here.
+\section{Como crear citas}
+Se debe de insertar el paquete
+\begin{lstlisting}
+\ usepackage {cite}
+\end{lstlisting} 
+Al inicio del documento de {\LaTeX} para mejorar el uso de citas num\'ericas y se tienen las siguientes opciones:
+\subsection{Spacing.}
+Se escribe un pequeño espacio despu\'es de comas en la lista de citas.
+La opci\'on [nospace] elimina ese espacio y la opci\'on de [space] la cambia con un espacio entre palabras com\'un.
+\subsection{Sorting.}
+Las citas de una lista son clasificadas de manera ascendente. Con la opci\'on de [nosort] se desactiva la ordenaci\'on. Las citas clasificables tienen que ser num\'ericas o al menos la mayor\'ia num\'ericas. Las entradas que no son clasificables se imprimen antes.
+\subsection{Compression.}
+Grupos de tres o mas n\'umeros consecutivos son comprimidos en un rango usando un guión. Ejemplo: Se tiene la lista [7,5,6,?,4,9,8,Einstein,6] que se mostrar\'ia como [?,Einstein,4–6,6–9]. La opci\'on de compresi\'on de este paquete se puede deshabilitar con [nocompress].
+\subsection{Non-numbers.}
+Trabajo de compresi\'on y clasificaci\'on con n\'umeros positivos (8,6,7,9 da [6-9]), as\'i como tambi\'en n\'umeros con caracteres sufijo o prefijo ([5a-5c] o [T1-T4]) y tambi\'en n\'umeros duales con un separador ([1,11 - 1,15]). Los n\'umeros duales no se mezclan bien con n\'umeros individuales. Otras formas de entradas se imprimen antes de todas las formas ordenables.
 
-\section{}
-Appendix two text goes here.
+\section{Ecuaciones Matem\'aticas}
+\IEEEPARstart{E}l uso de ecuaciones matem\'aticas en \LaTeX\ es uno de los fuertes de esta herramienta. Hay dos maneras distintas para escribir ecuaciones: \emph{inline} y \emph{display}. La primera es para ecuaciones que son parte del texto y el segundo para los que no son parte del texto o el p\'arrafo, por lo tanto son colocados en l\'ineas separadas.
+
+Podemos insertar la ecuaci\'on de equivalencia de Albert Einsten, $E=mc^2$, en la misma l\'inea o separado del p\'arrafo sin numerar
+$$E=mc^2$$
+o tambi\'en puede agrerarse la numeraci\'on a una ecuaci\'on
+\begin{equation}
+E=mc^2
+\end{equation}
+El c\'odigo para hacer esto es el siguiente:
+\begin{itemize}
+	\item Inline
+	\begin{lstlisting}
+	...Albert Einsten, $E=mc^2$, en la misma...
+	\end{lstlisting}
+	\item Display sin numerar
+	\begin{lstlisting}
+	$$E=mc^2$$
+	\end{lstlisting}
+	\item Display numerado
+	\begin{lstlisting}
+	\begin{equation}
+	E=mc^2
+	\end{equation}
+	\end{lstlisting}
+\end{itemize}
 
 \begin{thebibliography}{2}
 	
@@ -261,7 +534,25 @@ Appendix two text goes here.
 	L.~Lamport \emph{Latex A Document Preparation System User's Guide and Reference Manual} Recuperado de:
 	http://users.softlab.ntua.gr/~sivann/books/LaTeX\%20-\%20User's\%20Guide\%20and\%20Reference\%20Manual-lamport94.pdf
 	
+	\bibitem{IEEEhowto:kopka}
+	~Luis, \emph{Encabezados y pies de página en {\LaTeX}}.\hskip 1em plus
+	0.5em minus 0.4em\relax recuperado de: http://minisconlatex.blogspot.com/2013/01/como-editar-los-encabezados-y-pies-de.html, el 16 de agosto 2017.
 	
+	\bibitem{IEEEhowto:kopka}
+	~Luis, \emph{Notas al pie de página (y al final del documento) en {\LaTeX}}.\hskip 1em plus
+	0.5em minus 0.4em\relax recuperado de: http://minisconlatex.blogspot.com/2011/04/notas-al-pie-de-pagina.html, el 16 de agosto 2017.
+	
+	\bibitem{IEEEhowto:kopka}
+	~Unknown, \emph{Breve historia de {\LaTeX}}.\hskip 1em plus
+	0.5em minus 0.4em\relax recuperado de: http://nereida.deioc.ull.es/~pcgull/ihiu01/cdrom/latex/contenido/node2.html, el 20 de agosto 2017.
+	
+	\bibitem{IEEEhowto:kopka}
+	~Unknown, \emph{Columnas con el paquete multicol en {\LaTeX}}.\hskip 1em plus
+	0.5em minus 0.4em\relax recuperado de: https://bioinformatiquillo.wordpress.com/2009/02/16/lyx-latex-columnas-con-el-paquete-multicol/, el 18 de agosto 2017.
+	
+	\bibitem{IEEEhowto:kopka}
+	~M. Mata, \emph{Bibliografía en {\LaTeX}}.\hskip 1em plus
+	0.5em minus 0.4em\relax recuperado de: http://logistica.fime.uanl.mx/miguel/docs/BibTeX.pdf, el 20 de agosto 2017.
 	
 \end{thebibliography}
 
