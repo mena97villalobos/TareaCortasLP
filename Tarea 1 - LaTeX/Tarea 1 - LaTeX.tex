@@ -127,7 +127,7 @@ Con \LaTeX\ es posible escribir art\'iculos para revistas, reportes t\'ecnicos, 
 
 
 \subsection{P\'arrafos}
-Desde el punto de vista de las personas, un p\'arrafo es la uni\'on de varias palabras las cuales se ubican despu\'es de un t\'itulo o punto y aparte, hasta el siguiente punto y aparte. En \LaTeX\ se pueden hacer p\'arrafos simplemente escribiendo despu\'es de una secci\'on o subsecci\'on.\\  Adem\'as, \LaTeX\ maneja p\'arrafos bajo una estructura propia. Para comenzar a escribir un p\'arrafo, es necesario escribir la etiqueta correspondiente para p\'arrafos, la cu\'al es la siguiente: 
+\IEEEPARstart{D}esde el punto de vista de las personas, un p\'arrafo es la uni\'on de varias palabras las cuales se ubican despu\'es de un t\'itulo o punto y aparte, hasta el siguiente punto y aparte. En \LaTeX\ se pueden hacer p\'arrafos simplemente escribiendo despu\'es de una secci\'on o subsecci\'on.\\  Adem\'as, \LaTeX\ maneja p\'arrafos bajo una estructura propia. Para comenzar a escribir un p\'arrafo, es necesario escribir la etiqueta correspondiente para p\'arrafos, la cu\'al es la siguiente: 
 \begin{lstlisting}
 \paragraph{Titulo} 
 \end{lstlisting}
@@ -136,74 +136,60 @@ Un ejemplo de un p\'arrafo implementado bajo esta etiqueta es el siguiente:
 Los estudiantes de segundo a\~no del T\'ecnol\'ogico de Costa Rica que cursan el segundo semestre de la carrera de Ingenier\'ia en Computaci\'on deber\'ian estar cursando en este momento el curso IC-4700 el cu\'al corresponde a Lenguajes de Programaci\'on.
 
 \subsection{Efectos de letras, colores}
-El estilo de letra se puede ajustar a las necesidades de los usuarios en diferentes formas: \\
+El estilo de letra se puede ajustar a las necesidades de los usuarios en diferentes formas:
 \begin{itemize}
-	
-	\item \'Enfasis: Se usa por medio del comando \\
+	\item \'Enfasis: Se usa por medio del comando:
 	\begin{lstlisting}
 	\emph{texto}
 	\end{lstlisting}
 	Adem\'as, este comando puede combinarse consigo mismo para devolver texto a la forma normal (sin enfatizar) entre un gran texto que s\'i tiene todo un \'enfasis de inicio a fin. Por ejemplo: \\
 	\emph{Dentro de esta frase existe una \emph{palabra} que no ha sido enfatizada.}
-	
-	\item It\'alico: Se usa por medio del comando \\
+	\item It\'alico: Se usa por medio del comando 
 	\begin{lstlisting}
 	\textit{texto}
 	\end{lstlisting}
 	Un ejemplo del uso de letra con efecto it\'alico es el siguiente: \\
 	Una serie que tiene muchos seguidores a nivel mundial es \textit{Game of Thrones}.
-	
-	\item Negrita: Se usa por medio del comando: \\
+	\item Negrita: Se usa por medio del comando:
 	\begin{lstlisting}
 	\textbf{texto}
 	\end{lstlisting}
-	Un ejemplo del uso de la negrita en un texto es el siguiente: \\
+	Un ejemplo del uso de la negrita en un texto es el siguiente:\\
 	Las personas que se \textbf{esfuerzan} y \textbf{luchan} por sus sue\~nos consiguen una gran recompensa.
-	
-	\item Letras min\'usculas: Sirve para poner letras en may\'uscula y con un tama\~no m\'as peque\~no de lo tradicional. Se usa por medio del comando \\
+	\item Letras min\'usculas: Sirve para poner letras en may\'uscula y con un tama\~no m\'as peque\~no de lo tradicional. Se usa por medio del comando 
 	\begin{lstlisting}
 	\textsc{texto}
 	\end{lstlisting}
 	Un ejemplo del uso de este efecto es el siguiente: \\
 	No se lee igual la palabra \textsc{tec}, que TEC. 
-	
-	\item Inclinado: Se usa por medio del comando: \\
+	\item Inclinado: Se usa por medio del comando:
 	\begin{lstlisting}
 	\textsl{texto}
 	\end{lstlisting}
 	Por ejemplo: \textsl{Este texto est\'a inclinado.}
-	\item Anidado: Significa combinar un estilo con otro en el mismo texto. Por ejemplo: \\
+	\item Anidado: Significa combinar un estilo con otro en el mismo texto. Por ejemplo:
 	\begin{lstlisting}
 	\emph{\textbf{texto}}
 	\end{lstlisting}
 	Por ejemplo: el comando de arriba \emph{\textbf{quedar\'ia as\'i}}.
-	
-	\item Colores: Para utilizar colores en las letras, primero hay que importar el paquete \textit{\textbf{color}}. Esto se hace por medio del comando: \\
+	\item Colores: Para utilizar colores en las letras, primero hay que importar el paquete \textit{\textbf{color}}. Esto se hace por medio del comando:
 	\begin{lstlisting}
 	\usepackage{color}
 	\end{lstlisting}
 	Es preferible utilizar este comando antes del inicio del documento.
-	Seguidamente, se necesita utilizar el siguiente comando: \\
+	Seguidamente, se necesita utilizar el siguiente comando:
 	\begin{lstlisting}
 	\textcolor{color}{texto}
 	\end{lstlisting}
 	Y as\'i, ya se puede utilizar \textcolor{red}{colores} en el texto.
-	
 \end{itemize}
-
-\subsection{Efectos de letras y colores}
-Para cambiar texto de color se utiliza el paquete color \verb|\usepackage[usenames, dvipsnames]{color}| se utiliza l comando \verb|\color{Color}| para cambiar el color del texto desde el punto en que se utiliza, adem\'as se puede utlizar el comando \verb|\pagecolor{Color}| para cambiar el color de la p\'agina.\\
+Como otra opci\'on para cambiar el color del texto se utiliza el paquete color \verb|\usepackage[usenames, dvipsnames]{color}| se utiliza l comando \verb|\color{Color}| para cambiar el color del texto desde el punto en que se utiliza, adem\'as se puede utlizar el comando \verb|\pagecolor{Color}| para cambiar el color de la p\'agina.\\
 Para cambiar colores de fondo y texto tambien se utilizan los comandos \verb|\textcolor{Color}{Texto}| para cambiar el color del texto, \verb|\colorbox{color}{texto}| para ponerle fondo de color al texto, \verb|\fcolorbox{ColorBorde}{ColorFondo}{texto}| para encerrar un texto en una caja con color de borde y de fondo:\\
 \textcolor{red}{Texto}\\\newline
 \colorbox{blue}{Texto}\\\newline
 \fcolorbox{blue}{green}{Texto}\\\newline
 
-Para cambiar el estilo del texto se utilizan los comandos \verb|\textbf{Texto}| para texto en negrita, \verb|\textit{Texto}| para texto en it\'alica, \verb|\textsl{Texto}| para texto inclinado y \verb|\texttt{Texto}| para texto en estilo. Ejemplos:\\
-Negrita: \textbf{Texto}\\
-Italica: \textit{Texto}\\
-Inclinado: \textsl{Texto}\\
-Estilo: \texttt{Texto}\\
-Para tama\~no de letra se utilizan los comandos
+Para manipular el tama\~no de letra se utilizan los comandos
 \begin{lstlisting}
 \tiny
 \scriptsize
@@ -274,7 +260,6 @@ Para utilizar otros caracteres especiales de idiomas diferentes como chino o rus
 \end{minipage}\\
 Para una lista m\'as detallada (Simbolos matem\'aticos, griegos, entre otros) revisar \emph{Latex A Document Preparation System User's Guide and Reference Manual}\textsuperscript{[2]} p\'ag. 41
 
-
 \subsection{T\'itulos y subt\'itulos}
 El t\'itulo se agrega al inicio del documento, justo despu\'es del comando: \\
 \begin{lstlisting}
@@ -287,6 +272,31 @@ Para agregar un t\'itulo, se debe utilizar el comando: \\
 Y para agregar un subt\'itulo luego del t\'itulo, se utiliza: \\
 \begin{lstlisting}
 \subtitle{Subtitulo}
+\end{lstlisting}
+
+\subsection{Referencias.}
+Se puede hacer referencia a la mayor\'ia de lo que esta numerado, LaTeX se encarga de esta numeraci\'on y la actualiza autom\'aticamente.
+\newline Se pueden usar los siguientes comandos:
+\begin{lstlisting}
+\label{marker}
+\end{lstlisting}
+Se da al objeto que se quiere referenciar a un marcador y se puede ver como un nombre.
+\begin{lstlisting}
+\ref{marker}
+\end{lstlisting}
+Se puede referenciar al objeto que se marc\'o antes e imprime n\'umero que se asign\'o al objeto.
+\begin{lstlisting}
+\pageref{marker}
+\end{lstlisting}
+Se mostrar\'a el n\'umero de la p\'agina donde se encuentra el objeto.
+\newline 
+Ejemplo de la utilizaci\'on de referencias:
+\begin{lstlisting}
+\section{Agradecimientos}
+\label{sec:agradecimientos}
+Hola
+\section{Referenciando}
+Se hizo un saludo en la sección~\ref{sec:greetings}.
 \end{lstlisting}
 
 \subsection{Marcas de agua}
@@ -623,9 +633,8 @@ Y si se prefiere, se puede especificar el ancho y largo de la imagen como par\'a
 \begin{lstlisting}
 \includegraphics[width=2cm,height=3cm]{...}
 \end{lstlisting}
-Ser\'ia un ejemplo de una imagen de 2x3 cm. Un ejemplo de c\'omo se ver\'ia una imagen importada ser\'ia la siguiente: \\
+Ser\'ia un ejemplo de una imagen de 2x3 cm. Un ejemplo de c\'omo se ver\'ia una imagen importada ser\'ia la siguiente:\footnote{Imagen de muestra, tomada de http://albertaalpine.ca}\\
 \includegraphics[width=3cm, height=3cm]{aa}
-\footnote{Imagen de muestra, tomada de http://albertaalpine.ca}
 
 \begin{thebibliography}{2}
 	
