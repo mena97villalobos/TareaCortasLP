@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6300 64-bit) (preloaded format=pdflatex 2017.6.21)  21 AUG 2017 18:26
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6300 64-bit) (preloaded format=pdflatex 2017.6.21)  21 AUG 2017 18:35
 entering extended mode
 **"./Tarea 1 - LaTeX.tex"
 ("Tarea 1 - LaTeX.tex"
@@ -601,19 +601,6 @@ File: lstmisc.sty 2015/06/04 1.6 (Carsten Heinz)
 ("Tarea 1 - LaTeX.aux"
 LaTeX Info: Redefining \. on input line 7.
 LaTeX Info: Redefining \% on input line 7.
-
-
-LaTeX Warning: Label `IEEEhowto:kopka' multiply defined.
-
-
-LaTeX Warning: Label `IEEEhowto:kopka' multiply defined.
-
-
-LaTeX Warning: Label `IEEEhowto:kopka' multiply defined.
-
-
-LaTeX Warning: Label `IEEEhowto:kopka' multiply defined.
-
 )
 \openout1 = `"Tarea 1 - LaTeX.aux"'.
 
@@ -1245,45 +1232,79 @@ Underfull \hbox (badness 10000) in paragraph at lines 554--556
 \OT1/ppl/m/n/8.03 http://logistica.fime.uanl.mx/miguel/docs/BibTeX.pdf, el 20
  []
 
+
+Underfull \hbox (badness 1629) in paragraph at lines 564--565
+[]\OT1/ppl/m/n/8.03 Mathematical ex-pres-sions - Sha-re-La-TeX, On-li-ne La-TeX
+ Edi-
+ []
+
+
+Underfull \hbox (badness 1622) in paragraph at lines 564--565
+\OT1/ppl/m/n/8.03 tor. (s. f.). Re-cu-pe-ra-do 20 de agos-to de 2017, a par-tir
+ de
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 567--568
+[]\OT1/ppl/m/n/8.03 Tables - Sha-re-La-TeX, On-li-ne La-TeX Edi-tor. (s. f.).
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 567--568
+\OT1/ppl/m/n/8.03 Re-cu-pe-ra-do 19 de agos-to de 2017, a par-tir de
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 570--571
+[]\OT1/ppl/m/n/8.03 Wilson, P. (2016, ma-yo 16). The Me-moir Class for
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 570--571
+\OT1/ppl/m/n/8.03 Con-fi-gu-ra-ble Ty-pe-set-ting. Re-cu-pe-ra-do a par-tir de
+ []
+
+
+Overfull \hbox (41.48541pt too wide) in paragraph at lines 570--571
+\OT1/ppl/m/n/8.03 http://mirrors.ucr.ac.cr/CTAN/macros/latex/contrib/memoir/mem
+man.pdf 
+ []
+
 File: ITCR_LOGO.png Graphic file (type png)
 <use ITCR_LOGO.png>
-Package pdftex.def Info: ITCR_LOGO.png used on input line 559.
+Package pdftex.def Info: ITCR_LOGO.png used on input line 574.
 (pdftex.def)             Requested size: 19.27116pt x 4.47151pt.
-LaTeX Info: Redefining \. on input line 559.
-LaTeX Info: Redefining \% on input line 559.
+LaTeX Info: Redefining \. on input line 574.
+LaTeX Info: Redefining \% on input line 574.
  [5
 
 ] ("Tarea 1 - LaTeX.aux"
 LaTeX Info: Redefining \. on input line 7.
 LaTeX Info: Redefining \% on input line 7.
-)
-
-LaTeX Warning: There were multiply-defined labels.
-
- ) 
+) ) 
 Here is how much of TeX's memory you used:
- 17160 strings out of 493328
- 323656 string characters out of 3139124
+ 17170 strings out of 493328
+ 323763 string characters out of 3139124
  629237 words of memory out of 3000000
- 20332 multiletter control sequences out of 15000+200000
+ 20342 multiletter control sequences out of 15000+200000
  62134 words of font info for 128 fonts, out of 3000000 for 9000
  1144 hyphenation exceptions out of 8191
  62i,14n,122p,930b,2186s stack positions out of 5000i,500n,10000p,200000b,50000s
-{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/base/8r.enc}<C:/Program Files/Mi
-KTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Program Files/MiKTeX 2.9
-/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Program Files/MiKTeX 2.9/fonts/ty
-pe1/public/amsfonts/cm/cmr7.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public
-/amsfonts/cm/cmsy10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/courier/uc
-rr8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/courier/ucrro8a.pfb><C:/P
-rogram Files/MiKTeX 2.9/fonts/type1/urw/helvetic/uhvb8a.pfb><C:/Program Files/M
-iKTeX 2.9/fonts/type1/urw/helvetic/uhvr8a.pfb><C:/Program Files/MiKTeX 2.9/font
-s/type1/urw/helvetic/uhvro8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/p
-alatino/uplb8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/palatino/uplbi8
-a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/palatino/uplr8a.pfb><C:/Prog
-ram Files/MiKTeX 2.9/fonts/type1/urw/palatino/uplr8a.pfb><C:/Program Files/MiKT
-eX 2.9/fonts/type1/urw/palatino/uplri8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/
-type1/urw/zapfding/uzdr.pfb>
-Output written on "Tarea 1 - LaTeX.pdf" (5 pages, 240748 bytes).
+{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/base/8r.enc}<C:/Program Files/M
+iKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Program Files/MiKTeX 2.
+9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Program Files/MiKTeX 2.9/fonts/t
+ype1/public/amsfonts/cm/cmr7.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/publi
+c/amsfonts/cm/cmsy10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/courier/u
+crr8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/courier/ucrro8a.pfb><C:/
+Program Files/MiKTeX 2.9/fonts/type1/urw/helvetic/uhvb8a.pfb><C:/Program Files/
+MiKTeX 2.9/fonts/type1/urw/helvetic/uhvr8a.pfb><C:/Program Files/MiKTeX 2.9/fon
+ts/type1/urw/helvetic/uhvro8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/
+palatino/uplb8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/palatino/uplbi
+8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/palatino/uplr8a.pfb><C:/Pro
+gram Files/MiKTeX 2.9/fonts/type1/urw/palatino/uplr8a.pfb><C:/Program Files/MiK
+TeX 2.9/fonts/type1/urw/palatino/uplri8a.pfb><C:/Program Files/MiKTeX 2.9/fonts
+/type1/urw/zapfding/uzdr.pfb>
+Output written on "Tarea 1 - LaTeX.pdf" (5 pages, 241283 bytes).
 PDF statistics:
  84 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
