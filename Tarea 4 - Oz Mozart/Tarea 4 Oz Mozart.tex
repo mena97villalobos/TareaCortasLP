@@ -1,6 +1,5 @@
 \documentclass[10pt,journal,compsoc]{IEEEtran}
 \usepackage[spanish]{babel}
-\usepackage[linguistics]{forest}
 \usepackage{graphicx}
 \usepackage{wrapfig}
 \usepackage{listings}
@@ -43,12 +42,12 @@ pdfauthor={Daniel, Wilbert, Anthony, Bryan},
 \IEEEpeerreviewmaketitle
 
 \section{Datos Historicos}
-\begin{wrapfigure}{R}{0.3\textwidth}
-	\centering
+\begin{wrapfigure}{O}{0.3\textwidth}
 	\includegraphics[width=0.25\textwidth]{logo.png}
 	\caption{\label{fig:Logo}Logo de Mozart}
 \end{wrapfigure}
-Concebido en 1991 por Gert Smolka en la universidad de Saarland y desarrollado en colaboraci\'on con Seif Haridi y Perter Van Roy en el SICS (Swedish Institute of Computer Science), desde 2005 recibe mantenimiento por \emph{Mozart Board}. Tiene herencia de:
+
+\par Concebido en 1991 por Gert Smolka en la universidad de Saarland y desarrollado en colaboraci\'on con Seif Haridi y Perter Van Roy en el SICS (Swedish Institute of Computer Science), desde 2005 recibe mantenimiento por \emph{Mozart Board}. Tiene herencia de:
 \begin{itemize}
 	\item Prolog
 	\item Earlang
@@ -104,7 +103,7 @@ En Oz las variables no son variables, en OZ las variables son identificadores y 
 \begin{lstlisting}[language=Oz, caption = {Tupla}][linewidth=5.4cm]
 <Etiqueta>(1:elemento1 2:elemento2)
 \end{lstlisting}
-	\item Listas: puede ser el atomo nil para representar una lista vacia o puede representar una tupla usando el operador infijo $\mid$ y dos argumentos, los cuales son la cabeza y la cola de la lista, otra representaci\'on utili es la lista cerrada representada por \verb|[ ]| y separando elementos por espacios. Tambien estan las listas representadas con los caracteres \verb|"| (doble comilla al inicio y al final) estos son los string
+	\item Listas: puede ser el atomo nil para representar una lista vacia o puede representar una tupla usando el operador infijo $\mid$ y dos argumentos, los cuales son la cabeza y la cola de la lista, otra representaci\'on utili es la lista cerrada representada por \verb|[ ]| y separando elementos por espacios. Tambien estan las listas representadas con los caracteres \verb|"| (doble comilla al inicio y al final) estos son los string, se puede utilizar el estatuto ForAll para iterar sobre cada elemento que posee
 \end{itemize}
 Algunas ideas sobre los tipos de datos anteriores:
 \begin{itemize}
@@ -116,7 +115,7 @@ Algunas ideas sobre los tipos de datos anteriores:
 		\subitem Resoluci\'on de problemas utilizando "\textit{Search Techniques}"
 \end{itemize}
 
-\section{Estructuras de Control}
+\section{Estructuras de Control y Expresiones}
 \begin{figure}[h]
 	\centering
 	\includegraphics[width=0.5\textwidth]{struct.png}
@@ -132,6 +131,17 @@ Algunas ideas sobre los tipos de datos anteriores:
 	$>=$ & Mayor Igual que\\
 	$<=$ &Menor Igual que\\
 	\verb|\=| & Diferente\\
+	\hline
+\end{tabular}
+\subsection{Operadores Booleanos}
+\begin{tabular}{c p{3cm} p{5cm}}
+	Operador & Significado\\
+	\hline\hline\\
+	$false$ & Valor de falsedad\\
+	$true$ & Valor de Verdad\\
+	$Not$ & Negaci\'on L\'ogica\\
+	$Or~/~And$ & Or L\'ogico* And L\'ogico\\
+	$orelse~/~andthen$ & Short circuit de los anteriores\\
 	\hline
 \end{tabular}
 \subsection{Declaraci\'on de variables}
@@ -167,7 +177,7 @@ Lo que se hace es probar si X es igual a Y y dejar el resultado en R. La operaci
 	\item Retorna false si los elementos tienen estructuras o valores diferentes
 	\item Se suspende cuando los nodos son diferentes pero existe un elemento sin asociar a un valor. Como Oz es un lenguaje concurrente cuando pasa esto el hilo que ejecut\'o el c\'odigo se suspende tambien.
 \end{itemize}
-Tambien se puede utilizar el operador  "==" como infijo tal que R = X == Y donde se prueba si X y Y son iguales y se deja el resultado en R
+Tambien se puede utilizar el operador \verb|"=="| como infijo tal que R = X == Y donde se prueba si X y Y son iguales y se deja el resultado en R
 
 \subsection{Estatutos IF}
 \begin{lstlisting}[language=Oz, caption = {Variables en un scope}][linewidth=5.4cm]
@@ -204,6 +214,59 @@ Lo que hace el estatuto case es evaluar E con los $patrones_i$ esto de izquierda
 	\item Dado sea el caso que la parte del \emph{else} sea omitida si E no hace match con algun $patron_i$ se lanza un exception
 \end{itemize}
 
+\subsection{Loops}
+\subsubsection{For}
+El procedimiento {For From To Step P} es una abstracci\'on de un for qu aplicac el prodecimiento P, From y To son integers que denotan el inicio y el fin del ciclo, Step es otra integer que indica el incremento (o decremento) en From para llegar a To. Un ejemplo de For:
+\begin{lstlisting}[language=Oz, caption = {For}][linewidth=5.4cm]
+{For 1 10 1 Browse}
+\end{lstlisting}
+El c\'odigo anterior mostrar\'a los n\'umeros de 1 al 10. Ejemplo m\'as general
+\begin{lstlisting}[language=Oz, caption = {For}][linewidth=5.4cm]
+local 
+  proc {HelpPlus C To Step P}
+    if C=<To then 
+      {P C} {HelpPlus C+Step To Step P} 
+    end 
+  end 
+  proc {HelpMinus C To Step P}
+    if C>=To then 
+      {P C} {HelpMinus C+Step To Step P} 
+    end 
+  end 
+  in proc {For From To Step P}
+    if Step>0 then 
+      {HelpPlus From To Step P}
+    else 
+      {HelpMinus From To Step P} 
+    end 
+  end 
+end
+\end{lstlisting}
+
+\subsection{Manejo de Excepciones}
+Para lanzar una excepci\'on se utiliza
+\begin{lstlisting}[language=Oz, caption = {Variables en un scope}][linewidth=5.4cm]
+raise E end
+\end{lstlisting}
+donde E es una expresi\'on de error
+Usualmente se utiliza un try-statement para manejar estos errores:
+\begin{lstlisting}[language=Oz, caption = {Variables en un scope}][linewidth=5.4cm]
+try S1 catch X then S2 end
+\end{lstlisting}
+La anterior es la forma m\'as simplificada de un try-statement:
+\begin{lstlisting}[language=Oz, caption = {Variables en un scope}][linewidth=5.4cm]
+try S catch 
+Pattern_1 then S1 
+[] Pattern_2 then S2 
+... 
+[] Pattern_n then Sn 
+finally 
+S_final 
+end
+\end{lstlisting}
+Lo anterior se puede utilizar asemejando el try catch de Java con varios bloques catch y el bloque finally
+
+
 \subsection{Procedimientos}
 \begin{lstlisting}[language=Oz, caption = {Variables en un scope}][linewidth=5.4cm]
 proc {P X1 ... Xn} S end
@@ -220,6 +283,98 @@ local Max X Y Z in
 	{Max X Y Z} {Browse Z}
 end
 \end{lstlisting}
+
+\subsection{Funciones}
+\begin{lstlisting}[language=Oz, caption = {Variables en un scope}][linewidth=5.4cm]
+fun {F X1 ... Xn} S E end
+\end{lstlisting}
+Como se puede apreciar la sintaxis de una funci\'on es muy similar a la de un procedimiento. Oz permite ciertas formas de optimizaci\'on tail-recursion 
+
+\subsection{Funciones y procedimientos An\'onimos}
+La idea detras de un procedimiento an\'onimo es que la funci\'on o procedimiento no esta asociada con una etiqueta generalmente son usada para procedimientos o funciones que no son longevas. En mozart se utiliza el simbolo \emph{\$} en vez de pasar la etiqueta que contendria la funcion un ejemplo de esto
+\begin{lstlisting}[language=Oz, caption = {Variables en un scope}][linewidth=5.4cm]
+fun {$ X1 ... Xn} ...end
+\end{lstlisting}
+La funci\'on anterior no estaria asociada con una etiqueta simplemente existe. Unejemplo \'util de esto:\footnote{Tomado de \emph{Tutorial of Oz}}
+\begin{lstlisting}[language=Oz, caption = {Variables en un scope}][linewidth=5.4cm]
+local 
+  Max = proc {$ X Y Z}
+          if X >= Y then Z = X
+          else Z = Y end 
+        end 
+  X = 5
+  Y = 10
+  Z
+in 
+  {Max X Y Z} {Browse Z}
+end
+\end{lstlisting}
+
+\section{M\'odulos e Interfaces}
+Com\'unmente los modulos (o paquetes) son un grupo de procedimientos, valores, entre otros que se encuentran contenidos en un mismo lugar con el fin de brindar un conjunto de servicios relacionados, usualmente estos modulos contienen procedimientos privados que solo son accesibles dentro de si. En Oz se utiliza \emph{functor} para identificar miembros de un m\'odulo
+
+\section{Orientaci\'on a Objetos}
+En Oz una clase es un Chunk que contiene:
+\begin{itemize}
+	\item Una colecci\'on de m\'etodos
+	\item Descripci\'on de los atributos que cada instancia tendr\'a
+	\item Descripci\'on de los features que cada instancia de la clase tendr\'a (Un feature es una variable inmutable accesada por feature-name)
+	\item Son simplemente descripciones de como un objeto se debe comportar
+\end{itemize}
+Ejemplo de una clase:
+\begin{lstlisting}[language=Oz, caption = {Variables en un scope}][linewidth=5.4cm]
+class Counter 
+  attr val
+  meth browse 
+    {Browse @val}
+  end 
+  meth inc(Value)
+    val := @val + Value
+  end 
+  meth init(Value)
+    val := Value
+  end 
+end
+\end{lstlisting}
+Algunos datos importantes:
+\begin{itemize}
+	\item Para clases an\'onimas se utiliza el s\'imbolo  \emph{\$}
+	\item  La llamada a un metodo toma como argumento impl\'icito el objeto actual (self)
+	\item Existe una clase trivial (Base Object), el objetivo es que los hijos que la implementen no necesariamente tienen una funci\'on de inicializaci\'on
+	\item es posible definir una clase abstracta donde los m\'etodos se dejan sin especificaci\'on
+\end{itemize}
+
+Para definir una clase se utiliza la palabra clave \emph{class}, para los atributos se definen con \emph{attr} para los features(similares a los records) se utiliza \emph{feat} y los m\'etodos con \emph{meth}; para herencia se utliza la palabra reservada \emph{from}, para accesar a un atributo se utiliza @<AttrName>, para llamar a un m\'etodo de una clase se utiliza <Class Name>, <Method Name>(..)
+
+\subsection{\textquestiondown Para que se utiliza \emph{self}?}
+Como en muchos lenguajes de Orientaci\'on a objetos, self se utiliza en vez de clases especificas, algo así como un binding din\'amico, donde \emph{self} toma\'a el valor de la clase desde la cual se invoca alg\'un elemento
+
+\subsection{Atributos}
+Como ya se dijo anteriormente, los atributos se declaran utilizando la palabra reservada \emph{attr}.
+\begin{itemize}
+	\item Los atributos son privados y solo los puede manipular el objetos que los contiene, la \'unica manera de modificar un atributo fuera de la clase es que la misma clase tenga m\'etodos para hacerlo
+	\item Son \emph{Cells} que se pueden asignar, reasignar y accesar a voluntad
+\end{itemize}
+
+\subsection{Argumentos por Default para un M\'etodo}
+\par Algunas veces en llamada a m\'etodos puede suceder que se desee no brindar un parametro, para esto existen los valores por default. Lo que se hace es asignar al argumento que no recibi\'o un valor un valor por default, esto se hace con el siguiente co\'odigo:
+\begin{lstlisting}[language=Oz, caption = {Variables en un scope}][linewidth=5.4cm]
+meth m(X Y d1:Z<=0 d2:W<=0) ... end
+\end{lstlisting}
+En caso que no se un valor para d1 o d2 se asume el valor de 0
+
+\subsection{Herencia}
+En Oz la herencia multiple esta implementada, se considera una clase (B) superclase de otra (A) si:
+\begin{itemize}
+	\item La clase B aparece despues de la declaraci\'on \emph{from} de la clase A
+	\item La clase B es superclase de una clase C que aparece en la declaracion \emph{from} de la clase A
+\end{itemize}
+La herencia es una herramienta para construir clase apartir de clases ya existentes dandole un rango de metodos y atributos que tendr\'a la nueva clase. Un m\'etodo de la clase A sobre escribe cualquier m\'etodo con la misma etiqueta que posean sus superclases. No se permiten herencias ciclicas, esto es:
+\begin{lstlisting}[language=Oz, caption = {Variables en un scope}][linewidth=5.4cm]
+class A from B ... end 
+class B from A ... end
+\end{lstlisting}
+No se permite que en herencia dos superclases (o m\'as) tengan m\'etodos atributos o features con el mismo tag esto no se evalua en tiempo de compilación sino en tiempo de ejecuci\'on cuando se crea una instancia del objeto y se intenta acceder al atributo o m\'etodo con el tag repetido 
 
 \section{Caracter\'isticas}
 \begin{itemize}
@@ -255,6 +410,9 @@ end
 	\bibitem{TutorialOz}
 	\emph{Tutorial of Oz}, S. Haridi, N. Franzén, Recuperado de:
 	http://mozart.github.io/mozart-v1/doc-1.4.0/tutorial/index.html
+	
+	\bibitem{ReviewOfOz}
+	\emph{A review of Oz and its implementation with Mozart}, Philippe Giabbanelli, Bishop’s University, Recuperado de: http://aqualonne.free.fr/Teaching/csc/oz.pdf
 \end{thebibliography}
 
 \appendices
@@ -263,7 +421,7 @@ end
 \begin{figure}
 	\centering
 	\includegraphics[width=\textwidth]{datos.png}
-	\caption{\label{fig:Datos}Tipos de Datos}
+	\caption{\label{fig:Datos}Tipos de Datos, Tomado de \emph{Tutorial of Oz}}
 \end{figure}
 
 \end{document}
