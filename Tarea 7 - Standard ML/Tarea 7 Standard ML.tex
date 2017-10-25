@@ -162,7 +162,7 @@ fun remueve_duplicados xs = ...
 \end{itemize}
 
 \section{Tipos de Datos}
-Existen diferentes tipos b\'asicos pre-definidos en SML. Por ejemplo el tipo de valores l\'ogicos, llamado \textit{bool}. Esto tiene exactamente dos valores, verdadero o falso. Otro tipo simple es el \textit{string}. Los \textit{strings} se colocan entre comillas dobles (como en ''Hola'') y se unen con '' \^ '' (el símbolo del cursor o flecha hacia arriba). Como era de esperar, la expresión ''Hola'' \^ ''mundo!'' se eval\'ua como ''Hola mundo!''. Tambi\'en hay un tipo \textit{char} para caracteres individuales. Una constante \textit{char} es una constante \textit{string} de longitud uno precedida por un s\'imbolo de hash. As\'i, \#''a'' es la letra a. Se puede acceder a los caracteres de ocho bits mediante su c\'odigo ASCII.
+Existen diferentes tipos b\'asicos pre-definidos en SML. Por ejemplo el tipo de valores l\'ogicos, llamado \textit{bool}. Esto tiene exactamente dos valores, verdadero o falso. Otro tipo simple es el \textit{string}. Los \textit{strings} se colocan entre comillas dobles (como en ''Hola'') y se unen con '' $\wedge$  '' (el símbolo del cursor o flecha hacia arriba). Como era de esperar, la expresión ''Hola'' $\wedge$ ''mundo!'' se eval\'ua como ''Hola mundo!''. Tambi\'en hay un tipo \textit{char} para caracteres individuales. Una constante \textit{char} es una constante \textit{string} de longitud uno precedida por un s\'imbolo de hash. As\'i, \#''a'' es la letra a. Se puede acceder a los caracteres de ocho bits mediante su c\'odigo ASCII.
 
 Los tipos numéricos en SML son los enteros de tipo \textit{int}, los n\'umeros reales de tipo \textit{real} y enteros sin signo (o palabras) de tipo \textit{word}. Adem\'as de esto, una implementaci\'on del lenguaje puede proporcionar otros tipos num\'ericos en una biblioteca, por ejemplo, enteros de precisi\'on arbitraria, reales de doble precisi\'on o incluso bytes (enteros sin signo de 8 bits). Los n\'umeros enteros se pueden representar en notaci\'on decimal o hexadecimal, de modo que 255 y 0xff representan el n\'umero entero 255.
 
@@ -191,7 +191,7 @@ La biblioteca \textit{SML Basis} es el est\'andar para la revisi\'on de SML en 1
 	\item Conversi\'on de valores booleanos a \textit{string}.
 	\item Representaci\'on e intervalos de tiempo.
 	\item Conversiones entre valores num\'ericos.
-	\item B\'usquedas en cadenas de\textit{char}.
+	\item B\'usquedas en cadenas de \textit{char}.
 	\item Operaciones sobre \textit{strings}.
 	\item Operaciones sobre listas.
 	\item Obtener valor absoluto.
@@ -214,7 +214,7 @@ datatype 'a list = nil
 '::' es un operador infijo, por ejemplo, \textit{3 :: 4 :: 5 :: nil} es una lista de tres enteros (int). Tambi\'en es posible declarar listas de la siguiente forma: \textit{[3, 4, 5]}.
 
 \subsection{Tuplas}
-Los tipos de datos, incluidos los tipos básicos anteriores, se pueden combinar de diferentes maneras. Una forma de hacer esto es en una tupla, que es un conjunto ordenado de valores; por ejemplo, la expresión (1, 2) es del tipo int * int, y ('foo', false) es del tipo string * bool. Tambi\'en hay una 0-tupla, (), cuyo tipo se denomina \textit{unit}.
+Los tipos de datos, incluidos los tipos b\'asicos anteriores, se pueden combinar de diferentes maneras. Una forma de hacer esto es en una tupla, que es un conjunto ordenado de valores; por ejemplo, la expresi\'on (1, 2) es del tipo int * int, y ('foo', false) es del tipo string * bool. Tambi\'en hay una 0-tupla, (), cuyo tipo se denomina \textit{unit}.
 Las tuplas pueden ser anidadas, y (a diferencia de algunos formalismos matem\'aticos), (1, 2, 3) es distinto de ((1, 2), 3) y de (1, (2, 3)). El primero es de tipo int * int * int; los otros dos son de tipos (int * int) * int e int * (int * int), respectivamente. Ejemplos de declaraciones de tuplas:
 \begin{lstlisting}[language=ML, caption=Ejemplo Listas]
 val alien1 = ("Groot", 1586, 3.14159)
@@ -248,7 +248,7 @@ Un programa escrito en SML consiste de una secuencia de \textit{tokens}, algunos
 \end{tabular}
 
 \section{Funciones}
-En SML una funci\'on acepta un valor y normalmente devuelve otro valor. Como puede verse en el cuadro 4 la funci\'on factorial es de tipo \textit{int -\textgreater int}, esto significa que la funci\'on recibe un valor de tipo \textbf{int} y retorna un valor de tipo \textbf{int}. El \textit{binding} para la funci\'on debe hacerse como el ejemplo.
+En SML una funci\'on acepta un valor y normalmente devuelve otro valor. Como puede verse en el cuadro 11 la funci\'on factorial es de tipo \textit{int $\rightarrow$ int}, esto significa que la funci\'on recibe un valor de tipo \textbf{int} y retorna un valor de tipo \textbf{int}. El \textit{binding} para la funci\'on debe hacerse como el ejemplo.
 
 \begin{lstlisting}[language=ML, caption=Ejemplo Factorial]
 fun factorial n =  if n < 1  
@@ -257,7 +257,7 @@ then 1  else n * factorial (n - 1)
 
 Incluso si una funci\'on no retorna un valor en tiempo de ejecuci\'on (por una excepci\'on o si entra a un loop infinito) tiene un tipo de retorno est\'atico en tiempo de compilaci\'on. Es importante recordar que las funciones en SML son valores y todos los valores pueden estar enlazados a nombres, por lo tanto funciones pueden estar enlazadas a nombres.
 
-Cuando en el cuerpo no se provee de suficiente informaci\'on para determinar el tipo exacto del argumento de retorno, puede definirse el tipo expl\'icitamente de la siguiente manera:
+Cuando en el cuerpo de una funci\'on no se provee de suficiente informaci\'on para determinar el tipo exacto del argumento de retorno, puede definirse el tipo expl\'icitamente de la siguiente manera:
 
 \begin{lstlisting}[language=ML, caption=Ejemplo Factorial Tipo Expl\'icito]
 fun factorial (n : int) : int = if n<1
@@ -268,7 +268,7 @@ then 1  else n * factorial (n - 1)
 Los tipos de las llamadas a funciones son comprobadas de la manera m\'as obvia. El argumento actual debe coincidir con el argumento formal, cuando no es as\'i se genera un error.
 
 \subsection{Funciones sin valores de retorno o argumentos}
-Lenguajes como Pascal resuelven este problema dividiendo el universo de abstracciones de control en dos tipos: funciones, que devuelven valores y procedimientos, que no. Los lenguajes como C solucionan este problema al tener funciones \textit{void} que no devuelven nada. SML utiliza un enfoque similar, pero no igual a este último: utiliza el tipo \textit{unit}, que tiene un valor, escrito (): \textit{printHi()}
+Lenguajes como Pascal resuelven este problema dividiendo el universo de abstracciones de control en dos tipos: funciones, que devuelven valores y procedimientos, que no. Los lenguajes como C solucionan este problema al tener funciones \textit{void} que no devuelven nada. SML utiliza un enfoque similar, pero no igual a este \'ultimo: utiliza el tipo \textit{unit}, que tiene un valor, escrito (): \textit{printHi()}
 
 \subsection{Funciones recursivas}
 Las funciones recursivas son aquellas que utilizan alg\'un tipo de iteraci\'on para obtener los resultados. En los lenguajes imperativos la iteraci\'on se logra utilizando ciclos \textit{while} y ciclos \textit{for}, en SML se hace mediante la recursi\'on.
@@ -289,7 +289,7 @@ fun factorial 0 = 1
 |factorial (n:int) = n*factorial (n-1)
 \end{lstlisting}
 
-En ciertas ocasiones es \'util definir dos funciones simult\'aneamente, donde cada una de las cuales se llama a s\'i misma y/o la otra funci\'on para calcular el resultado. Este tipo de funciones se les llama \textit{mutuamente recursivas}, esto se hace de la siguiente manera:
+En ciertas ocasiones es \'util definir dos funciones simult\'aneamente, donde cada una se llama a s\'i misma o a la otra funci\'on para calcular el resultado. Este tipo de funciones se les llama \textit{mutuamente recursivas}, esto se hace de la siguiente manera:
 
 \begin{lstlisting}[language=ML, caption=Ejemplo Funciones Mutuamente Recursivas]
 fun par 0 = true
@@ -299,7 +299,7 @@ and impar 0 = false
 \end{lstlisting}
 
 \subsection{Ramificaci\'on (branching)}
-Los lenguajes imperativos expresan ramificación a trav\'es de declaraciones condicionales, sin embargo lenguajes funcionales como SML, expresan ramificación principalmente a trav\'es de expresiones condicionales.
+Los lenguajes imperativos expresan ramificaci\'on a trav\'es de declaraciones condicionales, sin embargo lenguajes funcionales como SML, expresan ramificaci\'on principalmente a trav\'es de expresiones condicionales.
 
 \subsection{Expresiones if}
 Los condicionales if en SML tienen la siguiente sintaxis: \textit{if boolExpr then expr1 else expr2}
@@ -318,7 +318,7 @@ Secuencias de expresi\'on tienen la siguiente sem\'antica:
 
 \begin{enumerate}
 	\item Evaluar cada expresi\'on en orden de izquierda a derecha.
-	\item Devuelven la \'ultima expresión evaluada como el valor de toda la expresi\'on.
+	\item Devuelven la \'ultima expresi\'on evaluada como el valor de toda la expresi\'on.
 \end{enumerate}
 
 Todos los resultados aparte de la \'ultima expresi\'on son descartados. Las secuencias de expresiones son primordialmente \'utiles para las expresiones de efectos secundarios como \textit{print}:
@@ -379,7 +379,7 @@ val swap = fn :
  'a * 'b -> 'b * 'a
 \end{lstlisting}
 
-En lugar de escribir tipos expl\'icitos para x e y, se escriben las variables de tipo 'a y b'. El tipo de swap es 'a*'b -> 'b*' a. Lo que esto significa es que podemos usar \textit{swap} como si tuviera cualquier tipo que se pudiese obtener consistentemente reemplazando 'a' y 'b' en su tipo con un tipo para 'a y un tipo para' b. Puede usarse el nuevo \textit{swap} en lugar de todas las viejas definiciones:
+En lugar de escribir tipos expl\'icitos para x e y, se escriben las variables de tipo 'a y b'. El tipo de swap es 'a*'b$\rightarrow$'b*'a. Lo que esto significa es que podemos usar \textit{swap} como si tuviera cualquier tipo que se pudiese obtener consistentemente reemplazando 'a' y 'b' en su tipo con un tipo para 'a y un tipo para 'b. Puede usarse el nuevo \textit{swap} en lugar de todas las viejas definiciones:
 
 \begin{lstlisting}[language=ML, caption=Ejemplo Polimorfismo con definiciones antiguas]
 (*swap:(int*int)->(int*int)*)
@@ -395,9 +395,9 @@ swap("foo","bar");
 swap("foo",3.14);   
 \end{lstlisting}
 
-Esta capacidad de usar \textit{swap} como si tuviera muchos tipos diferentes se conoce como polimorfismo, del griego para "muchas formas". Si pensamos que \textit{swap} tiene una "forma" que su tipo define, entonces \textit{swap} puede tener muchas formas: es polim\'orfico. Obs\'ervese que el requisito de que las variables de tipo sean sustituidas consistentemente significa que algunos tipos est\'an descartados; por ejemplo, es imposible usar swap en el tipo (int * real) -> (string * int), porque ese tipo sustituir\'ia consistentemente por la variable de tipo 'a pero no por 'b.
+Esta capacidad de usar \textit{swap} como si tuviera muchos tipos diferentes se conoce como polimorfismo, del griego para "muchas formas". Si pensamos que \textit{swap} tiene una "forma" que su tipo define, entonces \textit{swap} puede tener muchas formas: es polim\'orfico. Obs\'ervese que el requisito de que las variables de tipo sean sustituidas consistentemente significa que algunos tipos est\'an descartados; por ejemplo, es imposible usar swap en el tipo (int * real) $\rightarrow$ (string * int), porque ese tipo sustituir\'ia consistentemente por la variable de tipo 'a pero no por 'b.
 
-Los programadores de SML suelen leer los tipos 'a' y 'b' como "alfa" y "beta". Esto es m\'as f\'acil que decir "comillas simples a". De hecho, una variable de tipo puede ser cualquier identificador precedido por una comilla simple; por ejemplo, el valor \textit{'key} y \textit{'valor} tambi\'en son variables legales. El compilador SML necesita tener estos identificadores precedidos por una comilla simple para que sepa que est'a viendo una variable de tipo.
+Los programadores de SML suelen leer los tipos 'a' y 'b' como~\textquotedblleft alfa\textquotedblright~y "beta". Esto es m\'as f\'acil que decir~\textquotedblleft comillas simples a". De hecho, una variable de tipo puede ser cualquier identificador precedido por una comilla simple; por ejemplo, el valor \textit{'key} y \textit{'valor} tambi\'en son variables legales. El compilador SML necesita tener estos identificadores precedidos por una comilla simple para que sepa que est\'a viendo una variable de tipo.
 
 Es importante tener en cuenta que el \textit{swap} no utiliza sus argumentos \textit{x} o \textit{y} de manera interesante. Los trata como si fueran cajas negras. Cuando el verificador de tipo SML est\'a comprobando la definici\'on de \textit{swap}, todo lo que sabe es que \textit{x} es de alg\'un tipo arbitrario 'a. No permite realizar ninguna operaci\'on en \textit{x} que no pueda realizarse en un tipo arbitrario. Esto significa que el c\'odigo est\'a garantizado para trabajar para cualquier x e y.
 
