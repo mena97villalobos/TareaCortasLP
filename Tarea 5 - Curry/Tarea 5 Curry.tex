@@ -1,0 +1,394 @@
+\documentclass[10pt,journal,compsoc]{IEEEtran}
+\usepackage[spanish]{babel}
+\usepackage{listings}
+\usepackage{graphicx}
+\usepackage{wrapfig}
+\usepackage{lipsum}
+\usepackage[T1]{fontenc}
+\usepackage{filecontents}
+\ifCLASSOPTIONcompsoc
+  \usepackage[nocompress]{cite}
+\else
+  \usepackage{cite}
+\fi
+
+\ifCLASSINFOpdf
+\else
+\fi
+\newcommand\MYhyperrefoptions{bookmarks=true,bookmarksnumbered=true,
+pdfpagemode={UseOutlines},plainpages=false,pdfpagelabels=true,
+colorlinks=true,linkcolor={black},citecolor={black},urlcolor={black},
+pdftitle={Curry},
+pdfsubject={Lenguaje de Progemaci\'on Pascal},
+pdfauthor={Daniel, Wilbert, Anthony, Bryan},
+}
+\renewcommand{\lstlistingname}{Cuadro}
+\lstset{
+	extendedchars=true,
+	frame = single, 
+	language=Pascal, 
+	framexleftmargin=3pt
+}
+\hyphenation{op-tical net-works semi-conduc-tor}
+
+
+\begin{document}
+\title{Curry}
+
+\author{Daniel~Delgado,~\IEEEmembership{Estudiante,~ITCR,}
+	Wilbert~Gonzales,~\IEEEmembership{Estudiante,~ITCR,}
+	Anthony~Leandro,~\IEEEmembership{Estudiante,~ITCR,}
+	and~Bryan~Mena,~\IEEEmembership{Estudiante,~ITCR}
+}
+\markboth{Lenguajes de Programaci\'on, Tarea Corta 5, Octubre 2017}
+{Shell \MakeLowercase{\textit{et al.}}: \LaTex}
+
+
+\maketitle
+
+\IEEEdisplaynontitleabstractindextext
+
+\IEEEpeerreviewmaketitle
+
+\section{Datos Historicos}
+\begin{wrapfigure}{R}{0.3\textwidth}
+	\centering
+	\includegraphics[width=0.25\textwidth]{Curry.png}
+	\caption{\label{fig:HaskellCurry}Uno de los logos de Curry.}
+\end{wrapfigure}
+Curry es un lenguaje experimental multiparadigma (l\'ogico y funcional), con una sintaxis similar a la del lenguaje de programaci\'on Haskell y destinado a proveer una plataforma en com\'un para la investigaci\'on, ense\~nanza y aplicaci\'on de lenguajes l\'ogico-funcionales integrados. Curry combina elementos de ambos paradigmas de programaci\'on. Por un lado, de la programaci\'on funcional (expresiones anidadas, evaluaci\'on perezosa, funciones de alto orden) y por otra parte, de la programaci\'on l\'ogica (variables l\'ogicas, estructuras de datos parciales, b\'usqueda incorporada). Es un lenguaje que hasta la fecha su desarrollo sigue en proceso gracias a un grupo de investigadores, en su mayor\'ia de origen alem\'an, donde se destaca la contribuci\'on del Dr. Michael Hanus, quien ha sido el m\'as involucrado en el proyecto. La primera aparici\'on de Curry se di\'o en los a\~nos 90 y el \'ultimo reporte  data de enero de 2016 (dicho reporte es utilizado como referencia para la realizaci\'on de este documento en casi su totalidad) por lo que el lenguaje cuenta con recientes publicaciones relacionadas al mismo.  Por ejemplo, \emph{Programaci\'on de bases de datos de alto nivel en Curry}, \emph{Traducci\'on de Curry a Javascript}, \emph{Secuencia de comandos de alto nivel del servidor web en Curry}, \emph{Programando robots aut\'onomos en Curry}, entre otros. Curry provee caracter\'isticas adicionales en comparaci\'on con lenguajes puros (comparado con programaci\'on funcional: b\'usqueda, computaci\'on con informaci\'on parcial; comparado con programaci\'on l\'ogica: evaluaci\'on m\'as eficiente debido a la evaluaci\'on determinista de funciones.). Adem\'as, une los m\'as importantes principios operacionales de lenguajes l\'ogico-funcionales integrados, tales como \emph{residuation} y \emph {narrowing}.
+
+\section{Tipos de Datos}
+En Curry  existen tipos de datos predefinidos, y para cada uno de esos tipos de datos existen operaciones importantes seguidamente detalladas. \newline 
+
+\subsection{Boolean}
+Los valores boleanos son predefinidos por la declaraci\'on del tipo de dato
+\begin{lstlisting}[language=Haskell, caption = {C\'odigo de tipo de dato bool}][linewidth=5.4cm]
+data Bool = True | False
+\end{lstlisting}
+La conjunci\'on secuencial est\'a predefinida como el operador infijo asociativo izquierdo (\&\&)
+
+\begin{lstlisting}[language=Haskell, caption = {C\'odigo de ejemplo de datos bool}][linewidth=5.4cm]
+(&&) :: Bool -> Bool -> Bool 
+True &&x=x
+False && x = False
+\end{lstlisting}
+
+Similarmente, la disyunci\'on secuencial "||" y la negaci\'on \emph{not} est\'an definidas.
+
+\subsection{Functions}
+El tipo \emph{$t_{1} -> t_{2}$} es el tipo de una funci\'on que produce un valor de tipo \emph{$t_{2}$}  para cada uno de los argumentos de tipo \emph{t1}. Una funci\'on f es aplicada a un argumento \emph{x} por medio de \emph{" f x "}. \\
+\emph{$f e_{1} e_{2} e_{3} ... e_{n}$} es una abreviaci\'on que indica que la funci\'on f es aplicada a \emph{n} argumentos. \\
+Tambi\'en se define la aplicaci\'on del operador \$ con asociatividad derecha el cual sirve para omitir par\'entesis, por lo que la expresi\'on \textbf{f \$ g \$ 3+4} es equivalente a \textbf{f (g (3+4))}.
+
+\subsection{Integer}
+Los valores enteros comunes, como \textbf{42} o \textbf{-15} son considerados como constantes de tipo \textbf{Int}. Los operadores usuales de valores enteros, como \textbf{+} o \textbf{*}, son funciones predefinidas que son evaluadas solo si ambos argumentos son valores enteros. Pero tambi\'en se pueden usar esas funciones como restricciones pasivas. Por ejemplo: \\
+
+
+\begin{lstlisting}[language=Haskell, caption = {C\'odigo de ejemplo de restricciones con Integers}][linewidth=5.4cm]
+digit 0 = True
+...
+digit 9 = True
+\end{lstlisting}
+Se define los d\'igitos del 0-9 como correctos. Por lo tanto, la conjunci\'on \textbf{x*x=:=y \& x+x=:=y \& digit x} se satisface primeramente enlazando la variable \textbf{x} a un d\'igito bajo la restricci\'on \textbf{digit x = True} y seguidamente realizando las dos ecuaciones correspondientes. Por lo que, el resultado final ser\'ia: \textbf{\{x=0,y=0\} | \{x=2,y=4\}}.
+
+\subsection{Floating Point Numbers}
+Similares a los enteros, valores como \textbf{3.14159} o \textbf{5.0e-4} son considerados como constantes de tipo \textbf{Float}. Debido a que la sobrecarga no est\'a incluida en el kernel de Curry, los nombres de las funciones aritm\'eticas en floats son diferentes de las funciones correspondientes en enteros.
+
+\subsection{Lists}
+El tipo \textbf{[t]} denota todas las listas donde sus elementos son valores de tipo \textbf{t}. El tipo de listas puede ser considerado como predefinido por la declaraci\'on:
+\begin{lstlisting}[language=Haskell, caption = {C\'odigo de ejemplo de declaraci\'on de listas}][linewidth=5.4cm]
+data [a] = [] | a : [a]
+\end{lstlisting}
+donde \textbf{[]} denota la lista vac\'ia y \textbf{x:xs} es la lista no vac\'ia que consiste en el primer elemento de \textbf{x} y la lista restante \textbf{xs}. Como escribir listas entre brackets es soportado Curry, la siguiente expresi\'on es v\'alida: \textbf{[e1,e2,...,en]} que tambi\'en se traduce a la lista \textbf{e1:e2:...:en:[]}
+ 
+\subsection{Characters}
+Valores como \textbf{'a'} o \textbf{'0'} denotan constantes de tipo \textbf{Char}. Los caracteres especiales pueden ser escritos mediante un backslash, por ejemplo: '\textbackslash{n}' para el caracter con el valor ASCII 10, o '\textbackslash{228}' para el caracter '{\"a}' con el valor ASCII 228. Existen dos funciones conversoras entre chars y su correspondiente valor ASCII: \
+\begin{lstlisting}[language=Haskell, caption = {C\'odigo de funciones conversoras de Char-ASCII-Char}][linewidth=5.4cm]
+ord :: Char -> Int 
+chr :: Int -> Char
+\end{lstlisting}
+
+\subsection{Strings}
+El tipo \textbf{String} es una abreviaci\'on de \textbf{[Char]}. Por ejemplo, los strings pueden ser considerados como una lista de caracteres. Las constantes string est\'an cerradas por doble comilla. As\'i, la constante string \textbf{"hola"} es id\'entica a la lista de caracteres \textbf{['h','o','l','a']}. Un t\'ermino puede ser convertido a string mediante la funci\'on:
+\begin{lstlisting}[language=Haskell, caption = {C\'odigo de conversi\'on de un t\'ermino a String}][linewidth=5.4cm]
+show :: a -> String
+\end{lstlisting}
+Por lo tanto, el resultado de \textbf{(show 42)} es la lista de caracteres \textbf{['4','2']}
+
+\subsection{Tuples}
+Si $t_{1},t_{2},...,t_{n}$ son tipos y $n >= 2$, entonces ($t_{1},t_{2},...,t_{n}$) denota el tipo de todas las n-tuplas. Los elementos de tipo ($t_{1},t_{2},...,t_{n}$) son ($x_{1},x_{2},...,x_{n}$) donde $x_{i}$ es un elemento de tipo $t_{i}$ ($i = 1, ..., n$).
+El tipo unidad \textbf{()} tiene un \'unico elemento \textbf{()} y se considera como definido por: \textbf{data () = ()}. Adem\'as, el tipo unidad puede ser interpretado como el tipo de 0-tuplas.
+
+\section{Expresiones}
+Las expresiones son una notaci\'on fundamental en Curry. Las funciones son definidas por medio de ecuaciones que definen expresiones que son equivalentes a llamadas espec\'ificas de funciones. Por ejemplo, la regla 
+\begin{lstlisting}[language=Haskell, caption = {C\'odigo de una simple expresi\'on.}][linewidth=5.4cm]
+square x = x*x
+\end{lstlisting}
+define que la funci\'on \textbf{square 3} es equivalente a la expresi\'on \textbf{3*3}.
+
+\subsection{Secuencias aritm\'eticas} 
+Curry maneja dos extensiones sint\'acticas para definir una lista de elementos de una manera compacta. La primera es una notaci\'on para secuencias aritm\'eticas. La secuencia aritm\'etica \textbf{[$e_{1} , e_{2} , . . e_{3}$]} denota una lista de enteros comenzando por los primeros dos elementos $e_{1}$ y $e_{2}$ y terminando con el elemento $e_{3}$ (donde $e_{2}$ y $e_{3}$ pueden ser omitidos). El significado exacto para esta notaci\'on est\'a definido por las siguientes reglas de traducci\'on: 
+
+\begin{tabular}{ l | l }
+	\hline
+	Secuencia aritm\'etica & Su equivalente \\
+	\hline\\
+	$[e..]$ & enumFrom $e$\\
+	\hline\\
+	$[e_{1},e_{2}..]$ & enumFromThen $e_{1}$ $e_{2}$ \\
+	\hline\\
+	$[e_{1}..e_{2}]$ & enumFromTo $e_{1}$ $e_{2}$\\
+	\hline\\
+	$[e_{1},e_{2}..e_{3}]$ & enumFromThenTo $e_{1}$ $e_{2}$ $e_{3}$\\
+	\hline
+\end{tabular}
+
+Las diferentes notaciones tienen el siguiente significado: \\
+\begin{itemize}
+	\item La secuencia $[e..]$ denota la lista infinita $[e,e+1,e+2,...]$.
+	\item La secuencia $[e_{1}...e_{2}]$ denota la lista finita $[e_{1},e_{1}+1,e_{1}+2,...,e_{2}]$. Note que la lista es vac\'ia si $e_{1} > e_{2}$.
+	\item La secuencia $[e_{1},e_{2}..]$ denota la lista infinita $[e_{1},e_{1}+i,e_{1}+2*i,...]$ con $i = e_{2} - e_{1}$. Note que $i$ puede ser positivo, negativo o cero.
+	\item La secuencia $[e_{1},e_{2}...e_{3}]$ denota la lista finita  $[e_{1},e_{1}+i,e_{1}+2*i,...,e_{3}]$ con $i = e_{2} - e_{1}$. Note que $e_{3}$ no est\'a contenido en esta lista si no existe un entero $m$ talque $e_{3} = e_{1} + m * i$.
+\end{itemize}
+Entonces, $[0, 2 .. 10]$ denota la lista $[0, 2, 4, 6 ,8, 10]$.
+
+\subsection{Comprensi\'on de Listas}
+La segunda notaci\'on compacta para listas es \emph{comprensi\'on de listas}. Estas tienen la forma general: \\ $[e | q_{1}, ..., q_{k}]$ con $K \ge 1$ y cada $q_{i}$ es un calificador que es: \\
+\begin{itemize}
+	\item \emph{un generador} de la forma $ p \leftarrow l $, donde $p$ es un patr\'on local (por ejemplo: una expresi\'on sin s\'imbolos de funci\'on definida y sin m\'ultiples ocurrencias de la misma variable) de tipo $t$ y $l$ es una expresi\'on de tipo $[t]$, o sino:
+	\item \emph{un guardia} (por ejemplo: una expresi\'on de tipo \textbf{Bool} ).
+\end{itemize}
+
+Las variables insertadas en un patr\'on local  se pueden utilizar en calificadores posteriores y la descripci\'on del elemento $e$. Como la comprensi\'on de listas denota la lista de elementos que son el resultado de evaluar $e$ en el ambiente producido por la evaluaci\'on de primera profundidad y evaluaci\'on anidad de los generadores que satisfacen a  todos los \emph{guardias}. Por lo tanto, la comprensi\'on de listas \\ \\
+\textbf{$[ x | x \leftarrow [1..50], x ‘mod‘ 7 == 0 ]$} denota la lista  $[7,14,21,28,35,42,49]$ y la comprensi\'on de lista \\
+\textbf{$[ (x,y) | x\leftarrow [1,2,3], y\leftarrow[4,5] ]$} denota la lista $[(1,4),(1,5),(2,4),(2,5),(3,4),(3,5)] $ \\
+
+El significado exacto de las comprensiones de listas est\'a definido por las siguientes reglas de traducci\'on (para el prop\'osito de la definici\'on, tambi\'en se tomar\'a en cuenta las comprensiones de lista con una lista calificadora vac\'ia): \\
+
+\begin{tabular}{ l | l }
+	\hline
+	Comprensi\'on de Lista & Su equivalente \\
+	\hline\\
+	$[e |  ]$ &  $[e]$\\
+	\hline\\
+	$[e | b, q]$ & if $b$ then $[e | q]$ else $[]$ \\
+	\hline\\
+	$[e | $ let \emph{decls} $q]$ & let \emph{decls} in $[e | q]$\\
+	\hline
+\end{tabular} \\
+
+Por ejemplo, la comprensi\'on de lista: \\
+\begin{lstlisting}[language=Haskell, caption = {C\'odigo de una notaci\'on de comprensi\'on de lista}][linewidth=5.4cm]
+[x | (2,x) <- [(1,3),(2,4),(3,6)]]
+\end{lstlisting}
+(la cu\'al es evaluada a \textbf{[4]}) es traducida a la siguiente expresi\'on: \\
+\begin{lstlisting}[language=Haskell, caption = {Expresi\'on de una comprensi\'on de lista}][linewidth=5.4cm]
+let ok (y,x) = if y==2 then [x] else [] 
+in concatMap ok [(1,3),(2,4),(3,6)]
+\end{lstlisting}
+
+\begin{lstlisting}[language=Haskell, caption = {C\'odigo de ayuda para comprensi\'on del Cuadro 9.}][linewidth=5.4cm]
+-- Accumulate all list elements by applying 
+--a binary operator from right to left, i.e.,
+-- foldr f z [x1,x2,...,xn] = 
+-- (x1 'f' (x2 'f' ... (xn 'f' z)...)) :
+foldr 		:: (a->b->b) -> b -> [a] -> b
+foldr _ z []  	= z
+foldrfz(x:xs) 	=fx(foldrfzxs)
+
+-- Concatenate a list of lists into one list
+concat 		:: [[a]] -> [a]
+concat 1	= foldr (++) [] l
+
+-- Map a function from elements to list and
+--merge the results into one list
+concatMap :: (a -> [b]) -> [a] -> [b]
+concatMap f = concat . map f
+
+\end{lstlisting}
+
+
+\subsection{Expresiones Case}
+Las expresiones Case son una notaci\'on conveniente de asociaci\'on de patrones secuenciales con valores por defecto. La forma m\'as simple de una expresi\'on case es la siguiente: $(e,e_{1},...,e_{n}$ son expresiones y los patrones $p_{1},...,p_{n}$ son t\'erminos de datos$)$: \\ 
+\begin{lstlisting}[language=Haskell, caption = {Ejemplo de una expresi\'on case}][linewidth=5.4cm]
+case e of 
+p1 -> e1
+...
+pn -> en
+\end{lstlisting}
+
+Note que las expresiones case usan la regla de dise\~no lo que significa que los patrones $p_{1},...,p_{n}$ deben estar verticalmente alineados. El significado operacional informal de la expresi\'on case es la siguiente: 
+\begin{itemize}
+	\item Evaluar $e$ para que coincida con un patr\'on $p_{i}$.
+	\item Si esto es posible, reemplace toda la expresi\'on case con la alternativa correspondiente $e_{i}$ (despu\'es de reemplazar las variables de patr\'on que ocurren en $p_{1}$ por su expresi\'on actual). 
+	\item Si ninguno de los patrones $p_{1},...,p_{n}$ indice con una relaci\'on con alg\'un $e_{i}$, la computaci\'on falla.
+	\item La asociaci\'on con el patr\'on se intenta secuencialemente, de arriba hacia abajo y de una man\'era r\'igida, lo cual significa no enlazar variables libres que ocurren en $e$. 
+	\item En particular, la evaluaci\'on de una expresi\'on case es suspendida si la expresi\'on discriminadora $e$ es evaluada a una variable libre.
+\end{itemize}
+
+Las expresiones case son una notaci\'on convenientes para funciones con casos por defecto, por ejemplo la funci\'on 
+
+\begin{lstlisting}[language=Haskell, caption = {Otro ejemplo de una expresi\'on case}][linewidth=5.4cm]
+swap z = case z of
+[x,y] -> [y,x]
+_ ->z
+\end{lstlisting}
+devuelve una lista con elementos intercambiados en caso de que la entrada sea una lista con exactamente dos elementos y en cualquier otro caso, devuelve la identidad. Adem\'as si la entrada es una variable libre, se suspende. Si no se tomara en cuenta esta \'ultima propiedad, se podr\'ia reescribir \textbf{swap} por medio de las siguientes reglas:
+
+\begin{lstlisting}[language=Haskell, caption = {Redefinici\'on del ejemplo anterior}][linewidth=5.4cm]
+swap [] = []
+swap [x] = [x] 
+swap [x,y] = [y,x]
+swap (x1:x2:x3:xs) = x1:x2:x3:xs
+\end{lstlisting}
+
+Este \'ultimo ejemplo muestra la mejora de lectura que se obtiene por medio de expresiones case.\\
+Las expresiones case tambi\'en podr\'ian tener \emph{guardias} y \emph{declaraciones locales} en las alternativas. Por ejemplo, la siguiente expresi\'on es v\'alida: 
+
+\begin{lstlisting}[language=Haskell, caption = {Expresi\'on case con guardias y declaraciones locales}][linewidth=5.4cm]
+case y of Left z
+| z >= 0 -> sqr z
+| otherwise -> - sqr z 
+where sqr x = x * x
+_ -> 0
+\end{lstlisting}
+
+Las expresiones \emph{guardias} deben ser del tipo \textbf{Bool}. Casos alternativos con \emph{guardias} producen un fallo de sem\'antica: si todos los \emph{guardias}  de un caso alternativo eval\'uan a falso, la asociaci\'on contin\'ua con la siguiente alternativa, osea, se maneja como si el patr\'on no se asociara nunca. Por ejemplo: 
+
+\begin{lstlisting}[language=Haskell, caption = {Expresi\'on case sin asociaci\'on }][linewidth=5.4cm]
+case (1,3) of
+(x,y) | x < 0 -> (0,y) 
+z -> z
+\end{lstlisting}
+devuelve el par (1,3).
+
+\subsection{Expresiones case flexibles}
+Similar al patr\'on r\'igido de asociaci\'on de expresiones case, tambi\'en existe una notaci\'on para el est\'andar flexible de patrones de asociaci\'on de funciones definidas sin estar expl\'icitamente definiendo una funci\'on. Tal caso de expresi\'on case flexible tiene la forma general: 
+
+\begin{lstlisting}[language=Haskell, caption = {Expresi\'on case flexible}][linewidth=5.4cm]
+fcase e of
+p1 |g1 ->e1
+.
+.
+.
+pn |gn ->en
+\end{lstlisting}
+
+donde $e,e_{1},...,e_{n}$ son expresiones, los patrones $p_{1},..,p_{n}$ son t\'erminos de datos, y los \emph{guardias} (opcionales) $g_{1},...,g_{n}$ son expresiones de tipo \textbf{Bool}. El significado operacional obedece la asociaci\'on flexible del patr\'on con funciones definidas, eso quiere decir, que las alternativas no producen fallos de sem\'antica de expresiones case. Actualmente, esta expresi\'on corresponde a la expresi\'on:
+
+\begin{lstlisting}[language=Haskell, caption = {Expresi\'on case flexible con el uso de 'let'-'in'}][linewidth=5.4cm]
+let 	f p1|g1 = e1 
+	.
+	.
+	.
+	f pn|gn = en 
+in  	f e
+\end{lstlisting}
+donde $f$ es un s\'imbolo funcional auxiliar fresco.Por lo tanto, m\'as de una alternativa puede ser tomada durante la evaluaci\'on de una expresi\'on case flexible.  Por ejemplo, la expresi\'on:  
+
+\begin{lstlisting}[language=Haskell, caption = {Evaluaci\'on m\'ultiple en }][linewidth=5.4cm]
+fcase () of 
+_ -> False
+_ -> True
+\end{lstlisting}
+no determin\'isticamente eval\'ua a True o False
+
+\subsection{Comentarios en el c\'odigo}
+Para lograr escribir un comentario en Curry, solo se necesita escribir dos veces <gui\'on> al inicio de una l\'inea de c\'odigo. Por ejemplo:
+
+\begin{lstlisting}[language=Haskell, caption = {Ejemplo de comentairo de c\'odigo en Curry. }][linewidth=5.4cm]
+-- Esto es un comentario en Curry. 
+\end{lstlisting}
+
+\section{L\'exico en Curry}
+Como parte de un lenguaje multiparadigma, Curry posee muchas reglas que le permite utilizar una gran variedad de caracteres, sin embargo, existen determinadas palabras reservadas para el lenguaje las cu\'ales son: 
+
+\begin{center}
+\begin{tabular}{| l | c | r |} 
+	\hline \\
+	case & if & module \\
+	\hline \\
+	data & infix & of \\
+	\hline \\
+	do & infixl & then \\
+	\hline \\
+	else & infixr & type \\
+	\hline \\ 
+	external & import & where \\
+	\hline \\
+	fcase & in & free \\ 
+	\hline \\
+	let \\
+	\hline
+	
+\end{tabular} 
+\end{center}
+
+
+\section{Declaraci\'on de constructores con campos etiquetados}
+Un constructor de datos de $n$ argumentos crea un objeto con $n$ componentes. Dichos componentes son normlamente accesados posicionalmente como argumentos al constructor en expresiones o patrones. Para tipos de datos largos es \'util asignar campos etiquetados a los componentes de un objeto de datos. Esto permite a un campo espec\'ifico ser referenciado independientemente de su localizaci\'on dentro del constructor. Una definici\'on de constructor en una declaraci\'on de datos puede asignar etiquetas a los campos del constructor, usando la \emph{sintaxis de grabado} \textbf{C \{. . .\}}. Constructores usando etiquetas de campos pueden ser mezclados libremente con constructores sin ellos. Un constructor con etiquetas de campo asociadas aun puede ser usado como un constructor ordinario. El uso variado de etiquetas es simple abreviatura escrita para operaciones usando un constructor posicionalmente adyacente. Los argumentos del constructor posicional existen en el mismo orden que los campos etiquetados. \\
+Por ejemplo, la definici\'on usando etiquetas de campos: 
+
+\begin{lstlisting}[language=Haskell, caption = {Definici\'on usando etiquetas de campos }][linewidth=5.4cm]
+data Person = 
+Person { firstName, lastName :: String, 
+age :: Int }
+| Agent { firstName, lastName :: String, 
+trueIdentity :: Person }
+\end{lstlisting}
+
+es traducido a: 
+
+\begin{lstlisting}[language=Haskell, caption = {Definici\'on usando etiquetas de campos }][linewidth=5.4cm]
+data Person = Person String String Int
+| Agent String String Person
+\end{lstlisting}
+
+Una etiqueta no puede ser compartida por m\'as de un tipo en el alcance que tenga. 
+
+\section{Caracter\'isticas}
+\begin{itemize}
+	\item Composici\'on funcional.
+	\item Asociaci\'on de patrones.
+	\item Predicci\'on de restricciones.
+	\item Expresiones anidadas.
+	\item Funciones de alto nivel.
+	\item Concurrencia.
+	\item Evaluaci\'on perezosa.
+	\item Residuation.
+	\item Narrowing.
+\end{itemize}
+
+\section{Ventajas}
+\begin{itemize}
+	\item Se puede programar tanto en el paradigma l\'ogico como en el paradigma funcional.
+	\item Es ideal para ense\~nar a programar en estos paradigmas.
+\end{itemize}
+
+\section{Desventajas}
+\begin{itemize}
+	\item No tiene un compilador propio, el m\'as cercano es Smap que es web e incorpora caracter\'isticas de los compiladores existentes pero por lo general, lo que hacen los compiladores actuales es traducir el c\'odigo de Curry a otros lenguajes, tales como C, Haskell y Prolog.
+	\item Las aplicaciones y documentaci\'on fuera del sitio oficial es extremadamente escaza.
+	\item No posee mucho auge debido a que la comunidad de programadores en Curry es muy peque\~na.
+\end{itemize}
+
+
+
+\begin{thebibliography}{3}
+	
+	\bibitem{Curry}
+	M. Hanus, (2016). Curry: An Integrated Functional Logic Language. Recuperado de http://www.curry-language.org.
+	\bibitem{Taste}
+	W. Jeltsch. A taste of Curry. Consultado de https://jeltsch.wordpress.com.
+	\bibitem{Programming}
+	Y. Xiang, (2010). Functional Logic Programming Language Curry. Recuperado de http://www.cas.mcmaster.ca/cas/
+	
+
+	
+\end{thebibliography}
+
+
+\end{document}
+
+
