@@ -1,0 +1,740 @@
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6300) (preloaded format=pdflatex 2017.8.14)  7 NOV 2017 12:42
+entering extended mode
+**./Smalltalk.tex
+(Smalltalk.tex
+LaTeX2e <2017-04-15>
+Babel <3.9t> and hyphenation patterns for 76 language(s) loaded.
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\ieeetran\IEEEtran.cls"
+Document Class: IEEEtran 2015/08/26 V1.8b by Michael Shell
+-- See the "IEEEtran_HOWTO" manual for usage information.
+-- http://www.michaelshell.org/tex/ieeetran/
+\@IEEEtrantmpdimenA=\dimen102
+\@IEEEtrantmpdimenB=\dimen103
+\@IEEEtrantmpdimenC=\dimen104
+\@IEEEtrantmpcountA=\count79
+\@IEEEtrantmpcountB=\count80
+\@IEEEtrantmpcountC=\count81
+\@IEEEtrantmptoksA=\toks14
+LaTeX Font Info:    Try loading font information for OT1+ppl on input line 503.
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\psnfss\ot1ppl.fd"
+File: ot1ppl.fd 2001/06/04 font definitions for OT1/ppl.
+)
+-- Using IEEE Computer Society mode.
+-- Using 8.5in x 11in (letter) paper.
+-- Using PDF output.
+\@IEEEnormalsizeunitybaselineskip=\dimen105
+-- This is a 10 point document.
+\CLASSINFOnormalsizebaselineskip=\dimen106
+\CLASSINFOnormalsizeunitybaselineskip=\dimen107
+\IEEEnormaljot=\dimen108
+LaTeX Font Info:    Font shape `OT1/ppl/bx/n' in size <5.01874> not available
+(Font)              Font shape `OT1/ppl/b/n' tried instead on input line 1090.
+LaTeX Font Info:    Font shape `OT1/ppl/bx/it' in size <5.01874> not available
+(Font)              Font shape `OT1/ppl/b/it' tried instead on input line 1090.
+
+LaTeX Font Info:    Font shape `OT1/ppl/bx/n' in size <7.02625> not available
+(Font)              Font shape `OT1/ppl/b/n' tried instead on input line 1090.
+LaTeX Font Info:    Font shape `OT1/ppl/bx/it' in size <7.02625> not available
+(Font)              Font shape `OT1/ppl/b/it' tried instead on input line 1090.
+
+LaTeX Font Info:    Font shape `OT1/ppl/bx/n' in size <8.03> not available
+(Font)              Font shape `OT1/ppl/b/n' tried instead on input line 1090.
+LaTeX Font Info:    Font shape `OT1/ppl/bx/it' in size <8.03> not available
+(Font)              Font shape `OT1/ppl/b/it' tried instead on input line 1090.
+
+LaTeX Font Info:    Font shape `OT1/ppl/bx/n' in size <9.03374> not available
+(Font)              Font shape `OT1/ppl/b/n' tried instead on input line 1090.
+LaTeX Font Info:    Font shape `OT1/ppl/bx/it' in size <9.03374> not available
+(Font)              Font shape `OT1/ppl/b/it' tried instead on input line 1090.
+
+LaTeX Font Info:    Font shape `OT1/ppl/bx/n' in size <9.53561> not available
+(Font)              Font shape `OT1/ppl/b/n' tried instead on input line 1090.
+LaTeX Font Info:    Font shape `OT1/ppl/bx/it' in size <9.53561> not available
+(Font)              Font shape `OT1/ppl/b/it' tried instead on input line 1090.
+
+LaTeX Font Info:    Font shape `OT1/ppl/bx/n' in size <11.04124> not available
+(Font)              Font shape `OT1/ppl/b/n' tried instead on input line 1090.
+LaTeX Font Info:    Font shape `OT1/ppl/bx/it' in size <11.04124> not available
+
+(Font)              Font shape `OT1/ppl/b/it' tried instead on input line 1090.
+
+LaTeX Font Info:    Font shape `OT1/ppl/bx/n' in size <12.045> not available
+(Font)              Font shape `OT1/ppl/b/n' tried instead on input line 1090.
+LaTeX Font Info:    Font shape `OT1/ppl/bx/it' in size <12.045> not available
+(Font)              Font shape `OT1/ppl/b/it' tried instead on input line 1090.
+
+LaTeX Font Info:    Font shape `OT1/ppl/bx/n' in size <17.06374> not available
+(Font)              Font shape `OT1/ppl/b/n' tried instead on input line 1090.
+LaTeX Font Info:    Font shape `OT1/ppl/bx/it' in size <17.06374> not available
+
+(Font)              Font shape `OT1/ppl/b/it' tried instead on input line 1090.
+
+LaTeX Font Info:    Font shape `OT1/ppl/bx/n' in size <20.075> not available
+(Font)              Font shape `OT1/ppl/b/n' tried instead on input line 1090.
+LaTeX Font Info:    Font shape `OT1/ppl/bx/it' in size <20.075> not available
+(Font)              Font shape `OT1/ppl/b/it' tried instead on input line 1090.
+
+LaTeX Font Info:    Font shape `OT1/ppl/bx/n' in size <24.09> not available
+(Font)              Font shape `OT1/ppl/b/n' tried instead on input line 1090.
+LaTeX Font Info:    Font shape `OT1/ppl/bx/it' in size <24.09> not available
+(Font)              Font shape `OT1/ppl/b/it' tried instead on input line 1090.
+
+\IEEEquantizedlength=\dimen109
+\IEEEquantizedlengthdiff=\dimen110
+\IEEEquantizedtextheightdiff=\dimen111
+\IEEEilabelindentA=\dimen112
+\IEEEilabelindentB=\dimen113
+\IEEEilabelindent=\dimen114
+\IEEEelabelindent=\dimen115
+\IEEEdlabelindent=\dimen116
+\IEEElabelindent=\dimen117
+\IEEEiednormlabelsep=\dimen118
+\IEEEiedmathlabelsep=\dimen119
+\IEEEiedtopsep=\skip41
+\c@section=\count82
+\c@subsection=\count83
+\c@subsubsection=\count84
+\c@paragraph=\count85
+\c@IEEEsubequation=\count86
+\abovecaptionskip=\skip42
+\belowcaptionskip=\skip43
+\c@figure=\count87
+\c@table=\count88
+\@IEEEeqnnumcols=\count89
+\@IEEEeqncolcnt=\count90
+\@IEEEsubeqnnumrollback=\count91
+\@IEEEquantizeheightA=\dimen120
+\@IEEEquantizeheightB=\dimen121
+\@IEEEquantizeheightC=\dimen122
+\@IEEEquantizeprevdepth=\dimen123
+\@IEEEquantizemultiple=\count92
+\@IEEEquantizeboxA=\box26
+\@IEEEtmpitemindent=\dimen124
+\IEEEPARstartletwidth=\dimen125
+\c@IEEEbiography=\count93
+\@IEEEtranrubishbin=\box27
+) ("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\babel\babel.sty"
+Package: babel 2017/04/28 3.9t The Babel package
+
+*************************************
+* Local config file bblopts.cfg used
+*
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\arabi\bblopts.cfg"
+File: bblopts.cfg 2005/09/08 v0.1 add Arabic and Farsi to "declared" options of
+ babel
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\babel-spanish\spanish.ldf"
+Language: spanish.ldf 2016/03/03 v5.0p Spanish support from the babel system
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\babel\babel.def"
+File: babel.def 2017/04/28 3.9t Babel common definitions
+\babel@savecnt=\count94
+\U@D=\dimen126
+)
+\es@quottoks=\toks15
+\es@quotdepth=\count95
+Package babel Info: Making " an active character on input line 561.
+Package babel Info: Making . an active character on input line 662.
+Package babel Info: Making < an active character on input line 707.
+Package babel Info: Making > an active character on input line 707.
+))
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\listings\listings.sty"
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\graphics\keyval.sty"
+Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
+\KV@toks@=\toks16
+)
+\lst@mode=\count96
+\lst@gtempboxa=\box28
+\lst@token=\toks17
+\lst@length=\count97
+\lst@currlwidth=\dimen127
+\lst@column=\count98
+\lst@pos=\count99
+\lst@lostspace=\dimen128
+\lst@width=\dimen129
+\lst@newlines=\count100
+\lst@lineno=\count101
+\lst@maxwidth=\dimen130
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\listings\lstmisc.sty"
+File: lstmisc.sty 2015/06/04 1.6 (Carsten Heinz)
+\c@lstnumber=\count102
+\lst@skipnumbers=\count103
+\lst@framebox=\box29
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\listings\listings.cfg"
+File: listings.cfg 2015/06/04 1.6 listings configuration
+))
+Package: listings 2015/06/04 1.6 (Carsten Heinz)
+
+(macros.tex ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\graphics\color.sty"
+Package: color 2016/07/10 v1.1e Standard LaTeX Color (DPC)
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\graphics-cfg\color.cfg"
+File: color.cfg 2016/01/02 v1.6 sample color configuration
+)
+Package color Info: Driver file: pdftex.def on input line 147.
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\graphics-def\pdftex.def"
+File: pdftex.def 2017/01/12 v0.06k Graphics/color for pdfTeX
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\oberdiek\infwarerr.sty"
+Package: infwarerr 2016/05/16 v1.4 Providing info/warning/error messages (HO)
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\oberdiek\ltxcmds.sty"
+Package: ltxcmds 2016/05/16 v1.23 LaTeX kernel commands for general use (HO)
+)
+\Gread@gobject=\count104
+))
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\etoolbox\etoolbox.sty"
+Package: etoolbox 2017/01/02 v2.4 e-TeX tools for LaTeX (JAW)
+\etb@tempcnta=\count105
+))
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\graphics\graphicx.sty"
+Package: graphicx 2014/10/28 v1.0g Enhanced LaTeX Graphics (DPC,SPQR)
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\graphics\graphics.sty"
+Package: graphics 2017/04/14 v1.1b Standard LaTeX Graphics (DPC,SPQR)
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\graphics\trig.sty"
+Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\graphics-cfg\graphics.cfg"
+File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
+)
+Package graphics Info: Driver file: pdftex.def on input line 99.
+)
+\Gin@req@height=\dimen131
+\Gin@req@width=\dimen132
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\wrapfig\wrapfig.sty"
+\wrapoverhang=\dimen133
+\WF@size=\dimen134
+\c@WF@wrappedlines=\count106
+\WF@box=\box30
+\WF@everypar=\toks18
+Package: wrapfig 2003/01/31  v 3.6
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\lipsum\lipsum.sty"
+Package: lipsum 2014/07/27 v1.3 150 paragraphs of Lorem Ipsum dummy text
+\c@lips@count=\count107
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\cite\cite.sty"
+LaTeX Info: Redefining \cite on input line 302.
+LaTeX Info: Redefining \nocite on input line 332.
+Package: cite 2015/02/27  v 5.5
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\listings\lstlang1.sty"
+File: lstlang1.sty 2015/06/04 1.6 listings language file
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\listings\lstlang2.sty"
+File: lstlang2.sty 2015/06/04 1.6 listings language file
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\listings\lstlang3.sty"
+File: lstlang3.sty 2015/06/04 1.6 listings language file
+)
+(Smalltalk.aux
+LaTeX Info: Redefining \. on input line 6.
+LaTeX Info: Redefining \% on input line 6.
+)
+\openout1 = `Smalltalk.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 34.
+LaTeX Font Info:    ... okay on input line 34.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 34.
+LaTeX Font Info:    ... okay on input line 34.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 34.
+LaTeX Font Info:    ... okay on input line 34.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 34.
+LaTeX Font Info:    ... okay on input line 34.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 34.
+LaTeX Font Info:    ... okay on input line 34.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 34.
+LaTeX Font Info:    ... okay on input line 34.
+
+-- Lines per column: 61 (exact).
+LaTeX Info: Redefining \. on input line 34.
+LaTeX Info: Redefining \% on input line 34.
+\c@lstlisting=\count108
+("C:\Program Files (x86)\MiKTeX 2.9\tex\context\base\supp-pdf.mkii"
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count109
+\scratchdimen=\dimen135
+\scratchbox=\box31
+\nofMPsegments=\count110
+\nofMParguments=\count111
+\everyMPshowfont=\toks19
+\MPscratchCnt=\count112
+\MPscratchDim=\dimen136
+\MPnumerator=\count113
+\makeMPintoPDFobject=\count114
+\everyMPtoPDFconversion=\toks20
+) ("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\oberdiek\pdftexcmds.sty"
+Package: pdftexcmds 2017/03/19 v0.25 Utility functions of pdfTeX for LuaTeX (HO
+)
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\oberdiek\ifluatex.sty"
+Package: ifluatex 2016/05/16 v1.4 Provides the ifluatex switch (HO)
+Package ifluatex Info: LuaTeX not detected.
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\oberdiek\ifpdf.sty"
+Package: ifpdf 2017/03/15 v3.2 Provides the ifpdf switch
+)
+Package pdftexcmds Info: LuaTeX not detected.
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode found.
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\oberdiek\epstopdf-base.sty"
+Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\oberdiek\grfext.sty"
+Package: grfext 2016/05/16 v1.2 Manage graphics extensions (HO)
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\oberdiek\kvdefinekeys.sty"
+Package: kvdefinekeys 2016/05/16 v1.4 Define keys (HO)
+))
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\oberdiek\kvoptions.sty"
+Package: kvoptions 2016/05/16 v3.12 Key value format for package options (HO)
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\oberdiek\kvsetkeys.sty"
+Package: kvsetkeys 2016/05/16 v1.17 Key value parser (HO)
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\oberdiek\etexcmds.sty"
+Package: etexcmds 2016/05/16 v1.6 Avoid name clashes with e-TeX commands (HO)
+Package etexcmds Info: Could not find \expanded.
+(etexcmds)             That can mean that you are not using pdfTeX 1.50 or
+(etexcmds)             that some package has redefined \expanded.
+(etexcmds)             In the latter case, load this package earlier.
+)))
+Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
+38.
+Package grfext Info: Graphics extension search list:
+(grfext)             [.png,.pdf,.jpg,.mps,.jpeg,.jbig2,.jb2,.PNG,.PDF,.JPG,.JPE
+G,.JBIG2,.JB2,.eps]
+(grfext)             \AppendGraphicsExtensions on input line 456.
+)
+LaTeX Font Info:    Try loading font information for OT1+phv on input line 46.
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\psnfss\ot1phv.fd"
+File: ot1phv.fd 2001/06/04 scalable font definitions for OT1/phv.
+)
+LaTeX Font Info:    Font shape `OT1/phv/m/it' in size <11.04124> not available
+(Font)              Font shape `OT1/phv/m/sl' tried instead on input line 46.
+LaTeX Font Info:    Calculating math sizes for size <11.04124> on input line 46
+.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <11.04124> on input line 46.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <7.72884> on input line 46.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <5.52061> on input line 46.
+LaTeX Font Info:    Try loading font information for U+pzd on input line 46.
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\psnfss\upzd.fd"
+File: upzd.fd 2001/06/04 font definitions for U/pzd.
+)
+LaTeX Font Info:    Font shape `OT1/phv/bx/n' in size <11.04124> not available
+(Font)              Font shape `OT1/phv/b/n' tried instead on input line 52.
+LaTeX Font Info:    Font shape `OT1/phv/bx/sc' in size <11.04124> not available
+
+(Font)              Font shape `OT1/phv/b/sc' tried instead on input line 52.
+
+<Smalltalk.jpg, id=1, 677.53125pt x 564.60938pt>
+File: Smalltalk.jpg Graphic file (type jpg)
+ <use Smalltalk.jpg>
+Package pdftex.def Info: Smalltalk.jpg used on input line 55.
+(pdftex.def)             Requested size: 129.48375pt x 107.89719pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 58--59
+[][]\OT1/ppl/m/it/9.53561 Smalltalk \OT1/ppl/m/n/9.53561 fue
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 58--59
+\OT1/ppl/m/n/9.53561 crea-do por Alan
+ []
+
+
+Underfull \hbox (badness 4752) in paragraph at lines 58--59
+\OT1/ppl/m/n/9.53561 len-gua-je orien-ta-do
+ []
+
+
+Underfull \hbox (badness 1917) in paragraph at lines 58--59
+\OT1/ppl/m/n/9.53561 y el len-gua-je son
+ []
+
+
+Underfull \hbox (badness 3724) in paragraph at lines 58--59
+\OT1/ppl/m/n/9.53561 muy ma-du-ros, se
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 58--59
+\OT1/ppl/m/n/9.53561 desa-rro-llo en-tre
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 58--59
+\OT1/ppl/m/n/9.53561 1970 y 1980 en
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 58--59
+\OT1/ppl/m/n/9.53561 un en-torno de
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 58--59
+\OT1/ppl/m/n/9.53561 in-ves-ti-ga-ci[]on
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 58--59
+\OT1/ppl/m/n/9.53561 ais-la-do de to-do
+ []
+
+
+Underfull \hbox (badness 3942) in paragraph at lines 58--59
+\OT1/ppl/m/n/9.53561 ti-po de co-mer-cio,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 70--71
+
+ []
+
+LaTeX Font Info:    Calculating math sizes for size <9.53561> on input line 72.
+
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <9.53561> on input line 72.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <6.6749> on input line 72.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <4.7678> on input line 72.
+
+Underfull \hbox (badness 4403) in paragraph at lines 79--79
+[]\OT1/ppl/m/n/9.53561 N[]ume-ro en-te-ro
+ []
+
+
+Overfull \hbox (1.10759pt too wide) in paragraph at lines 72--83
+[][] 
+ []
+
+LaTeX Font Info:    Font shape `OT1/phv/bx/n' in size <9.53561> not available
+(Font)              Font shape `OT1/phv/b/n' tried instead on input line 84.
+
+Package Listings Warning: Text dropped after begin of listing on input line 86.
+
+
+
+Package Listings Warning: Text dropped after begin of listing on input line 92.
+
+
+
+Package Listings Warning: Text dropped after begin of listing on input line 109
+.
+
+
+Package Listings Warning: Text dropped after begin of listing on input line 115
+.
+
+
+Package Listings Warning: Text dropped after begin of listing on input line 124
+.
+
+
+Package Listings Warning: Text dropped after begin of listing on input line 130
+.
+
+LaTeX Info: Redefining \. on input line 137.
+LaTeX Info: Redefining \% on input line 137.
+[1{C:/ProgramData/MiKTeX/2.9/pdftex/config/pdftex.map}
+
+
+ <./Smalltalk.jpg>]
+
+Package Listings Warning: Text dropped after begin of listing on input line 140
+.
+
+
+Package Listings Warning: Text dropped after begin of listing on input line 151
+.
+
+LaTeX Font Info:    Try loading font information for OMS+ppl on input line 153.
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\psnfss\omsppl.fd"
+File: omsppl.fd 
+)
+LaTeX Font Info:    Font shape `OMS/ppl/m/n' in size <9.53561> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 153.
+LaTeX Font Info:    Font shape `OT1/phv/m/it' in size <9.53561> not available
+(Font)              Font shape `OT1/phv/m/sl' tried instead on input line 170.
+
+
+Package Listings Warning: Text dropped after begin of listing on input line 173
+.
+
+LaTeX Font Info:    Try loading font information for OT1+pcr on input line 178.
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\psnfss\ot1pcr.fd"
+File: ot1pcr.fd 2001/06/04 font definitions for OT1/pcr.
+)
+Overfull \hbox (4.8833pt too wide) in paragraph at lines 186--187
+[]\OT1/ppl/m/n/9.53561 Retorna| 
+ []
+
+
+Overfull \hbox (2.69836pt too wide) in paragraph at lines 185--193
+[][] 
+ []
+
+
+Package Listings Warning: Text dropped after begin of listing on input line 193
+.
+
+
+Package Listings Warning: Text dropped after begin of listing on input line 229
+.
+
+LaTeX Info: Redefining \. on input line 233.
+LaTeX Info: Redefining \% on input line 233.
+[2]
+
+Package Listings Warning: Text dropped after begin of listing on input line 257
+.
+
+
+Package Listings Warning: Text dropped after begin of listing on input line 274
+.
+
+
+Package Listings Warning: Text dropped after begin of listing on input line 292
+.
+
+
+Package Listings Warning: Text dropped after begin of listing on input line 302
+.
+
+
+Package Listings Warning: Text dropped after begin of listing on input line 325
+.
+
+
+Package Listings Warning: Text dropped after begin of listing on input line 335
+.
+
+LaTeX Info: Redefining \. on input line 337.
+LaTeX Info: Redefining \% on input line 337.
+[3]
+LaTeX Font Info:    Try loading font information for OML+ppl on input line 337.
+
+ ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\psnfss\omlppl.fd"
+File: omlppl.fd 
+)
+LaTeX Font Info:    Font shape `OML/ppl/m/n' in size <9.53561> not available
+(Font)              Font shape `OML/cmm/m/it' tried instead on input line 337.
+
+Overfull \hbox (1.60905pt too wide) in paragraph at lines 340--341
+[][][][][]\OT1/pcr/m/n/9.53561 Transcript[][]\OT1/ppl/m/n/9.53561 clear[][]show
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (1.60905pt too wide) in paragraph at lines 342--344
+[][][][][]\OT1/pcr/m/n/9.53561 Transcript[][]\OT1/ppl/m/n/9.53561 clear[][]show
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Package Listings Warning: Text dropped after begin of listing on input line 351
+.
+
+
+Package Listings Warning: Text dropped after begin of listing on input line 370
+.
+
+
+Package Listings Warning: Text dropped after begin of listing on input line 375
+.
+
+
+Package Listings Warning: Text dropped after begin of listing on input line 384
+.
+
+
+Package Listings Warning: Text dropped after begin of listing on input line 395
+.
+
+
+Package Listings Warning: Text dropped after begin of listing on input line 408
+.
+
+
+Package Listings Warning: Text dropped after begin of listing on input line 415
+.
+
+
+Package Listings Warning: Text dropped after begin of listing on input line 422
+.
+
+
+Package Listings Warning: Text dropped after begin of listing on input line 430
+.
+
+LaTeX Info: Redefining \. on input line 432.
+LaTeX Info: Redefining \% on input line 432.
+[4]
+
+Package Listings Warning: Text dropped after begin of listing on input line 439
+.
+
+
+Package Listings Warning: Text dropped after begin of listing on input line 450
+.
+
+
+Package Listings Warning: Text dropped after begin of listing on input line 461
+.
+
+
+Package Listings Warning: Text dropped after begin of listing on input line 469
+.
+
+LaTeX Font Info:    Font shape `OT1/phv/bx/it' in size <9.53561> not available
+(Font)              Font shape `OT1/phv/b/it' tried instead on input line 478.
+LaTeX Font Info:    Font shape `OT1/phv/b/it' in size <9.53561> not available
+(Font)              Font shape `OT1/phv/b/sl' tried instead on input line 478.
+
+Package Listings Warning: Text dropped after begin of listing on input line 481
+.
+
+
+Package Listings Warning: Text dropped after begin of listing on input line 501
+.
+
+
+Package Listings Warning: Text dropped after begin of listing on input line 512
+.
+
+
+Package Listings Warning: Text dropped after begin of listing on input line 524
+.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 535--550
+
+ []
+
+LaTeX Info: Redefining \. on input line 550.
+LaTeX Info: Redefining \% on input line 550.
+[5]
+
+Package Listings Warning: Text dropped after begin of listing on input line 554
+.
+
+
+Package Listings Warning: Text dropped after begin of listing on input line 564
+.
+
+
+Package Listings Warning: Text dropped after begin of listing on input line 572
+.
+
+
+Package Listings Warning: Text dropped after begin of listing on input line 581
+.
+
+
+Overfull \hbox (3.34062pt too wide) in paragraph at lines 589--618
+[][] 
+ []
+
+
+Underfull \vbox (badness 2005) has occurred while \output is active []
+
+LaTeX Info: Redefining \. on input line 634.
+LaTeX Info: Redefining \% on input line 634.
+ [6]
+
+Package Listings Warning: Text dropped after begin of listing on input line 637
+.
+
+
+Package Listings Warning: Text dropped after begin of listing on input line 645
+.
+
+
+Package Listings Warning: Text dropped after begin of listing on input line 655
+.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 697--699
+[]\OT1/ppl/m/n/8.03 T. Budd. 1987. \OT1/ppl/m/it/8.03 A Little Small-talk.\OT1/
+ppl/m/n/8.03 Recuperado de
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 697--699
+\OT1/ppl/m/n/8.03 http://sdmeta.gforge.inria.fr/FreeBooks/ LittleS-mall-tal-k/A
+-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 701--703
+[]\OT1/ppl/m/n/8.03 W. La-lon-de. 1994. \OT1/ppl/m/it/8.03 Dis-co-ve-ring Small
+-talk. \OT1/ppl/m/n/8.03 Ob-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 701--703
+\OT1/ppl/m/n/8.03 ject Tech-no-logy Se-ries. Re-cu-pe-ra-do de
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 701--703
+\OT1/ppl/m/n/8.03 https://books.google.co.cr/books/about/Discovering[]Smalltalk
+.
+ []
+
+
+Underfull \hbox (badness 2158) in paragraph at lines 712--713
+[]\OT1/ppl/m/n/8.03 D, Go-mez. 2006. \OT1/ppl/m/it/8.03 Li-bro de pro-gra-ma-ci
+on con Small-talk\OT1/ppl/m/n/8.03 . Re-cu-
+ []
+
+LaTeX Info: Redefining \. on input line 716.
+LaTeX Info: Redefining \% on input line 716.
+[7] (Smalltalk.aux
+LaTeX Info: Redefining \. on input line 6.
+LaTeX Info: Redefining \% on input line 6.
+) ) 
+Here is how much of TeX's memory you used:
+ 5564 strings out of 493320
+ 82736 string characters out of 3136359
+ 324443 words of memory out of 3000000
+ 9012 multiletter control sequences out of 15000+200000
+ 46516 words of font info for 95 fonts, out of 3000000 for 9000
+ 1144 hyphenation exceptions out of 8191
+ 39i,10n,42p,791b,1688s stack positions out of 5000i,500n,10000p,200000b,50000s
+{C:/Program Files (x86)/MiKTeX 2.9/fonts/enc/dvips/base/8r.enc}<C:/Program F
+iles (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Program Fil
+es (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Program Files 
+(x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files (x
+86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Program Files (x86)
+/MiKTeX 2.9/fonts/type1/urw/courier/ucrr8a.pfb><C:/Program Files (x86)/MiKTeX 2
+.9/fonts/type1/urw/helvetic/uhvb8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts
+/type1/urw/helvetic/uhvbo8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/
+urw/helvetic/uhvr8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/helv
+etic/uhvro8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/palatino/up
+lr8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/palatino/uplri8a.pf
+b><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/zapfding/uzdr.pfb>
+Output written on Smalltalk.pdf (7 pages, 239934 bytes).
+PDF statistics:
+ 76 PDF objects out of 1000 (max. 8388607)
+ 0 named destinations out of 1000 (max. 500000)
+ 6 words of extra memory for PDF output out of 10000 (max. 10000000)
+
