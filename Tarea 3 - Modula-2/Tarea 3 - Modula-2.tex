@@ -1,0 +1,804 @@
+\documentclass[10pt,journal,compsoc]{IEEEtran}
+\usepackage[spanish]{babel}
+\usepackage{listings}
+\usepackage{graphicx}
+\usepackage{wrapfig}
+\usepackage{lipsum}
+\ifCLASSOPTIONcompsoc
+  \usepackage[nocompress]{cite}
+\else
+  \usepackage{cite}
+\fi
+
+\ifCLASSINFOpdf
+\else
+\fi
+\newcommand\MYhyperrefoptions{=true,bookmarksnumbered=true,
+pdfpagemode={UseOutlines},plainpages=false,pdfpagelabebookmarksls=true,
+colorlinks=true,linkcolor={black},citecolor={black},urlcolor={black},
+pdftitle={Modula-2},
+pdfsubject={Lenguaje de Progemaci\'on Modula-2},
+pdfauthor={Daniel, Wilbert, Anthony, Bryan},
+}
+\renewcommand{\lstlistingname}{Cuadro}
+\lstset{
+	extendedchars=true,
+	frame = single, 
+	language=Modula-2, 
+	framexleftmargin=3pt
+}
+\hyphenation{op-tical net-works semi-conduc-tor}
+
+
+\begin{document}
+\title{Modula-2}
+
+\author{Daniel~Delgado,~\IEEEmembership{Estudiante,~ITCR,}
+	Wilbert~Gonzales,~\IEEEmembership{Estudiante,~ITCR,}
+	Anthony~Leandro,~\IEEEmembership{Estudiante,~ITCR,}
+	and~Bryan~Mena,~\IEEEmembership{Estudiante,~ITCR}
+}
+\markboth{Lenguajes de Programaci\'on, Tarea Corta 3, Setiembre 2017}
+{Shell \MakeLowercase{\textit{et al.}}: \LaTex}
+
+
+\maketitle
+
+\IEEEdisplaynontitleabstractindextext
+
+\IEEEpeerreviewmaketitle
+
+\section{Datos Historicos}
+\begin{wrapfigure}{R}{0.3\textwidth}
+	\centering
+	\includegraphics[width=0.25\textwidth]{wirth.jpg}
+	\caption{\label{fig:NiklausWirth}Niklaus Wirth.}
+\end{wrapfigure}
+\emph{Modula-2} fue creado en 1978 por Niklaus Wirth. Inicio como una revisi\'on de \emph{Pascal} para funcionar en el sistema operativo de una computadora llamada Lilith. Los tres conceptos fundamentales de este lenguaje de programaci\'on son:
+Utilizaci\'on del modulo como una unidad de compilaci\'on, con el fin de tener una compilaci\'on separada.
+Existen tipos y procedimientos que permiten el acceso a datos de la maquina. \emph{Modula-2} es utilizado en su mayoria por universidades ya que tienen una gran adaptacion a la ense\~nanza de lenguajes estructurados.
+
+\section{Tipos de Datos}
+En \emph{Modula-2} se utiliza la palabra \emph{VAR} cuando se va a realizar una declaraci\'on de una variable. 
+\newline\newline\newline
+\begin{tabular}{ l r r r }
+	Nombre & Tipo de Dato & Ejemplo \\
+	\hline\\
+	Integer & N\'umero Entero & -32768 a 32767 \\
+	Cardinal & N\'umero Entero & 0 a 65.535 \\
+	Real & N\'umero Real &  8.43E-37 a 3.37E+38 \\
+	Char &  Un solo car\'acter & 'S', 'A'\\
+	Boolean & Valor Booleano & TRUE, FALSE\\	
+\end{tabular}\\\newline\newline\newline
+
+\subsection{Scalars}
+Tambi\'en se conocen como \emph{enumerated}, es una lista de valores que una variable de este tipo puede asumir. \emph{Dias} es un tipo que puede asumir cualquiera de los siete valores. Dentro de la declaraci\'on \emph{VAR} a \emph{Dia} se le asigna el tipo \emph{Dias} entonces \emph{Dia} puede asumir cualquiera de los siete diferentes valores, lo que hace que el programa sea f\'acil de seguir y entender. Es importante de saber que el sistema \emph{Modula-2} no asigna el valor \emph{l} a la variable \emph{Dia} pero usa una representaci\'on entera para cada nombre, la importancia de esta caracter\'istica se debe a que no se puede imprimir \emph{l, k, etc.}, sino que se pueden usar para indexar instrucciones de control.
+
+\begin{lstlisting}[language=Modula-2, caption = {C\'odigo de declaraci\'on para un Scalar}][linewidth=5.4cm]
+
+MODULE Entypes;
+
+FROM Terminal2 
+IMPORT WriteString, WriteLn, WriteReal;
+
+TYPE 
+Dias      = (l,k,m,j,v,s,d);
+TiempoDia = (mañana,tarde,noche);
+
+VAR 
+Dia		: Dias;
+Tiempo	: TiempoDia;
+
+BEGIN	(* Estructura del programa *)
+.
+.
+.
+END Entypes.
+\end{lstlisting}
+
+\begin{lstlisting}[language=Modula-2, caption = {C\'odigo de declaraci\'on para un Scalar}][linewidth=5.4cm]
+
+TYPE
+<Nombre Tipo> = 
+  (<identificador>,...,<identificador>);
+\end{lstlisting}
+
+\subsection{Arrays}
+Una lista esta compuesta por elementos del mismo tipo. En la definici\'on de una lista se usa la palabra reservada \emph{ARRAY}, seguidamente por corchetes con un rango y de un tipo de dato. En el c\'odigo de ejemplo se define una lista de 12 diferentes n\'umeros de tipo \emph{CARDINAL}. Para acceder a los n\'umeros de la lista se usa:\newline
+Autos [1], Autos [2], ... Autos [12]\newline
+Ademas, de ver los valores se puede asignar valores o se pueden utilizar para c\'alculos o en alg\'un lugar del programa donde sea legal el uso de una variable de tipo \emph{CARDINAL}. En un lugar donde no se puede usar es en un indice de un bucle \emph{FOR} ya que es obligatorio un tipo de variable simple.
+\begin{lstlisting}[language=Modula-2, caption = {C\'odigo de declaraci\'on para un array}][linewidth=5.4cm]
+
+MODULE Arrays;
+
+FROM Terminal2 
+IMPORT WriteString, WriteCard, WriteLn;
+
+VAR 
+Index : CARDINAL;
+Autos : ARRAY [1..12] OF CARDINAL;
+BEGIN   (* Estructura del programa *)
+.
+.
+.
+END Arrays.
+\end{lstlisting}
+
+\subsection{Matrix}
+En la secci\'on \emph{VAR} se define la variable de tipo \emph{ARRAY} que contiene 8 elementos en el que cada elemento es otro \emph{ARRAY} de 8 elementos y se obtiene una matriz de 8 por 8 en la cual se pueden almacenar una variable de tipo \emph{CARDINAL}. La variable \emph{Valor} se define de la misma manera, pero el m\'etodo de definici\'on es un poco diferente. Los 2 m\'etodos resultan del mismo tipo y n\'umero de variables.
+\begin{lstlisting}[language=Modula-2, caption = {C\'odigo de declaraci\'on para una matriz}][linewidth=5.4cm]
+
+MODULE Arrays2;
+
+FROM Terminal2 
+IMPORT WriteString, WriteInt, WriteLn;
+
+VAR  
+Indice, Cont	: CARDINAL;
+Tablero: ARRAY[1..8] OF ARRAY[1..8] 
+		 OF CARDINAL;
+Valor  : ARRAY[1..8],[1..8] OF CARDINAL;
+
+BEGIN (* Estructura del programa *)
+.
+.
+.
+END Arrays2.
+\end{lstlisting}
+
+\subsection{Punteros}
+Como en C o C++ un puntero es una direcci\'on a memoria, de manera similar es necesario indicar a que tipo de dato se apuntar\'a, luego se debe asignar un espacio en memoria que ser\'a donde el puntero viva, esto se hace con el comando:
+\begin{lstlisting}[language=Modula-2, caption = {C\'odigo de una lista con punteros}][linewidth=5.4cm]
+
+MODULE Pointers;
+
+FROM Terminal2   
+IMPORT WriteString, WriteInt, WriteLn;
+FROM Storage 
+IMPORT ALLOCATE, DEALLOCATE;
+FROM SYSTEM  
+IMPORT TSIZE;
+
+TYPE 
+Nombre = ARRAY[0..20] OF CHAR;
+
+VAR  
+MiNbr : POINTER TO Nombre;    
+(* MiNbr apunta a un String *)
+MiEdad  : POINTER TO INTEGER; 
+(* MiEdad apunta a un entero *)
+
+BEGIN (* Estructura del programa *)
+.
+.
+.
+END Pointers.
+\end{lstlisting}
+
+Para asignarle un valor al espacio de memoria al cual se esta apuntando se necesita utilizar de nuevo el car\'acter \large \textasciicircum~ \normalsize y asignar el valor, pero para esto primero se debe de usar el comando ALLOCATE(NombrePuntero, TSIZE(TipoDatoApuntado)) que se utiliza para reservar memoria y al final del programa se debe de utilizar el comando DEALLOCATE(NombrePuntero, TSIZE(TipoDatoApuntado)) que es para liberar la memoria. Por ejemplo:
+\begin{lstlisting}[language=Modula-2, caption = {C\'odigo de asignacion a un puntero.}][linewidth=5.4cm]
+
+MODULE Pointers;
+
+FROM Terminal2   
+IMPORT WriteString, WriteInt, WriteLn;
+FROM Storage 
+IMPORT ALLOCATE, DEALLOCATE;
+FROM SYSTEM  
+IMPORT TSIZE;
+
+TYPE 
+Nombre = ARRAY[0..20] OF CHAR;
+
+VAR  
+MiNbr : POINTER TO Nombre;    
+(* MiNbr apunta a un String *)
+MiEdad  : POINTER TO INTEGER; 
+(* MiEdad apunta a un entero *)
+
+BEGIN
+ALLOCATE(MiEdad,TSIZE(INTEGER));
+ALLOCATE(MiNbr,TSIZE(Nombre));
+
+MiEdad^  := 20;
+MiNbr^ := "Willy";
+
+WriteString("Mi nombre es ");
+WriteString(MiNbr^);
+WriteString(" y tengo ");
+WriteInt(MiEdad^,2);
+WriteLn;
+
+DEALLOCATE(MiEdad,TSIZE(INTEGER));
+DEALLOCATE(MiNbr,TSIZE(Nombre));
+END Pointers.
+\end{lstlisting}
+
+\subsection{Subrangos}
+Primero se define un Tipo \emph{Dias} que es un \emph{Scalar}, luego se define \emph{Trabajar} donde se toman los valores del \emph{Scalar} del \emph{L al V} . Para usar estos Subrangos se deben de definir el la secci\'on \emph{VAR}.
+
+\begin{lstlisting}[language=Modula-2, caption = {Ejemplo de subrangos}][linewidth=3.5cm]
+
+MODULE Subrange;
+
+TYPE 
+Dias = (L,K,M,J,V,S,D);
+Trabajar = [L..V];
+Descansar = [S..D];
+
+VAR  
+Dia : Dias;  
+(* Puede ser cualquier dia *)
+DiaTrabajo : Trabajar;
+(* Son los dias de L a V  *)
+FinSemana : Descansar;
+(* Solo los 2 dias de Descansar *)
+
+BEGIN (* Estructura del programa *)
+.
+.
+.
+END Subrange.
+\end{lstlisting}
+
+\subsection{Puntos Importantes\protect\footnote{Datos Obtenidos de \emph{La programación imperativa desde Modula-2}, Proyectos y Producciones Editoriales Cyan.}}
+
+A continuaci\'on se presentan algunos de los rangos para \emph{Integers}.
+\begin{tabular}{c p{5cm} p{1cm}}
+	Tipo & Rango & Bytes\\
+	\hline\\
+	ShortInt & -128..127 & 1\\
+	\hline\\
+	ShortCard & 0..255 & 1\\
+	\hline\\
+	Integer8 & -128..127 & 1\\
+	\hline\\
+	Cardinal8 & 0..255 & 1\\
+	\hline\\
+	Integer16 & -32768..32767 & 2\\
+	\hline\\
+	Cardinal16 & 0..65535 & 2\\
+	\hline\\
+	Integer32 & -2147483648..2147483647 & 4\\
+	\hline\\
+	Cardinal32 & 0..4,294,967,295 & 4\\
+	\hline\\
+	Integer64 & $-2^{63}$..$(2^{63})-1$ & 8\\
+	\hline\\
+	Cardinal64 & $0$..$(2^{63})-1$ & 8\\
+	\hline\\
+	LongInt & -2,147,483,648..2,147,483,647 & 4\\
+	\hline\\
+	LongCard & $0$..$(2^{64})-1$ & 8\\
+	\hline\\
+\end{tabular}
+
+\section{Estructuras de control y Expresiones}
+En \emph{Modula-2} se utilizan bloques de c\'odigo, inician con un \emph{begin} y terminan con un \emph{end}. Como dato curioso en Modula-2 \emph{end} no necesariamente termina en \emph{;} al contrario cuando se utiliza para terminar un archivo de \emph{Modula-2} se utiliza un \emph{.} y el nombre del modulo.\\
+Ejemplo:
+\begin{lstlisting}[language=Modula-2, caption = {C\'odigo Hola Mundo en Modula-2}][linewidth=5.0cm]
+
+MODULE PrimerEjemplo;
+
+FROM InOut 
+IMPORT WriteString, WriteLn;
+
+BEGIN
+	WriteString('Hola Mundo!');
+	WriteLn;
+END PrimerEjemplo.
+\end{lstlisting}
+
+\subsection{Estructura t\'ipica de un programa}
+\begin{lstlisting}[language=Modula-2, caption = {Estructura t\'ipica de un programa en Modula-2}][linewidth=5.0cm]
+
+MODULE <Nombre del programa> ;
+
+FROM <Libreria> IMPORT <Funciones>;
+
+CONST
+	<Declarar Constantes>
+	
+TYPE
+	<Declarar Tipos>
+	
+VAR
+	<Declarar Variables>
+	
+BEGIN
+	<Expresiones Ejecutables>
+	
+END <Nombre del programa>.
+\end{lstlisting}
+
+\subsection{Constantes}
+Se definen en el bloque de constantes al inicio del programa, con la palabra reservada \emph{CONST} y el valor que almacenan no podr\'a ser cambiado a lo largo del programa.
+\begin{lstlisting}[language=Modula-2, caption = {Declaraci\'on de Constantes}][linewidth=5.0cm]
+
+MODULE Constant;
+
+CONST 
+Max    = 12;
+Indice = 49;
+
+TYPE  
+String = ARRAY[1..Max] OF CHAR;
+
+VAR
+Vacas       : String;
+Caballos     : String;
+
+BEGIN     (* Estructura del programa *)
+.
+.
+.
+END Constant.
+\end{lstlisting}
+
+\subsection{Variables}
+\begin{lstlisting}[language=Modula-2, caption = {Declaraci\'on de Variables}][linewidth=5.0cm]
+
+MODULE IntVar;
+
+FROM Terminal2 
+IMPORT WriteLn, WriteString, WriteInt;
+
+VAR 
+(* Declaracion de variables en este bloque *)
+Count : INTEGER; 
+x,y   : INTEGER;  
+
+BEGIN
+.
+.
+.
+END IntVar.
+\end{lstlisting}
+Cabe mencionar que los identificadores separados por comas ser\'an declarados del mismo tipo.
+
+\subsection{Type}
+En la parte superior del c\'odigo tenemos un grupo de declaraciones \emph{TYPE}. La primera definici\'on \emph{DefLista} se utiliza de la misma manera que se utilizar\'ia un \emph{Integer} o cualquier otra definici\'on simple. La variable llamada \emph{Aux} se define como una variable de tipo \emph{DefLista} y como \emph{DefLista} es un \emph{ARRAY} de 14 elementos, entonces \emph{Aux} es un array de 14 elementos de \emph{INTEGER}. La variable \emph{Avion} es una lista de 12 elementos del tipo \emph{Comida}.
+
+\begin{lstlisting}[language=Modula-2, caption = {C\'odigo de declaraci\'on para un tipo}][linewidth=5.4cm]
+
+MODULE Types;
+
+TYPE  
+DefLista = ARRAY[12..25] OF INTEGER;
+DefChar = ARRAY[0..27] OF CHAR;
+ArrayReal = ARRAY[-17..42] OF REAL;
+Comida = ARRAY[1..6] OF BOOLEAN;
+Avion = ARRAY[1..12] OF Comida;
+Bote = ARRAY[1..12],[1..6] OF BOOLEAN;
+
+VAR   
+Index,Count : CARDINAL;
+Aux   : ArrayDef;
+Aux2  : ArrayDef;
+Aux3  : ARRAY[12..25] OF INTEGER;
+Aviones : Avion;
+Botes : Bote;
+
+BEGIN
+.
+.
+.
+END Types.
+
+\end{lstlisting}
+
+\subsection{Identaci\'on y Puntuaci\'on}
+Es necesario utilizar puntuaci\'on para decirle al compilador cuando un \emph{statement} termina. Se utiliza \emph{;} en las siguientes situaciones:
+\begin{itemize}
+	\item Despu\'es de la declaraci\'on del programa
+	\item Despu\'es de cada definici\'on de constante
+	\item Despu\'es de cada definici\'on de variable
+	\item Despu\'es de cada definici\'on de tipo
+	\item Despu\'es de cada \emph{statement}
+\end{itemize}
+
+\subsection{Comentarios en el c\'odogo}
+Para comentar en \emph{Modula-2} se inicia con (* y termina con *), lo anterior para comentarios de una sola l\'inea y tambi\'en para comentarios de varias lineas, pero no se pueden delimitar entre llaves \{\}, cosa que en \emph{Pascal} si se puede.
+
+\subsection{Condiciones}
+\emph{Modula-2} usa la misma estructura que \emph{Pascal} para verificar condiciones
+\begin{itemize}
+	\item \emph{IF}: Se utiliza para comprobar una sola condici\'on o muy pocas.
+	\item \emph{CASE}: Se utiliza para casos de selecci\'on m\'ultiple.
+\end{itemize}
+\begin{lstlisting}[language=Modula-2, caption = {Sintaxis de un IF}][linewidth=5.0cm]
+
+MODULE if1;
+
+FROM InOut 
+IMPORT WriteString;
+
+VAR 
+Cont: CARDINAL;
+
+BEGIN
+
+Cont := 3;
+
+IF Cont=4 THEN 
+WriteString('Cont = 4'); 
+ELSIF Cont=3 THEN 
+WriteString('Cont = 3'); 
+ELSE 
+WriteString('Cont no es 3 ni 4');
+
+END;
+
+END if1. 
+
+\end{lstlisting}
+
+Luego del \emph{IF} se indica la condici\'on que se quiere comprobar, seguida por la palabra \emph{THEN} y por los comandos a ejecutar si se cumple la condici\'on. Al contrario de \emph{Pascal} que si se esperaba una sola orden se deb\'ia de emplear el \emph{BEGIN} y el \emph{END} si eran varias ordenes. Ademas, se utiliza la condici\'on \emph{ELSE} para ejecutar los pasos si no se cumple la condici\'on, pero si ocupamos comprobar otra nueva condici\'on se puede usar \emph{ELSIF}
+
+\begin{lstlisting}[language=Modula-2, caption = {Sintaxis de un Case}][linewidth=5.0cm]
+
+MODULE caseW;
+
+FROM InOut 
+IMPORT WriteString;
+
+VAR 
+num: CARDINAL;
+
+BEGIN
+
+num := 7;
+
+CASE num OF 
+1,2: WriteString('num vale 1 o 2');  | 
+3: WriteString('num vale 3');        | 
+4..9: WriteString('num vale entre 4 y 9'); 
+ELSE 
+WriteString('num no esta entre 1 y 9'); 
+END;
+
+END caseW.
+\end{lstlisting}
+La implementaci\'on del \emph{CASE} es similar a la de \emph{Pascal}, solo tiene una diferencia al terminar cada posible opci\'on se emplea el s\'imbolo $ \mid $, (barra vertical).
+
+
+\subsection{Estatutos \emph{WHILE}}
+Ira con un conjunto de lineas que deben de terminar con \emph{END} (ligado al \emph{WHILE}). Esto es algo que no sucede en \emph{Pascal}.
+
+\begin{lstlisting}[language=Modula-2, caption = {Sintaxis de un While}][linewidth=5.0cm]
+
+MODULE bucle;
+
+FROM InOut 
+IMPORT WriteString, WriteCard, WriteLn;
+
+VAR 
+i: CARDINAL;
+
+BEGIN
+
+(* Contamos de 1 a 10 con WHILE *)
+
+i := 1; 
+WHILE i <= 10 DO 
+(* Escribe un número entero no negativo *)
+WriteCard(i, 4); 
+(* El 4 representa la anchura (espacios) *)
+INC(i); 
+END;
+
+WriteLn;
+
+END bucle. 
+
+\end{lstlisting}
+
+\subsection{Estatutos \emph{REPEAT}}
+Similar al estatuto \emph{WHILE}, pero primero realiza los estatutos declarados en su bloque y luego pregunta la condici\'on
+\begin{lstlisting}[language=Modula-2, caption = {Sintaxis de un REPEAT}][linewidth=5.0cm]
+
+MODULE bucle;
+
+FROM InOut 
+IMPORT WriteString, WriteCard, WriteLn;
+
+VAR 
+i: CARDINAL;
+
+BEGIN
+
+(* Contamos de 1 a 10 con REPEAT *)
+
+i := 1; 
+REPEAT 
+WriteCard(i, 4); 
+INC(i); 
+UNTIL i>10;
+
+WriteLn;
+
+END bucle. 
+
+\end{lstlisting}
+
+\subsection{Estatutos \emph{FOR}}
+Despu\'es del \emph{FOR} ira el conjunto de lineas que terminan con \emph{END}. Diferente a \emph{Pascal} ya que despu\'es del \emph{FOR} se puede indicar un \'unico comando pero si se quiere que sean varios se deben de delimitar entre \emph{BEGIN} y \emph{END}.
+\begin{lstlisting}[language=Modula-2, caption = {Sintaxis de un FOR}][linewidth=5.0cm]
+
+MODULE bucle;
+
+FROM InOut 
+IMPORT WriteString, WriteCard, WriteLn;
+
+VAR 
+i: CARDINAL;
+
+BEGIN
+
+(* Contamos de 1 a 10 con FOR *)
+
+FOR i := 1 TO 10 DO 
+WriteCard(i, 4); 
+END;
+
+WriteLn;
+
+END bucle. 
+
+\end{lstlisting}
+Ademas se pueden contar con incrementos distintos a 1, por ejemplo si queremos contar de 4 en 4, debemos usar \emph{FOR i := 1 TO 30 BY 3 DO ...}
+y para contar hacia atr\'as, seria \emph{FOR i := 1 TO 30 BY -1 DO ...}.
+
+
+\subsection{Estatutos \emph{LOOP}}
+Repite indefinidamente esa parte del programa, que tiene que terminar con \emph{END}, si queremos salir del bucle se debe de utilizar el comando \emph{EXIT}. En el siguiente ejemplo se sale del bucle cuando el contador es mayor a 10.
+\begin{lstlisting}[language=Modula-2, caption = {Sintaxis de un LOOP}][linewidth=5.0cm]
+
+MODULE bucle;
+
+FROM InOut 
+IMPORT WriteString, WriteCard, WriteLn;
+
+VAR 
+i: CARDINAL;
+
+BEGIN
+
+(* Contamos de 1 a 10 con LOOP *)
+
+i := 1; 
+LOOP 
+WriteCard(i, 4); 
+INC(i); 
+IF i>10 THEN 
+EXIT; 
+END; 
+END;
+
+WriteLn;
+Universidad Nacional de Educación a Distancia
+END bucle. 
+
+\end{lstlisting}
+
+\subsection{Puntos Importantes\protect\footnote{Datos Obtenidos de \emph{Programación 1.}, Departamento de Lenguajes y Ciencias de la Computación, Universidad de M\'alaga.}}
+\begin{itemize}
+	\item INC: Incrementa el valor de una variable de 1 en 1, pero tambi\'en se puede definir en cuanto se quiere realizar cada salto de la siguiente manera \emph{INC(b,4)}, as\'i se aumentar\'ia el valor de la variable \emph{b} en 4 unidades.
+	\item DEC: Decrementa el valor de una variable.
+	\item WriteLn: Escribe un salto de linea.
+	\item WriteCard: Escribe un \emph{CARDINAL} y se le aplica la anchura para mostrarlo, si el numero ocupa menos de la anchura dada se rellenara con espacios en blanco por la izquierda pero si ocupa mas no se borrara el numero.
+\end{itemize}
+
+\subsection{Procedures}
+Un \emph{procedure}  es un conjunto de sentencias, que se pueden llamar para hacer un trabajo en especial. El \emph{procedure}  no retorna nada y ademas no se termina con \emph{.} si no que se termina con \emph{;}.
+
+\begin{lstlisting}[language=Modula-2, caption = {Sintaxis de un Procedure sin parametros}][linewidth=3.0cm]
+
+MODULE Proced1;
+
+FROM InOut 
+IMPORT WriteString, WriteInt, WriteLn;
+
+PROCEDURE Saludar; 
+BEGIN 
+WriteString('Hola'); 
+WriteLn; 
+END Saludar;
+
+BEGIN 
+
+Saludar;  
+WriteLn; 
+
+END Proced1. 
+
+\end{lstlisting}
+La diferencia de un \emph{procedure} en \emph{Pascal} es que la palabra \emph{procedure} debe de escribirse en may\'usculas y despu\'es del \emph{END} se debe de repetir el nombre del procedimiento que termina. Para llamar un \emph{procedure} se utiliza su nombre m\'as los datos para satisfacer la lista de par\'ametros declarados y se puede llamar a un \emph{procedure} dentro de otro.
+\begin{lstlisting}[language=Modula-2, caption = {Sintaxis de un Procedure con parametros}][linewidth=3.0cm]
+
+MODULE Proced2;
+
+FROM InOut 
+IMPORT WriteString, WriteInt, WriteLn;
+
+VAR 
+cont : INTEGER;
+cont2 : INTEGER;
+
+PROCEDURE MostrarInfo(aux : INTEGER);
+BEGIN
+WriteString("El valor del param es  ");
+WriteInt(aux,5);
+WriteLn;
+aux := 12;
+END MostrarInfo;
+
+BEGIN 
+
+FOR cont := 3 TO 5 DO
+cont2 := cont;
+MostrarInfo(cont2);
+WriteString("El valor es  ");
+WriteInt(cont2,5);
+WriteLn;
+END;
+
+END Proced2. 
+
+\end{lstlisting}
+
+\subsection{Function Procedure}
+Cabe aclarar que funciones y \emph{procedures} no son lo mismo, las funciones tienen valores de retorno mientras que los \emph{procedures} no.
+En \emph{Modula-2} no se usa la palabra reservada \emph{Function} si no que es un \emph{procedure} que devuelve un valor. \emph{Modula-2} sabe que un \emph{procedure} es una funci\'on ya que despu\'es de los par\'ametros se define el tipo del valor de retorno.
+\begin{lstlisting}[language=Modula-2, caption = {Sintaxis de una funci\'on}][linewidth=3.5cm]
+
+MODULE Func;
+
+FROM Terminal2 
+IMPORT WriteString, WriteInt, WriteLn;
+
+PROCEDURE SumaXCuatro
+	(Num1, Num2 : INTEGER) : INTEGER;
+BEGIN
+RETURN(4*(Num1 + Num2));
+END SumaXCuatro;
+
+VAR 
+Perros, Gatos, Patas : INTEGER;
+
+BEGIN  
+Perros := 4;
+Gatos := 3;
+Patas := SumaXCuatro(Perros,Gatos);
+WriteString("En total hay ");
+WriteInt(Patas,3);
+WriteString(" patas.");
+WriteLn;
+END Func.
+
+\end{lstlisting}
+
+\subsection{Recursi\'on}
+Recursi\'on es llamar un \emph{procedure} en el mismo, es importante recordar utilizar una condici\'on de parada en la recursi\'on para evitar que esta se vuelva infinita. Se hace exactamente igual que en \emph{Pascal} seguidamente se presenta un ejemplo del uso de la recursi\'on:
+\begin{lstlisting}[language=Modula-2, caption = {Recursi\'on en Modula-2}][linewidth=5.0cm]
+
+MODULE Recursion;
+
+FROM Terminal2 
+IMPORT WriteString, WriteInt, WriteLn;
+
+VAR 
+Cont : INTEGER;
+
+PROCEDURE MostrarYRestar(Param : INTEGER);
+BEGIN
+WriteString("El valor es ");
+WriteInt(Param,5);
+WriteLn;
+Param := Param - 1;
+IF Param > 0 THEN
+MostrarYRestar(Param);
+END;
+END MostrarYRestar;
+
+BEGIN    
+Cont := 7;
+MostrarYRestar(Cont);
+END Recursion.
+
+\end{lstlisting}
+
+\subsection{Operadores Booleanos}
+\begin{tabular}{c p{6cm} p{15cm}}
+	Operador & Significado\\
+	\hline\hline
+	$and$ & Las dos condiciones evaluadas tienen que ser verdad\\\hline
+	$and~then$ & Igual que $and$ solo que garantiza que se eval\'uen las expresiones en el orden dado\\\hline
+	$or$ & Al menos una de las condiciones debe ser verdad\\\hline
+	$or~else$ & Igual que $or$ solo que garantiza que se eval\'uen las expresiones en el orden dado\\\hline
+	$not$ & Niega el resultado (es unario)\\\hline
+	$xor$ & $or$ exclusivo\\ 
+	\hline 
+\end{tabular}
+
+\subsection{Operadores relacionales}
+Es importante mencionar que la asignaci\'on en \emph{Modula-2} es "$:=$". Estos operadores permiten comparar dos valores del mismo tipo. Se sabe que son binarios ya que poseen dos argumentos. Los operadores son los siguientes: \newline\newline
+\begin{tabular}{c p{3cm} p{5cm}}
+	Operador & Significado\\
+	\hline\hline\\
+	$=$ & Igual a\\
+	$>$ & Mayor que\\
+	$<$ & Menor que\\
+	$>=$ & Mayor o igual que\\
+	$<=$ &Menor o igual que\\
+	$<> \#$ & Distinto a\\
+	\hline
+\end{tabular}
+
+\subsection{Operadores aritmeticos.}
+
+\begin{tabular}{p{1.2cm} p{1.78cm} p{1.4cm} p {2.5cm}}
+	Operador & Operaci\'on & Operandos & Tipo Resultado\\
+	\hline\\
+	+ & Suma & Integer o Real & Integer si los dos operandos son integer, real de otra forma\\\hline\\
+	- & Resta & Integer o Real & Integer si los dos operandos son integer, real de otra forma\\\hline\\
+	$*$ & Multiplicaci\'on & Integer o Real & Integer si los dos operandos son integer, real de otra forma\\\hline\\
+	/ & Divisi\'on & Integer o Real & Real\\\hline\\
+	div & Divisi\'on truncada & Integer & Integer\\\hline\\
+	mod & Modulo & Integer & Integer\\\hline\\
+\end{tabular}
+
+\subsection{Prioridad de algunas operaciones}
+\begin{enumerate}
+	\item $not$
+	\item  $*,~/,~div,~mod,~and$
+	\item $+,~-,~or$
+	\item $<~>~<=~>=~=~<>\#$
+\end{enumerate}
+
+\section{Caracter\'isticas}
+\begin{itemize}
+	\item La principal caracter\'istica es que en \emph{Modula-2} se crean programas modulares, formado por diferentes m\'odulos que se relacionan, de aqu\'i viene su nombre.
+	\item Se puede dar concurrencia que es multitarea entre distintas partes de un programa.
+	\item \emph{Modula-2} fue influido por \emph{Pascal} y \emph{Mesa}.
+\end{itemize}
+
+\section{Caracter\'isticas y Ventajas}
+\begin{itemize}
+	\item Introduce el concepto de modulo y encapsulaci\'on.
+	\item Se facilita una interfaz llamada modulo de definici\'on.
+	\item Utilizado para la ense\~nanza de lenguajes estructurados.
+\end{itemize}
+
+
+\section{Desventajas}
+\begin{itemize}
+	\item Popularidad: \emph{Modula-2} no es un lenguaje tan popular como lo puede ser Java u otros, esto conduce a que librer\'ias y otros aditivos sean escasos para solucionar cierto tipo de problemas.
+	\item Imposibilita la modificaci\'on de estructuras de programaci\'on a cualquier persona que no tenga el c\'odigo de su modulo de implementaci\'on.
+	\item Incapacidad de declarar m\'ultiples instancias de los m\'odulos.
+\end{itemize}
+
+\begin{thebibliography}{3}
+	
+	\bibitem{Modula-2}
+	N.~Wirth. 2002. \emph{Pascal and its Successors. In Software Pioneers.} In M. Broy and E. Denert, Eds. Springer-Verlag.
+	
+	\bibitem{Modula-22}
+	C.~Pronk. 1997. \emph{Standardized extensions to Modula-2.} International conference. ACM New York, NY, USA, 34-48. DOI=http://dl.acm.org/citation.cfm?id=270949\&CFID=981704189
+	\&CFTOKEN=40472858
+	
+	\bibitem{Modula-23}
+	N.~Wirth. 1980. \emph{Modula-2.} Research Collection. Vol. 1. DOI=https://www.research-collection.ethz.ch/bitstream/handle/20.500.11850/68683/eth-3135-01.pdf
+	
+	\bibitem{Modula-24}
+	D.~Pase. 1985. \emph{System programming in Modula-2.} ACM New York, NY, USA, 49 - 53. DOI=http://dl.acm.org/citation.cfm?id=988299\&CFID=981704189
+	\&CFTOKEN=40472858
+	
+	\bibitem{Modula-25}
+	C, Somolinos. 2000. Fundamentos de programaci\'on con Modula 2. (1 edición). Editorial Centro de Estudios Ram\'on Areces, S.A. p. 486. 
+	
+\end{thebibliography}
+
+\end{document}
+
+
